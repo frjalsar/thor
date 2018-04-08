@@ -1,0 +1,1037 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AthleticsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="Athl$Competition">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Location" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Date2" Type="datetime" Nullable="false" />
+    <Property Name="Date3" Type="datetime" Nullable="false" />
+    <Property Name="Organizer" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Director" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Judge" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="OutdoorsOrIndoors" Type="int" Nullable="false" />
+    <Property Name="CompetitonType" Type="int" Nullable="false" />
+    <Property Name="fjolditilstiga" Type="int" Nullable="false" />
+    <Property Name="stigfyrir1saeti" Type="int" Nullable="false" />
+    <Property Name="stigfyrir2saeti" Type="int" Nullable="false" />
+    <Property Name="allirfastig" Type="tinyint" Nullable="false" />
+    <Property Name="tegundstigakeppni" Type="int" Nullable="false" />
+    <Property Name="fjoldibrauta" Type="int" Nullable="false" />
+    <Property Name="skraningargjaldprgrein" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="undirskriftgjaldkera" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="rafmagnstimataka" Type="tinyint" Nullable="false" />
+    <Property Name="heitiiafrekaskra" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fjoldiumferdaitaeknigreinum" Type="int" Nullable="false" />
+    <Property Name="staðurgreinainnanbæjarfélags" Type="tinyint" Nullable="false" />
+    <Property Name="dagsetning4" Type="datetime" Nullable="false" />
+    <Property Name="Tími" Type="datetime" Nullable="false" />
+    <Property Name="Skráningargjld f_ boðhlaup" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Skráningargj_ yngri en 18 ára" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Skráningargj_ f boðhl y 18 ára" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="vantardagogmanud" Type="tinyint" Nullable="false" />
+    <Property Name="lengdikm" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="systurhlaup1" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="systurhlaup2" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="systurhlaup3" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="hlaupmotifyrra" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="vidbotvtimatoku1" Type="int" Nullable="false" />
+    <Property Name="greiniafrekaskra" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="bokadiafrekaskra" Type="tinyint" Nullable="false" />
+    <Property Name="vidbotvtimatoku" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="endanlegurslitskrad" Type="tinyint" Nullable="false" />
+    <Property Name="raesitimi" Type="datetime" Nullable="false" />
+    <Property Name="synaathugasemd" Type="tinyint" Nullable="false" />
+    <Property Name="oldungaflokkar" Type="tinyint" Nullable="false" />
+    <Property Name="tungumal" Type="int" Nullable="false" />
+    <Property Name="synafelag" Type="tinyint" Nullable="false" />
+    <Property Name="synaheitisveitar" Type="tinyint" Nullable="false" />
+    <Property Name="taknhlaupsvidinnlestur" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ensktheitiamoti" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="heitihtmlsidu" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="aldursflokkamot" Type="tinyint" Nullable="false" />
+    <Property Name="makeppauppfyrirsig" Type="tinyint" Nullable="false" />
+    <Property Name="ritarablodmedislmeti" Type="tinyint" Nullable="false" />
+    <Property Name="synaland" Type="tinyint" Nullable="false" />
+    <Property Name="athugasemdaurslitabladi" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Reikna unglingastig" Type="tinyint" Nullable="false" />
+    <Property Name="dagssídastuppfaert" Type="datetime" Nullable="false" />
+    <Property Name="timisídastuppfaert" Type="datetime" Nullable="false" />
+    <Property Name="bodhlaupmedmismsprettum" Type="tinyint" Nullable="false" />
+    <Property Name="textividgesti" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="synanettotima" Type="tinyint" Nullable="false" />
+    <Property Name="greiniafrekaskraflogutimi" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="notafelagafkeppendaspjaldi" Type="tinyint" Nullable="false" />
+    <Property Name="lokamotivafrekaskrar" Type="tinyint" Nullable="false" />
+    <Property Name="landistadfelags" Type="tinyint" Nullable="false" />
+    <Property Name="ekkibirtaiafrekaskra" Type="tinyint" Nullable="false" />
+    <Property Name="slodaurslitmots" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="synamillitima1" Type="tinyint" Nullable="false" />
+    <Property Name="synamillitima2" Type="tinyint" Nullable="false" />
+    <Property Name="heitialista" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="keppnisvollur" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="floguhlaup" Type="tinyint" Nullable="false" />
+    <Property Name="nanaritegund" Type="int" Nullable="false" />
+    <Property Name="hlaupaseria" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="flokkurhlaups" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="tegundmots" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="synamillitima3" Type="tinyint" Nullable="false" />
+    <Property Name="teljarialltaf1" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Stofna nýjan v innles á millit" Type="tinyint" Nullable="false" />
+    <Property Name="Millitímar teknir eftir" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Nota aðeins ársbesta við röðun" Type="tinyint" Nullable="false" />
+    <Property Name="Tímabil ársbesta frá mótsdags" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="Reikna IAAF stig" Type="tinyint" Nullable="false" />
+    <Property Name="Má prenta úrslit frá Scheduler" Type="tinyint" Nullable="false" />
+    <Property Name="synamillitima4" Type="tinyint" Nullable="false" />
+    <Property Name="synamillitima5" Type="tinyint" Nullable="false" />
+    <Property Name="Með rásnúmeri" Type="tinyint" Nullable="false" />
+    <Property Name="Sleppa í afhendingu rásnúmera" Type="tinyint" Nullable="false" />
+    <Property Name="CompetitorsMinimumAge" Type="int" Nullable="false" />
+    <Property Name="Staða móts" Type="int" Nullable="false" />
+    <Property Name="EntryFeeType" Type="int" Nullable="false" />
+    <Property Name="EntryFeePrClub" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="MaxAgeForFee1" Type="int" Nullable="false" />
+    <Property Name="EntryFeePrCompetitor1" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="MaxAgeForFee2" Type="int" Nullable="false" />
+    <Property Name="EntryFeePrCompetitor2" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="MaxAgeForFee3" Type="int" Nullable="false" />
+    <Property Name="EntryFeePrCompetitor3" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="MaximumEntryFeePrCompetitor" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="DefaultTabOrderOnEntryForms" Type="int" Nullable="false" />
+    <Property Name="DisplayColumnForPrizeCeremony" Type="tinyint" Nullable="false" />
+    <Property Name="CompetitionFinalized" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Athl$CompetitionEvents">
+    <Key>
+      <PropertyRef Name="mot" />
+      <PropertyRef Name="lina" />
+    </Key>
+    <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="mot" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="lina" Type="int" Nullable="false" />
+    <Property Name="grein" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="kyn" Type="int" Nullable="false" />
+    <Property Name="flokkur" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ridill" Type="int" Nullable="false" />
+    <Property Name="numerridils" Type="int" Nullable="false" />
+    <Property Name="dagsetning" Type="datetime" Nullable="false" />
+    <Property Name="timi" Type="datetime" Nullable="false" />
+    <Property Name="stadur" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="nafnakall" Type="datetime" Nullable="false" />
+    <Property Name="timi2ridils" Type="datetime" Nullable="false" />
+    <Property Name="heitigreinar" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="ensktheitigreinar" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="tegundgreinar" Type="int" Nullable="false" />
+    <Property Name="rafmagnstimataka" Type="tinyint" Nullable="false" />
+    <Property Name="krefstvindmaelis" Type="tinyint" Nullable="false" />
+    <Property Name="nanaritegundargreining" Type="int" Nullable="false" />
+    <Property Name="thrautargrein" Type="tinyint" Nullable="false" />
+    <Property Name="Sería með stigum í þrautargr_" Type="tinyint" Nullable="false" />
+    <Property Name="fjoldiibrauta" Type="int" Nullable="false" />
+    <Property Name="fjoldiumferda" Type="int" Nullable="false" />
+    <Property Name="aldurfra" Type="int" Nullable="false" />
+    <Property Name="aldurtil" Type="int" Nullable="false" />
+    <Property Name="stigagrein" Type="tinyint" Nullable="false" />
+    <Property Name="fjolditilstiga" Type="int" Nullable="false" />
+    <Property Name="stigfyrir1saeti" Type="int" Nullable="false" />
+    <Property Name="stigfyrir2saeti" Type="int" Nullable="false" />
+    <Property Name="handvirkstigaskraning" Type="tinyint" Nullable="false" />
+    <Property Name="teljagreinistigautreikningi" Type="tinyint" Nullable="false" />
+    <Property Name="Röð kepp_ sem fær fyrst stig" Type="int" Nullable="false" />
+    <Property Name="skraningargjald" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="urslitkomin" Type="tinyint" Nullable="false" />
+    <Property Name="birtaiurslitum" Type="tinyint" Nullable="false" />
+    <Property Name="stadakeppni" Type="int" Nullable="false" />
+    <Property Name="takngreinar" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="rodiurslitum" Type="int" Nullable="false" />
+    <Property Name="urridliaundankoma" Type="int" Nullable="false" />
+    <Property Name="hamarkfjoldikeppenda" Type="int" Nullable="false" />
+    <Property Name="sigurvegariifyrra" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="arangurifyrra" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="motsmetshafi" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="motsmet" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="dagsetningmotsmets" Type="datetime" Nullable="false" />
+    <Property Name="stadurmotsmets" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="felagmotsmetshafa" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="rodiafrekaskra" Type="int" Nullable="false" />
+    <Property Name="rodithraut" Type="int" Nullable="false" />
+    <Property Name="motsmetshafi2" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="motsmet2" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="dagsetningmotsmets2" Type="datetime" Nullable="false" />
+    <Property Name="stadurmotsmets2" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="felagmotsmetshafa2" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="tharfadradakeppendum" Type="tinyint" Nullable="false" />
+    <Property Name="athugasemd" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="athugasemdaritarablad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="heitihtmlskrar" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="htmlskramyndudthann" Type="datetime" Nullable="false" />
+    <Property Name="htmlskramyndudkl" Type="datetime" Nullable="false" />
+    <Property Name="eventnamefisi" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Númer hlaupagreinar f_ Lynx" Type="int" Nullable="false" />
+    <Property Name="tilkynnaurslit" Type="int" Nullable="false" />
+    <Property Name="tilkynnaverdlaunaafhendingu" Type="int" Nullable="false" />
+    <Property Name="ekkiprentaritarablod" Type="tinyint" Nullable="false" />
+    <Property Name="motsmetshafi3" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="motsmet3" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="dagsetningmotsmets3" Type="datetime" Nullable="false" />
+    <Property Name="stadurmotsmets3" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="felagmotsmetshafa3" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Innlesið heiti greinar" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Val_fyrir_LedStudio" Type="int" Nullable="false" />
+    <Property Name="ValFyrirSjonvarp" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Athl$Competitors">
+    <Key>
+      <PropertyRef Name="Númer" />
+    </Key>
+    <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Númer" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Kennitala" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Nafn" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="Heimili" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="Staður" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Fæðingarár" Type="int" Nullable="false" />
+    <Property Name="Félag" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Kyn" Type="int" Nullable="false" />
+    <Property Name="Land" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Fjölskyldunúmer" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Heimasími" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Vinnusími" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="E-Mail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Heimili 2" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Merking" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Félag innan sambands" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Héraðssamband" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Leitarnafn" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="Fæðingardagur" Type="datetime" Nullable="false" />
+    <Property Name="Þjóðerni" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Mynd" Type="image" />
+    <Property Name="Heimasíða" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Númer flögu" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Auðkenni Idega" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Með Sömu Kennitölu" Type="tinyint" Nullable="false" />
+    <Property Name="Dags síðast uppfært" Type="datetime" Nullable="false" />
+    <Property Name="Tími síðast uppfært" Type="datetime" Nullable="false" />
+    <Property Name="Annað nafn" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Sleppa í afrekaskrá" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Athl$CompetitorsInCompetition">
+    <Key>
+      <PropertyRef Name="mot" />
+      <PropertyRef Name="rasnumer" />
+    </Key>
+    <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="mot" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="rasnumer" Type="int" Nullable="false" />
+    <Property Name="keppendanumer" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="nafn" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="felag" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="felaginnansambands" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="kyn" Type="int" Nullable="false" />
+    <Property Name="kennitala" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="faedingardagur" Type="datetime" Nullable="false" />
+    <Property Name="faedingarar" Type="int" Nullable="false" />
+    <Property Name="aldurkeppanda" Type="int" Nullable="false" />
+    <Property Name="aldursflokkur" Type="int" Nullable="false" />
+    <Property Name="leitarnafn" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="land" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="keppnisflokkurihlaupi" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="timinumeriskur" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="timi" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="rodimark" Type="int" Nullable="false" />
+    <Property Name="rodiflokki" Type="int" Nullable="false" />
+    <Property Name="heitisveitar" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ogreittthatttokugjald" Type="tinyint" Nullable="false" />
+    <Property Name="skraning" Type="int" Nullable="false" />
+    <Property Name="vegalengd" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="keppnisflokkur" Type="int" Nullable="false" />
+    <Property Name="skogerd" Type="int" Nullable="false" />
+    <Property Name="staerdtbols" Type="int" Nullable="false" />
+    <Property Name="athugasemd" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="numerflogu" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="starttimiklst" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="lokatimiklst" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="nettotimi" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="kaupaedaleigjaflogu" Type="int" Nullable="false" />
+    <Property Name="bruttotimi" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="bodhlaupssveit" Type="tinyint" Nullable="false" />
+    <Property Name="fyrirlidi" Type="tinyint" Nullable="false" />
+    <Property Name="millitimi1klst" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="millitimi1brutto" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="millitimi1netto" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="millitimi2klst" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="millitimi2brutto" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="millitimi2netto" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="byssutimihlaupara" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="millitimi3klst" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="millitimi3brutto" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="millitimi3netto" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="fradrvmargrarashopa" Type="int" Nullable="false" />
+    <Property Name="millitimi4klst" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="millitimi4brutto" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="millitimi4netto" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="millitimi5klst" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="millitimi5brutto" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="millitimi5netto" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="millitimi6klst" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="millitimi6brutto" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="millitimi6netto" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="LinunumerFloguskrar" Type="int" Nullable="false" />
+    <Property Name="rasnumeraskyrslu" Type="int" Nullable="false" />
+    <Property Name="wrkheimili" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="wrkstadur" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="vantarbol" Type="tinyint" Nullable="false" />
+    <Property Name="gestur" Type="tinyint" Nullable="false" />
+    <Property Name="skraningardags" Type="datetime" Nullable="false" />
+    <Property Name="skraningartimi" Type="datetime" Nullable="false" />
+    <Property Name="skradaf" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="wrkemail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="flokkurhlaups" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="StaerdBolsTexti" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Með medalíu" Type="tinyint" Nullable="false" />
+    <Property Name="numergodgerdafelags" Type="int" Nullable="false" />
+    <Property Name="numervaraflogu" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="wrkheimilifangland" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="idegauserid" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Má senda e-mail" Type="tinyint" Nullable="false" />
+    <Property Name="Netskráning" Type="tinyint" Nullable="false" />
+    <Property Name="Fyrirtæki" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Í hjólastól" Type="tinyint" Nullable="false" />
+    <Property Name="Innlesið nafn" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Innlesið fæðingarár" Type="int" Nullable="false" />
+    <Property Name="Innlesið félag" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="greinnumer" Type="int" Nullable="false" />
+    <Property Name="rodinnangreinar" Type="int" Nullable="false" />
+    <Property Name="Úthlutað rásnúmer" Type="int" Nullable="false" />
+    <Property Name="Skráningardags_ rásnúmers" Type="datetime" Nullable="false" />
+    <Property Name="Skráningartími rásnúmers" Type="datetime" Nullable="false" />
+    <Property Name="Skráð í vél" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Skipta yfir í vegalengd" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="wrkSimi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="wrkFarsimi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="wrkÞjóðerni" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Announcer Remarks" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Finish Line Description" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hlaupahópur" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="Má senda úrslit á Facebook" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Athl$CompetitorsInEvent">
+    <Key>
+      <PropertyRef Name="mot" />
+      <PropertyRef Name="greinarnumer" />
+      <PropertyRef Name="lina" />
+    </Key>
+    <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="mot" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="greinarnumer" Type="int" Nullable="false" />
+    <Property Name="lina" Type="int" Nullable="false" />
+    <Property Name="grein" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="kyn" Type="int" Nullable="false" />
+    <Property Name="flokkur" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ridill" Type="int" Nullable="false" />
+    <Property Name="numerridilsekkinotad" Type="int" Nullable="false" />
+    <Property Name="dagsetninggreinar" Type="datetime" Nullable="false" />
+    <Property Name="timigreinar" Type="datetime" Nullable="false" />
+    <Property Name="rasnumer" Type="int" Nullable="false" />
+    <Property Name="leitarnafn" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ridillnumer" Type="int" Nullable="false" />
+    <Property Name="stokkkastrod" Type="int" Nullable="false" />
+    <Property Name="nafn" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="faedingarar" Type="int" Nullable="false" />
+    <Property Name="felag" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="timi" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="metrar" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="vindur" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="arangur" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="rafmagnstimataka" Type="tinyint" Nullable="false" />
+    <Property Name="thrautarstig" Type="int" Nullable="false" />
+    <Property Name="urslitarod" Type="int" Nullable="false" />
+    <Property Name="samasaetiognaestiaundan" Type="tinyint" Nullable="false" />
+    <Property Name="nanarirod" Type="int" Nullable="false" />
+    <Property Name="stig" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="stadakeppni" Type="int" Nullable="false" />
+    <Property Name="urslitarodtexti" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="IAAF Stig" Type="int" Nullable="false" />
+    <Property Name="tilraun1" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="vindur1" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="merking1" Type="int" Nullable="false" />
+    <Property Name="tilraun2" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="vindur2" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="merking2" Type="int" Nullable="false" />
+    <Property Name="tilraun3" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="vindur3" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="merking3" Type="int" Nullable="false" />
+    <Property Name="tilraun4" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="vindur4" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="merking4" Type="int" Nullable="false" />
+    <Property Name="tilraun5" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="vindur5" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="merking5" Type="int" Nullable="false" />
+    <Property Name="tilraun6" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="vindur6" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="merking6" Type="int" Nullable="false" />
+    <Property Name="sortorder1" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="sortorder2" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="seria" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="athugasemd" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="handvirkathugasemd" Type="tinyint" Nullable="false" />
+    <Property Name="nullarangur" Type="tinyint" Nullable="false" />
+    <Property Name="bestiaranguriar" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="personulegmet" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="bestiaranguriartexti" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="personulegtmettexti" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="rodiundanurslitum" Type="int" Nullable="false" />
+    <Property Name="qualification" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="gestur" Type="tinyint" Nullable="false" />
+    <Property Name="handvirkstig" Type="tinyint" Nullable="false" />
+    <Property Name="rasnumeraskyrslu" Type="int" Nullable="false" />
+    <Property Name="Unglingastig" Type="int" Nullable="false" />
+    <Property Name="PerformaceRemarks" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="StartReactionTime" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Athl$Events">
+    <Key>
+      <PropertyRef Name="Grein" />
+      <PropertyRef Name="Kyn" />
+      <PropertyRef Name="Flokkur" />
+      <PropertyRef Name="Úti_Inni" />
+    </Key>
+    <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Grein" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Kyn" Type="int" Nullable="false" />
+    <Property Name="Flokkur" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Úti_Inni" Type="int" Nullable="false" />
+    <Property Name="Tegund greinar" Type="int" Nullable="false" />
+    <Property Name="Nánari tegundargreining" Type="int" Nullable="false" />
+    <Property Name="Fjöldi í boðhlaupssveit" Type="int" Nullable="false" />
+    <Property Name="Krefst vindmælis" Type="tinyint" Nullable="false" />
+    <Property Name="Mesti löglegi vindur" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Þyngd kastáhalds" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Hæð grinda" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Viðbót v_ handtímatöku" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Röð í afrekaskrá" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Heiti" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Leitarheiti" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Eining" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Í venjulegri afrekaskrá" Type="tinyint" Nullable="false" />
+    <Property Name="Enskt heiti greinar" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Enskt einingarheiti" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Stigaútreikningur - Reitur A" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Stigaútreikningur - Reitur B" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Stigaútreikningur - Reitur C" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Tveggja daga þraut" Type="tinyint" Nullable="false" />
+    <Property Name="Sýna handtímatöku sér" Type="tinyint" Nullable="false" />
+    <Property Name="Besti tími hlaups" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hámarkgildi tæknigreinar" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Greinahópur" Type="int" Nullable="false" />
+    <Property Name="Spretthlaup á beinni braut" Type="tinyint" Nullable="false" />
+    <Property Name="Þrautargrein 1" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Þrautargrein 2" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Þrautargrein 3" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Þrautargrein 4" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Þrautargrein 5" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Þrautargrein 6" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Þrautargrein 7" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Þrautargrein 8" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Þrautargrein 9" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Þrautargrein 10" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Skrá Íslandsmet" Type="tinyint" Nullable="false" />
+    <Property Name="Röð í þraut" Type="int" Nullable="false" />
+    <Property Name="Sleppa í afrekaskrá" Type="tinyint" Nullable="false" />
+    <Property Name="Aldur frá (fyrir 2011)" Type="int" Nullable="false" />
+    <Property Name="Aldur til (fyrir 2011)" Type="int" Nullable="false" />
+    <Property Name="Bókarmerki" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Greinarheiti í kerfi Breiðabli" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Dagsetningartakmörkun" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Vegal_ götuhlaups í km" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Aldurflokkasía öldunga" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Stigagrein skv_ IAAF" Type="tinyint" Nullable="false" />
+    <Property Name="Lengd hlaups í metrum" Type="int" Nullable="false" />
+    <Property Name="Teg_ hlaups v_ fj_ brauta" Type="int" Nullable="false" />
+    <Property Name="Ensk skammstöfun greinar" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tákn Greinar" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Mælieining" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Aldurssía" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Aldur frá" Type="int" Nullable="false" />
+    <Property Name="Aldur til" Type="int" Nullable="false" />
+    <Property Name="EventCode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Samsettur lykill" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="EventCodeForRegistration" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Athl$HeightsInHJandPV">
+    <Key>
+      <PropertyRef Name="Mót" />
+      <PropertyRef Name="Greinarnúmer" />
+      <PropertyRef Name="Lína" />
+    </Key>
+    <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Mót" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Greinarnúmer" Type="int" Nullable="false" />
+    <Property Name="Lína" Type="int" Nullable="false" />
+    <Property Name="Rásnúmer" Type="int" Nullable="false" />
+    <Property Name="Árangur" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Úrslitaröð" Type="int" Nullable="false" />
+    <Property Name="Nánari röð" Type="int" Nullable="false" />
+    <Property Name="Sama sæti og næsti á undan" Type="tinyint" Nullable="false" />
+    <Property Name="1_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="2_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="3_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="4_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="5_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="6_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="7_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="8_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="9_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="10_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="11_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="12_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="13_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="14_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="15_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="16_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="17_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="18_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="19_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="20_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="21_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="22_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="23_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="24_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="25_ hæð" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Raðsvæði 1 (1000 - hæð)" Type="int" Nullable="false" />
+    <Property Name="Raðsvæði 2 (yfir í tilraun)" Type="int" Nullable="false" />
+    <Property Name="Raðsvæði 3 (fjöldi falla)" Type="int" Nullable="false" />
+    <Property Name="IAAF Stig" Type="int" Nullable="false" />
+    <Property Name="Unglingastig" Type="int" Nullable="false" />
+    <Property Name="OpeningHeight" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FirstIncreaseBy" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FirstLimit" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SecondIncreaseBy" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SecondLimit" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ThirdIncreaseBy" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Athl$Venues">
+    <Key>
+      <PropertyRef Name="Heiti" />
+    </Key>
+    <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Heiti" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Staður" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Úti_Inni" Type="int" Nullable="false" />
+    <Property Name="Hringhlaup á hallandi braut" Type="tinyint" Nullable="false" />
+    <Property Name="Fj_ hringbrauta spretthlaup" Type="int" Nullable="false" />
+    <Property Name="Fjöldi beinna brauta" Type="int" Nullable="false" />
+    <Property Name="Opnunardagsetning" Type="datetime" Nullable="false" />
+    <Property Name="Fj_ hingbrauta millivegalengd" Type="int" Nullable="false" />
+    <Property Name="Fj_ hringbrauta langhlaup" Type="int" Nullable="false" />
+  </EntityType>
+  <Function Name="CalculateMultiEventPointsFromResult" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="LineNo" Type="int" Mode="In" />
+    <Parameter Name="ResultTimeOrMeters" Type="decimal" Mode="In" />
+    <Parameter Name="MultiEventPoints" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="CalculatePointsInEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CanUserUpdateMeet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="CanUpdate" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="ChangePassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UsrID" Type="nvarchar" Mode="In" />
+    <Parameter Name="OldPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="NewPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="ChangedByUserID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="CheckUserIDAndPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Passw" Type="nvarchar" Mode="In" />
+    <Parameter Name="ReturnValue" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="ClubsForUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserLogin" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="CompetitionAgeGroupsAndEvents" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="WithRelayEvents" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CompetitionEvents" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="CompetitionIsFinalized" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompetitionStatus" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="CompetitorInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitorCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Name" Type="nvarchar" Mode="InOut" />
+    <Parameter Name="Club" Type="nvarchar" Mode="InOut" />
+    <Parameter Name="YearOfBirth" Type="int" Mode="InOut" />
+    <Parameter Name="FirstYear" Type="int" Mode="InOut" />
+    <Parameter Name="LastYear" Type="int" Mode="InOut" />
+    <Parameter Name="NoOfRecords" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="CompetitorIsAlreadyRegisteredInCompetition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompetitorCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsRegistered" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="CompetitorIsAlreadyRegisteredInEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="BibNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsRegistered" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="CompetitorsAndRegistrationInCompetition2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCodeIn" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="CompetitorsInEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventNumber" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CompetitorsInEvResultOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventNumber" Type="int" Mode="In" />
+    <Parameter Name="HeatNumberFilter" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="CompetitorsRecords" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitorNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="YearFrom" Type="int" Mode="In" />
+    <Parameter Name="YearTo" Type="int" Mode="In" />
+    <Parameter Name="OutdoorsIndoorsFilter" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="CompResultsWithParameters" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="SelectedGender" Type="nvarchar" Mode="In" />
+    <Parameter Name="SelectedAgeFrom" Type="nvarchar" Mode="In" />
+    <Parameter Name="SelectedAgeTo" Type="nvarchar" Mode="In" />
+    <Parameter Name="SelectedDay" Type="nvarchar" Mode="In" />
+    <Parameter Name="MaxNoOfLinesText" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteCompetitionEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteCompetitorInComp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="BibNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteCompetitorInEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="BibNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EventInProgress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="HeatNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EventsForAthlete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Gender" Type="int" Mode="In" />
+    <Parameter Name="Age" Type="int" Mode="In" />
+    <Parameter Name="BibNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EventsPrAgeGroupInCompetition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="WithRelayEvents" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetAccessLevel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="CurrentAccessLevel" Type="int" Mode="InOut" />
+    <Parameter Name="CanEnterScores" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GetAvailableRelayRunners" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Club" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="CurrentBibNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetRelayTeamMembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="TeamBibNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetUserAccessToCompetition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCodeIn" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserIDIn" Type="nvarchar" Mode="In" />
+    <Parameter Name="NewUserAccessTxt" Type="nvarchar" Mode="InOut" />
+  </Function>
+  <Function Name="IndexCompetitionVenue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Venue" Type="varchar" Mode="In" />
+    <Parameter Name="Indx" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="InsertCompUpdAccess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="AccessLevel" Type="int" Mode="In" />
+    <Parameter Name="CompetitionCreator" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertToLogFile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserInfo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Description" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompetitorCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="LastBibNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="varchar" Mode="In" />
+    <Parameter Name="LastBib" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="MedalTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="SelectDate" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="MedalWinnersPrClub" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="ClubCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="MedalType" Type="int" Mode="In" />
+    <Parameter Name="SelectDate" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ModifyCompetitorsClub" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitorCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="NewClub" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="NoOfRegistrationsInEvetns" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="BibNo" Type="int" Mode="In" />
+    <Parameter Name="NoOfRegistrations" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="PerfornancesForCompetitorFoundInYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitorCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="PerformanceYear" Type="int" Mode="In" />
+    <Parameter Name="NoOfPerfForYear" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="PrepareToRegisterNewRelayTeam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="Club" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ProcessMultiEventCompetitors" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ReadyForSelectFirst8ForFinal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="ReadyReturnValue" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="RegisterCompetitorFromNatReg" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="KennitalaIn" Type="nvarchar" Mode="In" />
+    <Parameter Name="Club" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompetitorCodeOut" Type="nvarchar" Mode="InOut" />
+  </Function>
+  <Function Name="RetrieveRunnersFromPreviousRound" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="CopyToEventLineNo" Type="int" Mode="In" />
+    <Parameter Name="IgnoreError" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ReturnAgeGroupInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AgeGroupCode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ReturnCompAgeFromAndAgeTo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ReturnCompetitionDates" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ReturnCompetitionEventDates" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ReturnCompetitionForScoreb" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCodeForScorb" Type="nvarchar" Mode="InOut" />
+  </Function>
+  <Function Name="ReturnCompetitorsInEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventNumber" Type="int" Mode="In" />
+    <Parameter Name="HeatFilter" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ReturnIAAFPoints" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenderInt" Type="int" Mode="In" />
+    <Parameter Name="Flokkur" Type="nvarchar" Mode="In" />
+    <Parameter Name="OutdoorsIndorrs" Type="int" Mode="In" />
+    <Parameter Name="TimeResult" Type="decimal" Mode="In" />
+    <Parameter Name="MetersResult" Type="decimal" Mode="In" />
+    <Parameter Name="Points" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="ReturnLastComptetionCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ReturnLastEventinCompLineNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ReturnLastLineInEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ReturnLastLineNosForHJPV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="LastLineNoOfCompetitorsInEvent" Type="int" Mode="InOut" />
+    <Parameter Name="LastLineNoOfHeights" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="ReturnLineNoOfFirstCompetitorInHeat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventNumber" Type="int" Mode="In" />
+    <Parameter Name="HeatNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ReturnLineNumberOfMultiEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="LineNoOfMultiEvent" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="ReturnNoOfHeatsInEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventNumber" Type="int" Mode="In" />
+    <Parameter Name="OutNoOfHeats" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="ReturnPersBestYearBestForEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitorCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventGroup" Type="nvarchar" Mode="In" />
+    <Parameter Name="OutdoorsIndoors" Type="int" Mode="In" />
+    <Parameter Name="PersonalBest" Type="nvarchar" Mode="InOut" />
+    <Parameter Name="PBSuffix" Type="nvarchar" Mode="InOut" />
+    <Parameter Name="SeasonBest" Type="nvarchar" Mode="InOut" />
+    <Parameter Name="SBSuffix" Type="nvarchar" Mode="InOut" />
+  </Function>
+  <Function Name="ReturnUnglingastig" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventCodeIn" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenderIn" Type="int" Mode="In" />
+    <Parameter Name="AgeGroupCodeIn" Type="nvarchar" Mode="In" />
+    <Parameter Name="OutdoorsIndoorsIn" Type="int" Mode="In" />
+    <Parameter Name="AgeIn" Type="int" Mode="In" />
+    <Parameter Name="MarkIn" Type="nvarchar" Mode="In" />
+    <Parameter Name="PointsOut" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="ReturnYouthPoints" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Gender" Type="int" Mode="In" />
+    <Parameter Name="Flokkur" Type="nvarchar" Mode="In" />
+    <Parameter Name="OutOrIndoors" Type="int" Mode="In" />
+    <Parameter Name="PerformanceText" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompetitorsAge" Type="int" Mode="In" />
+    <Parameter Name="ElectricalTiming" Type="int" Mode="In" />
+    <Parameter Name="PointsOut" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="SaveApplicationForAccess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmailAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmailAddress2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Teleph" Type="nvarchar" Mode="In" />
+    <Parameter Name="Club1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Club2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Club3" Type="nvarchar" Mode="In" />
+    <Parameter Name="MessageOut" Type="nvarchar" Mode="InOut" />
+  </Function>
+  <Function Name="ScoreboardEventsUpdSelection" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventLineNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="NewScoreboardStatus" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectFirst8ForFinal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SetRunnersInRelay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="BibNoOfRelayTeam" Type="int" Mode="In" />
+    <Parameter Name="RunnersBibNos1" Type="nvarchar" Mode="In" />
+    <Parameter Name="LegNumber1" Type="nvarchar" Mode="In" />
+    <Parameter Name="RunnersBibNos2" Type="nvarchar" Mode="In" />
+    <Parameter Name="LegNumber2" Type="nvarchar" Mode="In" />
+    <Parameter Name="RunnersBibNos3" Type="nvarchar" Mode="In" />
+    <Parameter Name="LegNumber3" Type="nvarchar" Mode="In" />
+    <Parameter Name="RunnersBibNos4" Type="nvarchar" Mode="In" />
+    <Parameter Name="LegNumber4" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SortAthletesInCompEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="SeedingType" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ToggleGuestForCompetitorInCompetition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompetitorBibNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ToggleGuestForCompetitorInEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompetitorBibNo" Type="int" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="TopPerformanceByIAAFPoints" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenderFilter" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="TVEventsUpdSelection" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventLineNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="NewTVStatus" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateCompInEvPbSb" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="BibNo" Type="int" Mode="In" />
+    <Parameter Name="PersonalBestDecimal" Type="decimal" Mode="In" />
+    <Parameter Name="PersonalBestText" Type="nvarchar" Mode="In" />
+    <Parameter Name="SeasonBestDecimal" Type="decimal" Mode="In" />
+    <Parameter Name="SeasonBestText" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateEventDateTimeAndStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="NewDate" Type="datetime" Mode="In" />
+    <Parameter Name="NewTime" Type="datetime" Mode="In" />
+    <Parameter Name="NewStatus" Type="int" Mode="In" />
+    <Parameter Name="NewPrizeCeremonyStatus" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateEventDateTimeEtc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="EventDate" Type="datetime" Mode="In" />
+    <Parameter Name="EventTime" Type="datetime" Mode="In" />
+    <Parameter Name="NoOfLanes" Type="int" Mode="In" />
+    <Parameter Name="NoOfRounds" Type="int" Mode="In" />
+    <Parameter Name="AgeFrom" Type="int" Mode="In" />
+    <Parameter Name="AgeTo" Type="int" Mode="In" />
+    <Parameter Name="EventDescr" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateEventStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="NewStatus" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateHeightsInHJandPV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="LineNo" Type="int" Mode="In" />
+    <Parameter Name="BibNo" Type="int" Mode="In" />
+    <Parameter Name="ResultText" Type="nvarchar" Mode="In" />
+    <Parameter Name="ResultPlace" Type="int" Mode="In" />
+    <Parameter Name="CloserPlace" Type="int" Mode="In" />
+    <Parameter Name="SamePlaceAsPrev" Type="int" Mode="In" />
+    <Parameter Name="Height1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height3" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height4" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height5" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height6" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height7" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height8" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height9" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height10" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height11" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height12" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height13" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height14" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height15" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height16" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height17" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height18" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height19" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height20" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height21" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height22" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height23" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height24" Type="nvarchar" Mode="In" />
+    <Parameter Name="Height25" Type="nvarchar" Mode="In" />
+    <Parameter Name="SortOrder1" Type="int" Mode="In" />
+    <Parameter Name="SortOrder2" Type="int" Mode="In" />
+    <Parameter Name="SortOrder3" Type="int" Mode="In" />
+    <Parameter Name="IAAFPoints" Type="int" Mode="In" />
+    <Parameter Name="YouthPoints" Type="int" Mode="In" />
+    <Parameter Name="OpeningHeight" Type="nvarchar" Mode="In" />
+    <Parameter Name="FirstIncreaseBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="FirstLimit" Type="nvarchar" Mode="In" />
+    <Parameter Name="SecondIncreaseBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="SecondLimit" Type="nvarchar" Mode="In" />
+    <Parameter Name="ThirdIncreaseBy" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateOrderAndPointsByResults" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="varchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="EventType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateScoreboardStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompetitionCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="NewScoreboardStaus" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateTimesInTrackEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="RunnersBibNumbers" Type="nvarchar" Mode="In" />
+    <Parameter Name="RunnersTimes" Type="nvarchar" Mode="In" />
+    <Parameter Name="RunnersLanes" Type="nvarchar" Mode="In" />
+    <Parameter Name="HeatNo" Type="int" Mode="In" />
+    <Parameter Name="WindReading" Type="decimal" Mode="In" />
+    <Parameter Name="MessageOut" Type="nvarchar" Mode="InOut" />
+  </Function>
+  <Function Name="UpdateWindInHeat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="HeatNo" Type="int" Mode="In" />
+    <Parameter Name="Wind" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="UpdCompetitorInEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompCode" Type="varchar" Mode="In" />
+    <Parameter Name="EventLineNo" Type="int" Mode="In" />
+    <Parameter Name="BibNo" Type="int" Mode="In" />
+    <Parameter Name="Timi" Type="decimal" Mode="In" />
+    <Parameter Name="Metrar" Type="decimal" Mode="In" />
+    <Parameter Name="Vindur" Type="decimal" Mode="In" />
+    <Parameter Name="Arangur" Type="varchar" Mode="In" />
+    <Parameter Name="Tilr1" Type="decimal" Mode="In" />
+    <Parameter Name="Vind1" Type="decimal" Mode="In" />
+    <Parameter Name="Tilr2" Type="decimal" Mode="In" />
+    <Parameter Name="Vind2" Type="decimal" Mode="In" />
+    <Parameter Name="Tilr3" Type="decimal" Mode="In" />
+    <Parameter Name="Vind3" Type="decimal" Mode="In" />
+    <Parameter Name="Tilr4" Type="decimal" Mode="In" />
+    <Parameter Name="Vind4" Type="decimal" Mode="In" />
+    <Parameter Name="Tilr5" Type="decimal" Mode="In" />
+    <Parameter Name="Vind5" Type="decimal" Mode="In" />
+    <Parameter Name="Tilr6" Type="decimal" Mode="In" />
+    <Parameter Name="Vind6" Type="decimal" Mode="In" />
+    <Parameter Name="Seria" Type="nvarchar" Mode="In" />
+    <Parameter Name="ElectricalTiming" Type="int" Mode="In" />
+    <Parameter Name="Merk1" Type="int" Mode="In" />
+    <Parameter Name="Merk2" Type="int" Mode="In" />
+    <Parameter Name="Merk3" Type="int" Mode="In" />
+    <Parameter Name="Merk4" Type="int" Mode="In" />
+    <Parameter Name="Merk5" Type="int" Mode="In" />
+    <Parameter Name="Merk6" Type="int" Mode="In" />
+    <Parameter Name="Sortorder1" Type="decimal" Mode="In" />
+    <Parameter Name="Sortorder2" Type="decimal" Mode="In" />
+    <Parameter Name="NanariRod" Type="int" Mode="In" />
+    <Parameter Name="UrslitarodTexti" Type="nvarchar" Mode="In" />
+    <Parameter Name="SamaSaetiOgNastiAUndan" Type="int" Mode="In" />
+    <Parameter Name="Athugasemd" Type="nvarchar" Mode="In" />
+    <Parameter Name="HeatNo" Type="int" Mode="In" />
+    <Parameter Name="LaneOrOrder" Type="int" Mode="In" />
+    <Parameter Name="IAAFPts" Type="int" Mode="In" />
+    <Parameter Name="MultiEventPoints" Type="int" Mode="In" />
+    <Parameter Name="YouthPoints" Type="int" Mode="In" />
+    <Parameter Name="PerformanceRemarks" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="AthleticsModelStoreContainer">
+    <EntitySet Name="Athl$Competition" EntityType="Self.Athl$Competition" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Athl$CompetitionEvents" EntityType="Self.Athl$CompetitionEvents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Athl$Competitors" EntityType="Self.Athl$Competitors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Athl$CompetitorsInCompetition" EntityType="Self.Athl$CompetitorsInCompetition" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Athl$CompetitorsInEvent" EntityType="Self.Athl$CompetitorsInEvent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Athl$Events" EntityType="Self.Athl$Events" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Athl$HeightsInHJandPV" EntityType="Self.Athl$HeightsInHJandPV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Athl$Venues" EntityType="Self.Athl$Venues" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

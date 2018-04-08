@@ -1,0 +1,15 @@
+C:\Users\fridrik.LSRETAIL\Documents\Visual Studio 2013\Projects\MotFRI\MotFRI\bin\MotFRI.dll.config
+C:\Users\fridrik.LSRETAIL\Documents\Visual Studio 2013\Projects\MotFRI\MotFRI\bin\MotFRI.dll
+C:\Users\fridrik.LSRETAIL\Documents\Visual Studio 2013\Projects\MotFRI\MotFRI\bin\MotFRI.pdb
+C:\Users\fridrik.LSRETAIL\Documents\Visual Studio 2013\Projects\MotFRI\MotFRI\obj\Release\MotFRI.csprojResolveAssemblyReference.cache
+C:\Users\fridrik.LSRETAIL\Documents\Visual Studio 2013\Projects\MotFRI\MotFRI\obj\Release\MotFRI.dll
+C:\Users\fridrik.LSRETAIL\Documents\Visual Studio 2013\Projects\MotFRI\MotFRI\obj\Release\MotFRI.pdb
+C:\Users\fridrik.LSRETAIL\Documents\Visual Studio 2013\Projects\MotFRI\MotFRI\obj\Release\RdlCompile.cache
+C:\Users\fridrik.LSRETAIL\Documents\Visual Studio 2013\Projects\MotFRI\MotFRI\obj\Release\RdlCompile.compiled
+C:\Users\Fridrik\Documents\Visual Studio 2012\Projects\MotFRI\MotFRI\bin\MotFRI.dll
+C:\Users\Fridrik\Documents\Visual Studio 2012\Projects\MotFRI\MotFRI\bin\MotFRI.pdb
+C:\Users\Fridrik\Documents\Visual Studio 2012\Projects\MotFRI\MotFRI\obj\Release\MotFRI.csprojResolveAssemblyReference.cache
+C:\Users\Fridrik\Documents\Visual Studio 2012\Projects\MotFRI\MotFRI\obj\Release\RdlCompile.cache
+C:\Users\Fridrik\Documents\Visual Studio 2012\Projects\MotFRI\MotFRI\obj\Release\RdlCompile.compiled
+C:\Users\Fridrik\Documents\Visual Studio 2012\Projects\MotFRI\MotFRI\obj\Release\MotFRI.dll
+C:\Users\Fridrik\Documents\Visual Studio 2012\Projects\MotFRI\MotFRI\obj\Release\MotFRI.pdb

@@ -1,0 +1,1167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AthleticsModelStoreContainer" CdmEntityContainer="AthleticsEntities1">
+    <EntitySetMapping Name="Athl_Competition">
+      <EntityTypeMapping TypeName="AthleticsModel.Athl_Competition">
+        <MappingFragment StoreEntitySet="Athl$Competition">
+          <ScalarProperty Name="CompetitionFinalized" ColumnName="CompetitionFinalized" />
+          <ScalarProperty Name="DisplayColumnForPrizeCeremony" ColumnName="DisplayColumnForPrizeCeremony" />
+          <ScalarProperty Name="DefaultTabOrderOnEntryForms" ColumnName="DefaultTabOrderOnEntryForms" />
+          <ScalarProperty Name="MaximumEntryFeePrCompetitor" ColumnName="MaximumEntryFeePrCompetitor" />
+          <ScalarProperty Name="EntryFeePrCompetitor3" ColumnName="EntryFeePrCompetitor3" />
+          <ScalarProperty Name="MaxAgeForFee3" ColumnName="MaxAgeForFee3" />
+          <ScalarProperty Name="EntryFeePrCompetitor2" ColumnName="EntryFeePrCompetitor2" />
+          <ScalarProperty Name="MaxAgeForFee2" ColumnName="MaxAgeForFee2" />
+          <ScalarProperty Name="EntryFeePrCompetitor1" ColumnName="EntryFeePrCompetitor1" />
+          <ScalarProperty Name="MaxAgeForFee1" ColumnName="MaxAgeForFee1" />
+          <ScalarProperty Name="EntryFeePrClub" ColumnName="EntryFeePrClub" />
+          <ScalarProperty Name="EntryFeeType" ColumnName="EntryFeeType" />
+          <ScalarProperty Name="Staða_móts" ColumnName="Staða móts" />
+          <ScalarProperty Name="CompetitorsMinimumAge" ColumnName="CompetitorsMinimumAge" />
+          <ScalarProperty Name="Skráningargj__f_boðhl_y_18_ára" ColumnName="Skráningargj_ f boðhl y 18 ára" />
+          <ScalarProperty Name="Skráningargj__yngri_en_18_ára" ColumnName="Skráningargj_ yngri en 18 ára" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Date2" ColumnName="Date2" />
+          <ScalarProperty Name="Date3" ColumnName="Date3" />
+          <ScalarProperty Name="Organizer" ColumnName="Organizer" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="Judge" ColumnName="Judge" />
+          <ScalarProperty Name="OutdoorsOrIndoors" ColumnName="OutdoorsOrIndoors" />
+          <ScalarProperty Name="CompetitonType" ColumnName="CompetitonType" />
+          <ScalarProperty Name="fjolditilstiga" ColumnName="fjolditilstiga" />
+          <ScalarProperty Name="stigfyrir1saeti" ColumnName="stigfyrir1saeti" />
+          <ScalarProperty Name="stigfyrir2saeti" ColumnName="stigfyrir2saeti" />
+          <ScalarProperty Name="allirfastig" ColumnName="allirfastig" />
+          <ScalarProperty Name="tegundstigakeppni" ColumnName="tegundstigakeppni" />
+          <ScalarProperty Name="fjoldibrauta" ColumnName="fjoldibrauta" />
+          <ScalarProperty Name="skraningargjaldprgrein" ColumnName="skraningargjaldprgrein" />
+          <ScalarProperty Name="undirskriftgjaldkera" ColumnName="undirskriftgjaldkera" />
+          <ScalarProperty Name="rafmagnstimataka" ColumnName="rafmagnstimataka" />
+          <ScalarProperty Name="heitiiafrekaskra" ColumnName="heitiiafrekaskra" />
+          <ScalarProperty Name="fjoldiumferdaitaeknigreinum" ColumnName="fjoldiumferdaitaeknigreinum" />
+          <ScalarProperty Name="staðurgreinainnanbæjarfélags" ColumnName="staðurgreinainnanbæjarfélags" />
+          <ScalarProperty Name="dagsetning4" ColumnName="dagsetning4" />
+          <ScalarProperty Name="Tími" ColumnName="Tími" />
+          <ScalarProperty Name="Skráningargjld_f__boðhlaup" ColumnName="Skráningargjld f_ boðhlaup" />
+          <ScalarProperty Name="vantardagogmanud" ColumnName="vantardagogmanud" />
+          <ScalarProperty Name="lengdikm" ColumnName="lengdikm" />
+          <ScalarProperty Name="systurhlaup1" ColumnName="systurhlaup1" />
+          <ScalarProperty Name="systurhlaup2" ColumnName="systurhlaup2" />
+          <ScalarProperty Name="systurhlaup3" ColumnName="systurhlaup3" />
+          <ScalarProperty Name="hlaupmotifyrra" ColumnName="hlaupmotifyrra" />
+          <ScalarProperty Name="vidbotvtimatoku1" ColumnName="vidbotvtimatoku1" />
+          <ScalarProperty Name="greiniafrekaskra" ColumnName="greiniafrekaskra" />
+          <ScalarProperty Name="bokadiafrekaskra" ColumnName="bokadiafrekaskra" />
+          <ScalarProperty Name="vidbotvtimatoku" ColumnName="vidbotvtimatoku" />
+          <ScalarProperty Name="endanlegurslitskrad" ColumnName="endanlegurslitskrad" />
+          <ScalarProperty Name="raesitimi" ColumnName="raesitimi" />
+          <ScalarProperty Name="synaathugasemd" ColumnName="synaathugasemd" />
+          <ScalarProperty Name="oldungaflokkar" ColumnName="oldungaflokkar" />
+          <ScalarProperty Name="tungumal" ColumnName="tungumal" />
+          <ScalarProperty Name="synafelag" ColumnName="synafelag" />
+          <ScalarProperty Name="synaheitisveitar" ColumnName="synaheitisveitar" />
+          <ScalarProperty Name="taknhlaupsvidinnlestur" ColumnName="taknhlaupsvidinnlestur" />
+          <ScalarProperty Name="ensktheitiamoti" ColumnName="ensktheitiamoti" />
+          <ScalarProperty Name="heitihtmlsidu" ColumnName="heitihtmlsidu" />
+          <ScalarProperty Name="aldursflokkamot" ColumnName="aldursflokkamot" />
+          <ScalarProperty Name="makeppauppfyrirsig" ColumnName="makeppauppfyrirsig" />
+          <ScalarProperty Name="ritarablodmedislmeti" ColumnName="ritarablodmedislmeti" />
+          <ScalarProperty Name="synaland" ColumnName="synaland" />
+          <ScalarProperty Name="athugasemdaurslitabladi" ColumnName="athugasemdaurslitabladi" />
+          <ScalarProperty Name="Reikna_unglingastig" ColumnName="Reikna unglingastig" />
+          <ScalarProperty Name="dagssídastuppfaert" ColumnName="dagssídastuppfaert" />
+          <ScalarProperty Name="timisídastuppfaert" ColumnName="timisídastuppfaert" />
+          <ScalarProperty Name="bodhlaupmedmismsprettum" ColumnName="bodhlaupmedmismsprettum" />
+          <ScalarProperty Name="textividgesti" ColumnName="textividgesti" />
+          <ScalarProperty Name="synanettotima" ColumnName="synanettotima" />
+          <ScalarProperty Name="greiniafrekaskraflogutimi" ColumnName="greiniafrekaskraflogutimi" />
+          <ScalarProperty Name="notafelagafkeppendaspjaldi" ColumnName="notafelagafkeppendaspjaldi" />
+          <ScalarProperty Name="lokamotivafrekaskrar" ColumnName="lokamotivafrekaskrar" />
+          <ScalarProperty Name="landistadfelags" ColumnName="landistadfelags" />
+          <ScalarProperty Name="ekkibirtaiafrekaskra" ColumnName="ekkibirtaiafrekaskra" />
+          <ScalarProperty Name="slodaurslitmots" ColumnName="slodaurslitmots" />
+          <ScalarProperty Name="synamillitima1" ColumnName="synamillitima1" />
+          <ScalarProperty Name="synamillitima2" ColumnName="synamillitima2" />
+          <ScalarProperty Name="heitialista" ColumnName="heitialista" />
+          <ScalarProperty Name="keppnisvollur" ColumnName="keppnisvollur" />
+          <ScalarProperty Name="floguhlaup" ColumnName="floguhlaup" />
+          <ScalarProperty Name="nanaritegund" ColumnName="nanaritegund" />
+          <ScalarProperty Name="hlaupaseria" ColumnName="hlaupaseria" />
+          <ScalarProperty Name="flokkurhlaups" ColumnName="flokkurhlaups" />
+          <ScalarProperty Name="tegundmots" ColumnName="tegundmots" />
+          <ScalarProperty Name="synamillitima3" ColumnName="synamillitima3" />
+          <ScalarProperty Name="teljarialltaf1" ColumnName="teljarialltaf1" />
+          <ScalarProperty Name="Stofna_nýjan_v_innles_á_millit" ColumnName="Stofna nýjan v innles á millit" />
+          <ScalarProperty Name="Millitímar_teknir_eftir" ColumnName="Millitímar teknir eftir" />
+          <ScalarProperty Name="Nota_aðeins_ársbesta_við_röðun" ColumnName="Nota aðeins ársbesta við röðun" />
+          <ScalarProperty Name="Tímabil_ársbesta_frá_mótsdags" ColumnName="Tímabil ársbesta frá mótsdags" />
+          <ScalarProperty Name="Reikna_IAAF_stig" ColumnName="Reikna IAAF stig" />
+          <ScalarProperty Name="Má_prenta_úrslit_frá_Scheduler" ColumnName="Má prenta úrslit frá Scheduler" />
+          <ScalarProperty Name="synamillitima4" ColumnName="synamillitima4" />
+          <ScalarProperty Name="synamillitima5" ColumnName="synamillitima5" />
+          <ScalarProperty Name="Með_rásnúmeri" ColumnName="Með rásnúmeri" />
+          <ScalarProperty Name="Sleppa_í_afhendingu_rásnúmera" ColumnName="Sleppa í afhendingu rásnúmera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Athl_CompetitionEvents">
+      <EntityTypeMapping TypeName="AthleticsModel.Athl_CompetitionEvents">
+        <MappingFragment StoreEntitySet="Athl$CompetitionEvents">
+          <ScalarProperty Name="felagmotsmetshafa3" ColumnName="felagmotsmetshafa3" />
+          <ScalarProperty Name="stadurmotsmets3" ColumnName="stadurmotsmets3" />
+          <ScalarProperty Name="dagsetningmotsmets3" ColumnName="dagsetningmotsmets3" />
+          <ScalarProperty Name="motsmet3" ColumnName="motsmet3" />
+          <ScalarProperty Name="motsmetshafi3" ColumnName="motsmetshafi3" />
+          <ScalarProperty Name="ValFyrirSjonvarp" ColumnName="ValFyrirSjonvarp" />
+          <ScalarProperty Name="Val_fyrir_LedStudio" ColumnName="Val_fyrir_LedStudio" />
+          <ScalarProperty Name="Innlesið_heiti_greinar" ColumnName="Innlesið heiti greinar" />
+          <ScalarProperty Name="ekkiprentaritarablod" ColumnName="ekkiprentaritarablod" />
+          <ScalarProperty Name="tilkynnaverdlaunaafhendingu" ColumnName="tilkynnaverdlaunaafhendingu" />
+          <ScalarProperty Name="tilkynnaurslit" ColumnName="tilkynnaurslit" />
+          <ScalarProperty Name="Númer_hlaupagreinar_f__Lynx" ColumnName="Númer hlaupagreinar f_ Lynx" />
+          <ScalarProperty Name="eventnamefisi" ColumnName="eventnamefisi" />
+          <ScalarProperty Name="htmlskramyndudkl" ColumnName="htmlskramyndudkl" />
+          <ScalarProperty Name="htmlskramyndudthann" ColumnName="htmlskramyndudthann" />
+          <ScalarProperty Name="heitihtmlskrar" ColumnName="heitihtmlskrar" />
+          <ScalarProperty Name="athugasemdaritarablad" ColumnName="athugasemdaritarablad" />
+          <ScalarProperty Name="athugasemd" ColumnName="athugasemd" />
+          <ScalarProperty Name="tharfadradakeppendum" ColumnName="tharfadradakeppendum" />
+          <ScalarProperty Name="felagmotsmetshafa2" ColumnName="felagmotsmetshafa2" />
+          <ScalarProperty Name="stadurmotsmets2" ColumnName="stadurmotsmets2" />
+          <ScalarProperty Name="dagsetningmotsmets2" ColumnName="dagsetningmotsmets2" />
+          <ScalarProperty Name="motsmet2" ColumnName="motsmet2" />
+          <ScalarProperty Name="motsmetshafi2" ColumnName="motsmetshafi2" />
+          <ScalarProperty Name="rodithraut" ColumnName="rodithraut" />
+          <ScalarProperty Name="rodiafrekaskra" ColumnName="rodiafrekaskra" />
+          <ScalarProperty Name="felagmotsmetshafa" ColumnName="felagmotsmetshafa" />
+          <ScalarProperty Name="stadurmotsmets" ColumnName="stadurmotsmets" />
+          <ScalarProperty Name="dagsetningmotsmets" ColumnName="dagsetningmotsmets" />
+          <ScalarProperty Name="motsmet" ColumnName="motsmet" />
+          <ScalarProperty Name="motsmetshafi" ColumnName="motsmetshafi" />
+          <ScalarProperty Name="arangurifyrra" ColumnName="arangurifyrra" />
+          <ScalarProperty Name="sigurvegariifyrra" ColumnName="sigurvegariifyrra" />
+          <ScalarProperty Name="hamarkfjoldikeppenda" ColumnName="hamarkfjoldikeppenda" />
+          <ScalarProperty Name="urridliaundankoma" ColumnName="urridliaundankoma" />
+          <ScalarProperty Name="rodiurslitum" ColumnName="rodiurslitum" />
+          <ScalarProperty Name="takngreinar" ColumnName="takngreinar" />
+          <ScalarProperty Name="stadakeppni" ColumnName="stadakeppni" />
+          <ScalarProperty Name="birtaiurslitum" ColumnName="birtaiurslitum" />
+          <ScalarProperty Name="urslitkomin" ColumnName="urslitkomin" />
+          <ScalarProperty Name="skraningargjald" ColumnName="skraningargjald" />
+          <ScalarProperty Name="Röð_kepp__sem_fær_fyrst_stig" ColumnName="Röð kepp_ sem fær fyrst stig" />
+          <ScalarProperty Name="teljagreinistigautreikningi" ColumnName="teljagreinistigautreikningi" />
+          <ScalarProperty Name="handvirkstigaskraning" ColumnName="handvirkstigaskraning" />
+          <ScalarProperty Name="stigfyrir2saeti" ColumnName="stigfyrir2saeti" />
+          <ScalarProperty Name="stigfyrir1saeti" ColumnName="stigfyrir1saeti" />
+          <ScalarProperty Name="fjolditilstiga" ColumnName="fjolditilstiga" />
+          <ScalarProperty Name="stigagrein" ColumnName="stigagrein" />
+          <ScalarProperty Name="aldurtil" ColumnName="aldurtil" />
+          <ScalarProperty Name="aldurfra" ColumnName="aldurfra" />
+          <ScalarProperty Name="fjoldiumferda" ColumnName="fjoldiumferda" />
+          <ScalarProperty Name="fjoldiibrauta" ColumnName="fjoldiibrauta" />
+          <ScalarProperty Name="Sería_með_stigum_í_þrautargr_" ColumnName="Sería með stigum í þrautargr_" />
+          <ScalarProperty Name="thrautargrein" ColumnName="thrautargrein" />
+          <ScalarProperty Name="nanaritegundargreining" ColumnName="nanaritegundargreining" />
+          <ScalarProperty Name="krefstvindmaelis" ColumnName="krefstvindmaelis" />
+          <ScalarProperty Name="rafmagnstimataka" ColumnName="rafmagnstimataka" />
+          <ScalarProperty Name="tegundgreinar" ColumnName="tegundgreinar" />
+          <ScalarProperty Name="ensktheitigreinar" ColumnName="ensktheitigreinar" />
+          <ScalarProperty Name="heitigreinar" ColumnName="heitigreinar" />
+          <ScalarProperty Name="timi2ridils" ColumnName="timi2ridils" />
+          <ScalarProperty Name="nafnakall" ColumnName="nafnakall" />
+          <ScalarProperty Name="stadur" ColumnName="stadur" />
+          <ScalarProperty Name="timi" ColumnName="timi" />
+          <ScalarProperty Name="dagsetning" ColumnName="dagsetning" />
+          <ScalarProperty Name="numerridils" ColumnName="numerridils" />
+          <ScalarProperty Name="ridill" ColumnName="ridill" />
+          <ScalarProperty Name="flokkur" ColumnName="flokkur" />
+          <ScalarProperty Name="kyn" ColumnName="kyn" />
+          <ScalarProperty Name="grein" ColumnName="grein" />
+          <ScalarProperty Name="lina" ColumnName="lina" />
+          <ScalarProperty Name="mot" ColumnName="mot" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Athl_CompetitorsInCompetition">
+      <EntityTypeMapping TypeName="AthleticsModel.Athl_CompetitorsInCompetition">
+        <MappingFragment StoreEntitySet="Athl$CompetitorsInCompetition">
+          <ScalarProperty Name="Má_senda_úrslit_á_Facebook" ColumnName="Má senda úrslit á Facebook" />
+          <ScalarProperty Name="Hlaupahópur" ColumnName="Hlaupahópur" />
+          <ScalarProperty Name="LinunumerFloguskrar" ColumnName="LinunumerFloguskrar" />
+          <ScalarProperty Name="Finish_Line_Description" ColumnName="Finish Line Description" />
+          <ScalarProperty Name="Announcer_Remarks" ColumnName="Announcer Remarks" />
+          <ScalarProperty Name="Í_hjólastól" ColumnName="Í hjólastól" />
+          <ScalarProperty Name="rodinnangreinar" ColumnName="rodinnangreinar" />
+          <ScalarProperty Name="greinnumer" ColumnName="greinnumer" />
+          <ScalarProperty Name="wrkÞjóðerni" ColumnName="wrkÞjóðerni" />
+          <ScalarProperty Name="Fyrirtæki" ColumnName="Fyrirtæki" />
+          <ScalarProperty Name="wrkFarsimi" ColumnName="wrkFarsimi" />
+          <ScalarProperty Name="wrkSimi" ColumnName="wrkSimi" />
+          <ScalarProperty Name="Skipta_yfir_í_vegalengd" ColumnName="Skipta yfir í vegalengd" />
+          <ScalarProperty Name="Skráð_í_vél" ColumnName="Skráð í vél" />
+          <ScalarProperty Name="Skráningartími_rásnúmers" ColumnName="Skráningartími rásnúmers" />
+          <ScalarProperty Name="Skráningardags__rásnúmers" ColumnName="Skráningardags_ rásnúmers" />
+          <ScalarProperty Name="Úthlutað_rásnúmer" ColumnName="Úthlutað rásnúmer" />
+          <ScalarProperty Name="Innlesið_félag" ColumnName="Innlesið félag" />
+          <ScalarProperty Name="Innlesið_fæðingarár" ColumnName="Innlesið fæðingarár" />
+          <ScalarProperty Name="Innlesið_nafn" ColumnName="Innlesið nafn" />
+          <ScalarProperty Name="Netskráning" ColumnName="Netskráning" />
+          <ScalarProperty Name="Má_senda_e_mail" ColumnName="Má senda e-mail" />
+          <ScalarProperty Name="idegauserid" ColumnName="idegauserid" />
+          <ScalarProperty Name="wrkheimilifangland" ColumnName="wrkheimilifangland" />
+          <ScalarProperty Name="numervaraflogu" ColumnName="numervaraflogu" />
+          <ScalarProperty Name="numergodgerdafelags" ColumnName="numergodgerdafelags" />
+          <ScalarProperty Name="Með_medalíu" ColumnName="Með medalíu" />
+          <ScalarProperty Name="StaerdBolsTexti" ColumnName="StaerdBolsTexti" />
+          <ScalarProperty Name="flokkurhlaups" ColumnName="flokkurhlaups" />
+          <ScalarProperty Name="wrkemail" ColumnName="wrkemail" />
+          <ScalarProperty Name="skradaf" ColumnName="skradaf" />
+          <ScalarProperty Name="skraningartimi" ColumnName="skraningartimi" />
+          <ScalarProperty Name="skraningardags" ColumnName="skraningardags" />
+          <ScalarProperty Name="gestur" ColumnName="gestur" />
+          <ScalarProperty Name="vantarbol" ColumnName="vantarbol" />
+          <ScalarProperty Name="wrkstadur" ColumnName="wrkstadur" />
+          <ScalarProperty Name="wrkheimili" ColumnName="wrkheimili" />
+          <ScalarProperty Name="rasnumeraskyrslu" ColumnName="rasnumeraskyrslu" />
+          <ScalarProperty Name="millitimi6netto" ColumnName="millitimi6netto" />
+          <ScalarProperty Name="millitimi6brutto" ColumnName="millitimi6brutto" />
+          <ScalarProperty Name="millitimi6klst" ColumnName="millitimi6klst" />
+          <ScalarProperty Name="millitimi5netto" ColumnName="millitimi5netto" />
+          <ScalarProperty Name="millitimi5brutto" ColumnName="millitimi5brutto" />
+          <ScalarProperty Name="millitimi5klst" ColumnName="millitimi5klst" />
+          <ScalarProperty Name="millitimi4netto" ColumnName="millitimi4netto" />
+          <ScalarProperty Name="millitimi4brutto" ColumnName="millitimi4brutto" />
+          <ScalarProperty Name="millitimi4klst" ColumnName="millitimi4klst" />
+          <ScalarProperty Name="fradrvmargrarashopa" ColumnName="fradrvmargrarashopa" />
+          <ScalarProperty Name="millitimi3netto" ColumnName="millitimi3netto" />
+          <ScalarProperty Name="millitimi3brutto" ColumnName="millitimi3brutto" />
+          <ScalarProperty Name="millitimi3klst" ColumnName="millitimi3klst" />
+          <ScalarProperty Name="byssutimihlaupara" ColumnName="byssutimihlaupara" />
+          <ScalarProperty Name="millitimi2netto" ColumnName="millitimi2netto" />
+          <ScalarProperty Name="millitimi2brutto" ColumnName="millitimi2brutto" />
+          <ScalarProperty Name="millitimi2klst" ColumnName="millitimi2klst" />
+          <ScalarProperty Name="millitimi1netto" ColumnName="millitimi1netto" />
+          <ScalarProperty Name="millitimi1brutto" ColumnName="millitimi1brutto" />
+          <ScalarProperty Name="millitimi1klst" ColumnName="millitimi1klst" />
+          <ScalarProperty Name="fyrirlidi" ColumnName="fyrirlidi" />
+          <ScalarProperty Name="bodhlaupssveit" ColumnName="bodhlaupssveit" />
+          <ScalarProperty Name="bruttotimi" ColumnName="bruttotimi" />
+          <ScalarProperty Name="kaupaedaleigjaflogu" ColumnName="kaupaedaleigjaflogu" />
+          <ScalarProperty Name="nettotimi" ColumnName="nettotimi" />
+          <ScalarProperty Name="lokatimiklst" ColumnName="lokatimiklst" />
+          <ScalarProperty Name="starttimiklst" ColumnName="starttimiklst" />
+          <ScalarProperty Name="numerflogu" ColumnName="numerflogu" />
+          <ScalarProperty Name="athugasemd" ColumnName="athugasemd" />
+          <ScalarProperty Name="staerdtbols" ColumnName="staerdtbols" />
+          <ScalarProperty Name="skogerd" ColumnName="skogerd" />
+          <ScalarProperty Name="keppnisflokkur" ColumnName="keppnisflokkur" />
+          <ScalarProperty Name="vegalengd" ColumnName="vegalengd" />
+          <ScalarProperty Name="skraning" ColumnName="skraning" />
+          <ScalarProperty Name="ogreittthatttokugjald" ColumnName="ogreittthatttokugjald" />
+          <ScalarProperty Name="heitisveitar" ColumnName="heitisveitar" />
+          <ScalarProperty Name="rodiflokki" ColumnName="rodiflokki" />
+          <ScalarProperty Name="rodimark" ColumnName="rodimark" />
+          <ScalarProperty Name="timi" ColumnName="timi" />
+          <ScalarProperty Name="timinumeriskur" ColumnName="timinumeriskur" />
+          <ScalarProperty Name="keppnisflokkurihlaupi" ColumnName="keppnisflokkurihlaupi" />
+          <ScalarProperty Name="land" ColumnName="land" />
+          <ScalarProperty Name="leitarnafn" ColumnName="leitarnafn" />
+          <ScalarProperty Name="aldursflokkur" ColumnName="aldursflokkur" />
+          <ScalarProperty Name="aldurkeppanda" ColumnName="aldurkeppanda" />
+          <ScalarProperty Name="faedingarar" ColumnName="faedingarar" />
+          <ScalarProperty Name="faedingardagur" ColumnName="faedingardagur" />
+          <ScalarProperty Name="kennitala" ColumnName="kennitala" />
+          <ScalarProperty Name="kyn" ColumnName="kyn" />
+          <ScalarProperty Name="felaginnansambands" ColumnName="felaginnansambands" />
+          <ScalarProperty Name="felag" ColumnName="felag" />
+          <ScalarProperty Name="nafn" ColumnName="nafn" />
+          <ScalarProperty Name="keppendanumer" ColumnName="keppendanumer" />
+          <ScalarProperty Name="rasnumer" ColumnName="rasnumer" />
+          <ScalarProperty Name="mot" ColumnName="mot" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ReturnLastEventinCompLineNo" FunctionName="AthleticsModel.Store.ReturnLastEventinCompLineNo" />
+    <FunctionImportMapping FunctionImportName="ReturnAgeGroupInfo2" FunctionName="AthleticsModel.Store.ReturnAgeGroupInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.ReturnAgeGroupInfo2_Result">
+          <ScalarProperty Name="Tákn" ColumnName="Tákn" />
+          <ScalarProperty Name="Kyn" ColumnName="Kyn" />
+          <ScalarProperty Name="Aldur_frá" ColumnName="Aldur frá" />
+          <ScalarProperty Name="Aldur_Til" ColumnName="Aldur Til" />
+          <ScalarProperty Name="Heiti" ColumnName="Heiti" />
+          <ScalarProperty Name="Þágufallsheiti" ColumnName="Þágufallsheiti" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Athl_Events">
+      <EntityTypeMapping TypeName="AthleticsModel.Athl_Events">
+        <MappingFragment StoreEntitySet="Athl$Events">
+          <ScalarProperty Name="EventCodeForRegistration" ColumnName="EventCodeForRegistration" />
+          <ScalarProperty Name="Spretthlaup_á_beinni_braut" ColumnName="Spretthlaup á beinni braut" />
+          <ScalarProperty Name="Samsettur_lykill" ColumnName="Samsettur lykill" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="Aldur_til" ColumnName="Aldur til" />
+          <ScalarProperty Name="Aldur_frá" ColumnName="Aldur frá" />
+          <ScalarProperty Name="Aldurssía" ColumnName="Aldurssía" />
+          <ScalarProperty Name="Mælieining" ColumnName="Mælieining" />
+          <ScalarProperty Name="Tákn_Greinar" ColumnName="Tákn Greinar" />
+          <ScalarProperty Name="Ensk_skammstöfun_greinar" ColumnName="Ensk skammstöfun greinar" />
+          <ScalarProperty Name="Teg__hlaups_v__fj__brauta" ColumnName="Teg_ hlaups v_ fj_ brauta" />
+          <ScalarProperty Name="Lengd_hlaups_í_metrum" ColumnName="Lengd hlaups í metrum" />
+          <ScalarProperty Name="Stigagrein_skv__IAAF" ColumnName="Stigagrein skv_ IAAF" />
+          <ScalarProperty Name="Aldurflokkasía_öldunga" ColumnName="Aldurflokkasía öldunga" />
+          <ScalarProperty Name="Vegal__götuhlaups_í_km" ColumnName="Vegal_ götuhlaups í km" />
+          <ScalarProperty Name="Dagsetningartakmörkun" ColumnName="Dagsetningartakmörkun" />
+          <ScalarProperty Name="Greinarheiti_í_kerfi_Breiðabli" ColumnName="Greinarheiti í kerfi Breiðabli" />
+          <ScalarProperty Name="Bókarmerki" ColumnName="Bókarmerki" />
+          <ScalarProperty Name="Aldur_til__fyrir_2011_" ColumnName="Aldur til (fyrir 2011)" />
+          <ScalarProperty Name="Aldur_frá__fyrir_2011_" ColumnName="Aldur frá (fyrir 2011)" />
+          <ScalarProperty Name="Sleppa_í_afrekaskrá" ColumnName="Sleppa í afrekaskrá" />
+          <ScalarProperty Name="Röð_í_þraut" ColumnName="Röð í þraut" />
+          <ScalarProperty Name="Skrá_Íslandsmet" ColumnName="Skrá Íslandsmet" />
+          <ScalarProperty Name="Þrautargrein_10" ColumnName="Þrautargrein 10" />
+          <ScalarProperty Name="Þrautargrein_9" ColumnName="Þrautargrein 9" />
+          <ScalarProperty Name="Þrautargrein_8" ColumnName="Þrautargrein 8" />
+          <ScalarProperty Name="Þrautargrein_7" ColumnName="Þrautargrein 7" />
+          <ScalarProperty Name="Þrautargrein_6" ColumnName="Þrautargrein 6" />
+          <ScalarProperty Name="Þrautargrein_5" ColumnName="Þrautargrein 5" />
+          <ScalarProperty Name="Þrautargrein_4" ColumnName="Þrautargrein 4" />
+          <ScalarProperty Name="Þrautargrein_3" ColumnName="Þrautargrein 3" />
+          <ScalarProperty Name="Þrautargrein_2" ColumnName="Þrautargrein 2" />
+          <ScalarProperty Name="Þrautargrein_1" ColumnName="Þrautargrein 1" />
+          <ScalarProperty Name="Greinahópur" ColumnName="Greinahópur" />
+          <ScalarProperty Name="Hámarkgildi_tæknigreinar" ColumnName="Hámarkgildi tæknigreinar" />
+          <ScalarProperty Name="Besti_tími_hlaups" ColumnName="Besti tími hlaups" />
+          <ScalarProperty Name="Sýna_handtímatöku_sér" ColumnName="Sýna handtímatöku sér" />
+          <ScalarProperty Name="Tveggja_daga_þraut" ColumnName="Tveggja daga þraut" />
+          <ScalarProperty Name="Stigaútreikningur___Reitur_C" ColumnName="Stigaútreikningur - Reitur C" />
+          <ScalarProperty Name="Stigaútreikningur___Reitur_B" ColumnName="Stigaútreikningur - Reitur B" />
+          <ScalarProperty Name="Stigaútreikningur___Reitur_A" ColumnName="Stigaútreikningur - Reitur A" />
+          <ScalarProperty Name="Enskt_einingarheiti" ColumnName="Enskt einingarheiti" />
+          <ScalarProperty Name="Enskt_heiti_greinar" ColumnName="Enskt heiti greinar" />
+          <ScalarProperty Name="Í_venjulegri_afrekaskrá" ColumnName="Í venjulegri afrekaskrá" />
+          <ScalarProperty Name="Eining" ColumnName="Eining" />
+          <ScalarProperty Name="Leitarheiti" ColumnName="Leitarheiti" />
+          <ScalarProperty Name="Heiti" ColumnName="Heiti" />
+          <ScalarProperty Name="Röð_í_afrekaskrá" ColumnName="Röð í afrekaskrá" />
+          <ScalarProperty Name="Viðbót_v__handtímatöku" ColumnName="Viðbót v_ handtímatöku" />
+          <ScalarProperty Name="Hæð_grinda" ColumnName="Hæð grinda" />
+          <ScalarProperty Name="Þyngd_kastáhalds" ColumnName="Þyngd kastáhalds" />
+          <ScalarProperty Name="Mesti_löglegi_vindur" ColumnName="Mesti löglegi vindur" />
+          <ScalarProperty Name="Krefst_vindmælis" ColumnName="Krefst vindmælis" />
+          <ScalarProperty Name="Fjöldi_í_boðhlaupssveit" ColumnName="Fjöldi í boðhlaupssveit" />
+          <ScalarProperty Name="Nánari_tegundargreining" ColumnName="Nánari tegundargreining" />
+          <ScalarProperty Name="Tegund_greinar" ColumnName="Tegund greinar" />
+          <ScalarProperty Name="Úti_Inni" ColumnName="Úti_Inni" />
+          <ScalarProperty Name="Flokkur" ColumnName="Flokkur" />
+          <ScalarProperty Name="Kyn" ColumnName="Kyn" />
+          <ScalarProperty Name="Grein" ColumnName="Grein" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Athl_Competitors">
+      <EntityTypeMapping TypeName="AthleticsModel.Athl_Competitors">
+        <MappingFragment StoreEntitySet="Athl$Competitors">
+          <ScalarProperty Name="Héraðssamband" ColumnName="Héraðssamband" />
+          <ScalarProperty Name="Sleppa_í_afrekaskrá" ColumnName="Sleppa í afrekaskrá" />
+          <ScalarProperty Name="Annað_nafn" ColumnName="Annað nafn" />
+          <ScalarProperty Name="Tími_síðast_uppfært" ColumnName="Tími síðast uppfært" />
+          <ScalarProperty Name="Dags_síðast_uppfært" ColumnName="Dags síðast uppfært" />
+          <ScalarProperty Name="Með_Sömu_Kennitölu" ColumnName="Með Sömu Kennitölu" />
+          <ScalarProperty Name="Auðkenni_Idega" ColumnName="Auðkenni Idega" />
+          <ScalarProperty Name="Númer_flögu" ColumnName="Númer flögu" />
+          <ScalarProperty Name="Heimasíða" ColumnName="Heimasíða" />
+          <ScalarProperty Name="Mynd" ColumnName="Mynd" />
+          <ScalarProperty Name="Þjóðerni" ColumnName="Þjóðerni" />
+          <ScalarProperty Name="Fæðingardagur" ColumnName="Fæðingardagur" />
+          <ScalarProperty Name="Leitarnafn" ColumnName="Leitarnafn" />
+          <ScalarProperty Name="Félag_innan_sambands" ColumnName="Félag innan sambands" />
+          <ScalarProperty Name="Merking" ColumnName="Merking" />
+          <ScalarProperty Name="Heimili_2" ColumnName="Heimili 2" />
+          <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+          <ScalarProperty Name="Vinnusími" ColumnName="Vinnusími" />
+          <ScalarProperty Name="Heimasími" ColumnName="Heimasími" />
+          <ScalarProperty Name="Fjölskyldunúmer" ColumnName="Fjölskyldunúmer" />
+          <ScalarProperty Name="Land" ColumnName="Land" />
+          <ScalarProperty Name="Kyn" ColumnName="Kyn" />
+          <ScalarProperty Name="Félag" ColumnName="Félag" />
+          <ScalarProperty Name="Fæðingarár" ColumnName="Fæðingarár" />
+          <ScalarProperty Name="Staður" ColumnName="Staður" />
+          <ScalarProperty Name="Heimili" ColumnName="Heimili" />
+          <ScalarProperty Name="Nafn" ColumnName="Nafn" />
+          <ScalarProperty Name="Kennitala" ColumnName="Kennitala" />
+          <ScalarProperty Name="Númer" ColumnName="Númer" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Athl_CompetitorsInEvent">
+      <EntityTypeMapping TypeName="AthleticsModel.Athl_CompetitorsInEvent">
+        <MappingFragment StoreEntitySet="Athl$CompetitorsInEvent">
+          <ScalarProperty Name="StartReactionTime" ColumnName="StartReactionTime" />
+          <ScalarProperty Name="handvirkstig" ColumnName="handvirkstig" />
+          <ScalarProperty Name="PerformaceRemarks" ColumnName="PerformaceRemarks" />
+          <ScalarProperty Name="sortorder2" ColumnName="sortorder2" />
+          <ScalarProperty Name="sortorder1" ColumnName="sortorder1" />
+          <ScalarProperty Name="Unglingastig" ColumnName="Unglingastig" />
+          <ScalarProperty Name="rasnumeraskyrslu" ColumnName="rasnumeraskyrslu" />
+          <ScalarProperty Name="gestur" ColumnName="gestur" />
+          <ScalarProperty Name="qualification" ColumnName="qualification" />
+          <ScalarProperty Name="rodiundanurslitum" ColumnName="rodiundanurslitum" />
+          <ScalarProperty Name="personulegtmettexti" ColumnName="personulegtmettexti" />
+          <ScalarProperty Name="bestiaranguriartexti" ColumnName="bestiaranguriartexti" />
+          <ScalarProperty Name="personulegmet" ColumnName="personulegmet" />
+          <ScalarProperty Name="bestiaranguriar" ColumnName="bestiaranguriar" />
+          <ScalarProperty Name="nullarangur" ColumnName="nullarangur" />
+          <ScalarProperty Name="handvirkathugasemd" ColumnName="handvirkathugasemd" />
+          <ScalarProperty Name="athugasemd" ColumnName="athugasemd" />
+          <ScalarProperty Name="seria" ColumnName="seria" />
+          <ScalarProperty Name="merking6" ColumnName="merking6" />
+          <ScalarProperty Name="vindur6" ColumnName="vindur6" />
+          <ScalarProperty Name="tilraun6" ColumnName="tilraun6" />
+          <ScalarProperty Name="merking5" ColumnName="merking5" />
+          <ScalarProperty Name="vindur5" ColumnName="vindur5" />
+          <ScalarProperty Name="tilraun5" ColumnName="tilraun5" />
+          <ScalarProperty Name="merking4" ColumnName="merking4" />
+          <ScalarProperty Name="vindur4" ColumnName="vindur4" />
+          <ScalarProperty Name="tilraun4" ColumnName="tilraun4" />
+          <ScalarProperty Name="merking3" ColumnName="merking3" />
+          <ScalarProperty Name="vindur3" ColumnName="vindur3" />
+          <ScalarProperty Name="tilraun3" ColumnName="tilraun3" />
+          <ScalarProperty Name="merking2" ColumnName="merking2" />
+          <ScalarProperty Name="vindur2" ColumnName="vindur2" />
+          <ScalarProperty Name="tilraun2" ColumnName="tilraun2" />
+          <ScalarProperty Name="merking1" ColumnName="merking1" />
+          <ScalarProperty Name="vindur1" ColumnName="vindur1" />
+          <ScalarProperty Name="tilraun1" ColumnName="tilraun1" />
+          <ScalarProperty Name="IAAF_Stig" ColumnName="IAAF Stig" />
+          <ScalarProperty Name="urslitarodtexti" ColumnName="urslitarodtexti" />
+          <ScalarProperty Name="stadakeppni" ColumnName="stadakeppni" />
+          <ScalarProperty Name="stig" ColumnName="stig" />
+          <ScalarProperty Name="nanarirod" ColumnName="nanarirod" />
+          <ScalarProperty Name="samasaetiognaestiaundan" ColumnName="samasaetiognaestiaundan" />
+          <ScalarProperty Name="urslitarod" ColumnName="urslitarod" />
+          <ScalarProperty Name="thrautarstig" ColumnName="thrautarstig" />
+          <ScalarProperty Name="rafmagnstimataka" ColumnName="rafmagnstimataka" />
+          <ScalarProperty Name="arangur" ColumnName="arangur" />
+          <ScalarProperty Name="vindur" ColumnName="vindur" />
+          <ScalarProperty Name="metrar" ColumnName="metrar" />
+          <ScalarProperty Name="timi" ColumnName="timi" />
+          <ScalarProperty Name="felag" ColumnName="felag" />
+          <ScalarProperty Name="faedingarar" ColumnName="faedingarar" />
+          <ScalarProperty Name="nafn" ColumnName="nafn" />
+          <ScalarProperty Name="stokkkastrod" ColumnName="stokkkastrod" />
+          <ScalarProperty Name="ridillnumer" ColumnName="ridillnumer" />
+          <ScalarProperty Name="leitarnafn" ColumnName="leitarnafn" />
+          <ScalarProperty Name="rasnumer" ColumnName="rasnumer" />
+          <ScalarProperty Name="timigreinar" ColumnName="timigreinar" />
+          <ScalarProperty Name="dagsetninggreinar" ColumnName="dagsetninggreinar" />
+          <ScalarProperty Name="numerridilsekkinotad" ColumnName="numerridilsekkinotad" />
+          <ScalarProperty Name="ridill" ColumnName="ridill" />
+          <ScalarProperty Name="flokkur" ColumnName="flokkur" />
+          <ScalarProperty Name="kyn" ColumnName="kyn" />
+          <ScalarProperty Name="grein" ColumnName="grein" />
+          <ScalarProperty Name="lina" ColumnName="lina" />
+          <ScalarProperty Name="greinarnumer" ColumnName="greinarnumer" />
+          <ScalarProperty Name="mot" ColumnName="mot" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ReturnLastLineInEvent" FunctionName="AthleticsModel.Store.ReturnLastLineInEvent" />
+    <FunctionImportMapping FunctionImportName="CompetitionEvents" FunctionName="AthleticsModel.Store.CompetitionEvents">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.CompetitionEvents_Result">
+          <ScalarProperty Name="mot" ColumnName="mot" />
+          <ScalarProperty Name="lina" ColumnName="lina" />
+          <ScalarProperty Name="grein" ColumnName="grein" />
+          <ScalarProperty Name="kyn" ColumnName="kyn" />
+          <ScalarProperty Name="flokkur" ColumnName="flokkur" />
+          <ScalarProperty Name="ridill" ColumnName="ridill" />
+          <ScalarProperty Name="numerridils" ColumnName="numerridils" />
+          <ScalarProperty Name="dagsetning" ColumnName="dagsetning" />
+          <ScalarProperty Name="timi" ColumnName="timi" />
+          <ScalarProperty Name="heitigreinar" ColumnName="heitigreinar" />
+          <ScalarProperty Name="tegundgreinar" ColumnName="tegundgreinar" />
+          <ScalarProperty Name="rafmagnstimataka" ColumnName="rafmagnstimataka" />
+          <ScalarProperty Name="krefstvindmaelis" ColumnName="krefstvindmaelis" />
+          <ScalarProperty Name="nanaritegundargreining" ColumnName="nanaritegundargreining" />
+          <ScalarProperty Name="thrautargrein" ColumnName="thrautargrein" />
+          <ScalarProperty Name="fjoldiibrauta" ColumnName="fjoldiibrauta" />
+          <ScalarProperty Name="fjoldiumferda" ColumnName="fjoldiumferda" />
+          <ScalarProperty Name="aldurfra" ColumnName="aldurfra" />
+          <ScalarProperty Name="aldurtil" ColumnName="aldurtil" />
+          <ScalarProperty Name="stigagrein" ColumnName="stigagrein" />
+          <ScalarProperty Name="fjolditilstiga" ColumnName="fjolditilstiga" />
+          <ScalarProperty Name="stigfyrir1saeti" ColumnName="stigfyrir1saeti" />
+          <ScalarProperty Name="stigfyrir2saeti" ColumnName="stigfyrir2saeti" />
+          <ScalarProperty Name="teljagreinistigautreikningi" ColumnName="teljagreinistigautreikningi" />
+          <ScalarProperty Name="Röð_kepp__sem_fær_fyrst_stig" ColumnName="Röð kepp_ sem fær fyrst stig" />
+          <ScalarProperty Name="skraningargjald" ColumnName="skraningargjald" />
+          <ScalarProperty Name="urslitkomin" ColumnName="urslitkomin" />
+          <ScalarProperty Name="birtaiurslitum" ColumnName="birtaiurslitum" />
+          <ScalarProperty Name="stadakeppni" ColumnName="stadakeppni" />
+          <ScalarProperty Name="takngreinar" ColumnName="takngreinar" />
+          <ScalarProperty Name="rodiurslitum" ColumnName="rodiurslitum" />
+          <ScalarProperty Name="urridliaundankoma" ColumnName="urridliaundankoma" />
+          <ScalarProperty Name="hamarkfjoldikeppenda" ColumnName="hamarkfjoldikeppenda" />
+          <ScalarProperty Name="sigurvegariifyrra" ColumnName="sigurvegariifyrra" />
+          <ScalarProperty Name="arangurifyrra" ColumnName="arangurifyrra" />
+          <ScalarProperty Name="motsmetshafi" ColumnName="motsmetshafi" />
+          <ScalarProperty Name="motsmet" ColumnName="motsmet" />
+          <ScalarProperty Name="dagsetningmotsmets" ColumnName="dagsetningmotsmets" />
+          <ScalarProperty Name="stadurmotsmets" ColumnName="stadurmotsmets" />
+          <ScalarProperty Name="felagmotsmetshafa" ColumnName="felagmotsmetshafa" />
+          <ScalarProperty Name="rodiafrekaskra" ColumnName="rodiafrekaskra" />
+          <ScalarProperty Name="rodithraut" ColumnName="rodithraut" />
+          <ScalarProperty Name="tharfadradakeppendum" ColumnName="tharfadradakeppendum" />
+          <ScalarProperty Name="athugasemd" ColumnName="athugasemd" />
+          <ScalarProperty Name="athugasemdaritarablad" ColumnName="athugasemdaritarablad" />
+          <ScalarProperty Name="Númer_hlaupagreinar_f__Lynx" ColumnName="Númer hlaupagreinar f_ Lynx" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Athl_HeightsInHJandPV">
+      <EntityTypeMapping TypeName="AthleticsModel.Athl_HeightsInHJandPV">
+        <MappingFragment StoreEntitySet="Athl$HeightsInHJandPV">
+          <ScalarProperty Name="ThirdIncreaseBy" ColumnName="ThirdIncreaseBy" />
+          <ScalarProperty Name="SecondLimit" ColumnName="SecondLimit" />
+          <ScalarProperty Name="SecondIncreaseBy" ColumnName="SecondIncreaseBy" />
+          <ScalarProperty Name="FirstLimit" ColumnName="FirstLimit" />
+          <ScalarProperty Name="FirstIncreaseBy" ColumnName="FirstIncreaseBy" />
+          <ScalarProperty Name="OpeningHeight" ColumnName="OpeningHeight" />
+          <ScalarProperty Name="Unglingastig" ColumnName="Unglingastig" />
+          <ScalarProperty Name="IAAF_Stig" ColumnName="IAAF Stig" />
+          <ScalarProperty Name="Raðsvæði_3__fjöldi_falla_" ColumnName="Raðsvæði 3 (fjöldi falla)" />
+          <ScalarProperty Name="Raðsvæði_2__yfir_í_tilraun_" ColumnName="Raðsvæði 2 (yfir í tilraun)" />
+          <ScalarProperty Name="Raðsvæði_1__1000___hæð_" ColumnName="Raðsvæði 1 (1000 - hæð)" />
+          <ScalarProperty Name="C25__hæð" ColumnName="25_ hæð" />
+          <ScalarProperty Name="C24__hæð" ColumnName="24_ hæð" />
+          <ScalarProperty Name="C23__hæð" ColumnName="23_ hæð" />
+          <ScalarProperty Name="C22__hæð" ColumnName="22_ hæð" />
+          <ScalarProperty Name="C21__hæð" ColumnName="21_ hæð" />
+          <ScalarProperty Name="C20__hæð" ColumnName="20_ hæð" />
+          <ScalarProperty Name="C19__hæð" ColumnName="19_ hæð" />
+          <ScalarProperty Name="C18__hæð" ColumnName="18_ hæð" />
+          <ScalarProperty Name="C17__hæð" ColumnName="17_ hæð" />
+          <ScalarProperty Name="C16__hæð" ColumnName="16_ hæð" />
+          <ScalarProperty Name="C15__hæð" ColumnName="15_ hæð" />
+          <ScalarProperty Name="C14__hæð" ColumnName="14_ hæð" />
+          <ScalarProperty Name="C13__hæð" ColumnName="13_ hæð" />
+          <ScalarProperty Name="C12__hæð" ColumnName="12_ hæð" />
+          <ScalarProperty Name="C11__hæð" ColumnName="11_ hæð" />
+          <ScalarProperty Name="C10__hæð" ColumnName="10_ hæð" />
+          <ScalarProperty Name="C9__hæð" ColumnName="9_ hæð" />
+          <ScalarProperty Name="C8__hæð" ColumnName="8_ hæð" />
+          <ScalarProperty Name="C7__hæð" ColumnName="7_ hæð" />
+          <ScalarProperty Name="C6__hæð" ColumnName="6_ hæð" />
+          <ScalarProperty Name="C5__hæð" ColumnName="5_ hæð" />
+          <ScalarProperty Name="C4__hæð" ColumnName="4_ hæð" />
+          <ScalarProperty Name="C3__hæð" ColumnName="3_ hæð" />
+          <ScalarProperty Name="C2__hæð" ColumnName="2_ hæð" />
+          <ScalarProperty Name="C1__hæð" ColumnName="1_ hæð" />
+          <ScalarProperty Name="Sama_sæti_og_næsti_á_undan" ColumnName="Sama sæti og næsti á undan" />
+          <ScalarProperty Name="Nánari_röð" ColumnName="Nánari röð" />
+          <ScalarProperty Name="Úrslitaröð" ColumnName="Úrslitaröð" />
+          <ScalarProperty Name="Árangur" ColumnName="Árangur" />
+          <ScalarProperty Name="Rásnúmer" ColumnName="Rásnúmer" />
+          <ScalarProperty Name="Lína" ColumnName="Lína" />
+          <ScalarProperty Name="Greinarnúmer" ColumnName="Greinarnúmer" />
+          <ScalarProperty Name="Mót" ColumnName="Mót" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UpdateHeightsInHJandPV" FunctionName="AthleticsModel.Store.UpdateHeightsInHJandPV" />
+    <FunctionImportMapping FunctionImportName="UpdateWindInHeat" FunctionName="AthleticsModel.Store.UpdateWindInHeat" />
+    <FunctionImportMapping FunctionImportName="CompetitorsInEvent3" FunctionName="AthleticsModel.Store.CompetitorsInEvent">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.CompetitorsInEvent3_Result">
+          <ScalarProperty Name="mot" ColumnName="mot" />
+          <ScalarProperty Name="greinarnumer" ColumnName="greinarnumer" />
+          <ScalarProperty Name="lina" ColumnName="lina" />
+          <ScalarProperty Name="rasnumer" ColumnName="rasnumer" />
+          <ScalarProperty Name="ridillnumer" ColumnName="ridillnumer" />
+          <ScalarProperty Name="stokkkastrod" ColumnName="stokkkastrod" />
+          <ScalarProperty Name="nafn" ColumnName="nafn" />
+          <ScalarProperty Name="faedingarar" ColumnName="faedingarar" />
+          <ScalarProperty Name="felag" ColumnName="felag" />
+          <ScalarProperty Name="vindur" ColumnName="vindur" />
+          <ScalarProperty Name="arangur" ColumnName="arangur" />
+          <ScalarProperty Name="rafmagnstimataka" ColumnName="rafmagnstimataka" />
+          <ScalarProperty Name="urslitarod" ColumnName="urslitarod" />
+          <ScalarProperty Name="urslitarodtexti" ColumnName="urslitarodtexti" />
+          <ScalarProperty Name="sortorder1" ColumnName="sortorder1" />
+          <ScalarProperty Name="sortorder2" ColumnName="sortorder2" />
+          <ScalarProperty Name="samasaetiognaestiaundan" ColumnName="samasaetiognaestiaundan" />
+          <ScalarProperty Name="nanarirod" ColumnName="nanarirod" />
+          <ScalarProperty Name="stig" ColumnName="stig" />
+          <ScalarProperty Name="IAAF_Stig" ColumnName="IAAF Stig" />
+          <ScalarProperty Name="tilraun1" ColumnName="tilraun1" />
+          <ScalarProperty Name="vindur1" ColumnName="vindur1" />
+          <ScalarProperty Name="merking1" ColumnName="merking1" />
+          <ScalarProperty Name="tilraun2" ColumnName="tilraun2" />
+          <ScalarProperty Name="vindur2" ColumnName="vindur2" />
+          <ScalarProperty Name="merking2" ColumnName="merking2" />
+          <ScalarProperty Name="tilraun3" ColumnName="tilraun3" />
+          <ScalarProperty Name="vindur3" ColumnName="vindur3" />
+          <ScalarProperty Name="merking3" ColumnName="merking3" />
+          <ScalarProperty Name="tilraun4" ColumnName="tilraun4" />
+          <ScalarProperty Name="vindur4" ColumnName="vindur4" />
+          <ScalarProperty Name="merking4" ColumnName="merking4" />
+          <ScalarProperty Name="tilraun5" ColumnName="tilraun5" />
+          <ScalarProperty Name="vindur5" ColumnName="vindur5" />
+          <ScalarProperty Name="merking5" ColumnName="merking5" />
+          <ScalarProperty Name="tilraun6" ColumnName="tilraun6" />
+          <ScalarProperty Name="vindur6" ColumnName="vindur6" />
+          <ScalarProperty Name="merking6" ColumnName="merking6" />
+          <ScalarProperty Name="athugasemd" ColumnName="athugasemd" />
+          <ScalarProperty Name="bestiaranguriar" ColumnName="bestiaranguriar" />
+          <ScalarProperty Name="personulegmet" ColumnName="personulegmet" />
+          <ScalarProperty Name="bestiaranguriartexti" ColumnName="bestiaranguriartexti" />
+          <ScalarProperty Name="personulegtmettexti" ColumnName="personulegtmettexti" />
+          <ScalarProperty Name="rodiundanurslitum" ColumnName="rodiundanurslitum" />
+          <ScalarProperty Name="qualification" ColumnName="qualification" />
+          <ScalarProperty Name="gestur" ColumnName="gestur" />
+          <ScalarProperty Name="Unglingastig" ColumnName="Unglingastig" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ReturnCompetitionDates" FunctionName="AthleticsModel.Store.ReturnCompetitionDates">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.ReturnCompetitionDates_Result">
+          <ScalarProperty Name="Line" ColumnName="Line" />
+          <ScalarProperty Name="FirstDate" ColumnName="FirstDate" />
+          <ScalarProperty Name="LastDate" ColumnName="LastDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ReturnLastLineNosForHJPV" FunctionName="AthleticsModel.Store.ReturnLastLineNosForHJPV" />
+    <FunctionImportMapping FunctionImportName="ReturnIAAFPoints" FunctionName="AthleticsModel.Store.ReturnIAAFPoints" />
+    <FunctionImportMapping FunctionImportName="CheckUserIDAndPassword" FunctionName="AthleticsModel.Store.CheckUserIDAndPassword" />
+    <EntitySetMapping Name="Athl_Venues">
+      <EntityTypeMapping TypeName="AthleticsModel.Athl_Venues">
+        <MappingFragment StoreEntitySet="Athl$Venues">
+          <ScalarProperty Name="Fj__hringbrauta_langhlaup" ColumnName="Fj_ hringbrauta langhlaup" />
+          <ScalarProperty Name="Fj__hingbrauta_millivegalengd" ColumnName="Fj_ hingbrauta millivegalengd" />
+          <ScalarProperty Name="Opnunardagsetning" ColumnName="Opnunardagsetning" />
+          <ScalarProperty Name="Fjöldi_beinna_brauta" ColumnName="Fjöldi beinna brauta" />
+          <ScalarProperty Name="Fj__hringbrauta_spretthlaup" ColumnName="Fj_ hringbrauta spretthlaup" />
+          <ScalarProperty Name="Hringhlaup_á_hallandi_braut" ColumnName="Hringhlaup á hallandi braut" />
+          <ScalarProperty Name="Úti_Inni" ColumnName="Úti_Inni" />
+          <ScalarProperty Name="Staður" ColumnName="Staður" />
+          <ScalarProperty Name="Heiti" ColumnName="Heiti" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UpdateEventStatus" FunctionName="AthleticsModel.Store.UpdateEventStatus" />
+    <FunctionImportMapping FunctionImportName="ReturnCompetitionEventDates" FunctionName="AthleticsModel.Store.ReturnCompetitionEventDates" />
+    <FunctionImportMapping FunctionImportName="ReturnNoOfHeatsInEvent" FunctionName="AthleticsModel.Store.ReturnNoOfHeatsInEvent" />
+    <FunctionImportMapping FunctionImportName="SortAthletesInCompEvent" FunctionName="AthleticsModel.Store.SortAthletesInCompEvent" />
+    <FunctionImportMapping FunctionImportName="ReturnLineNoOfFirstCompetitorInHeat" FunctionName="AthleticsModel.Store.ReturnLineNoOfFirstCompetitorInHeat" />
+    <FunctionImportMapping FunctionImportName="UpdateOrderAndPointsByResults" FunctionName="AthleticsModel.Store.UpdateOrderAndPointsByResults" />
+    <FunctionImportMapping FunctionImportName="ClubsForUser" FunctionName="AthleticsModel.Store.ClubsForUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.ClubsForUser_Result">
+          <ScalarProperty Name="Club" ColumnName="Club" />
+          <ScalarProperty Name="NameOfClub" ColumnName="NameOfClub" />
+          <ScalarProperty Name="Héraðssamband" ColumnName="Héraðssamband" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CompetitorsAndRegistrationInCompetition2" FunctionName="AthleticsModel.Store.CompetitorsAndRegistrationInCompetition2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.CompetitorsAndRegistrationInCompetition2_Result">
+          <ScalarProperty Name="LineNumber" ColumnName="LineNumber" />
+          <ScalarProperty Name="BibNo" ColumnName="BibNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BirthYear" ColumnName="BirthYear" />
+          <ScalarProperty Name="BirthDateText" ColumnName="BirthDateText" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Club" ColumnName="Club" />
+          <ScalarProperty Name="AgeGroupName" ColumnName="AgeGroupName" />
+          <ScalarProperty Name="AgeGroup" ColumnName="AgeGroup" />
+          <ScalarProperty Name="NoOfEvents" ColumnName="NoOfEvents" />
+          <ScalarProperty Name="Eve01" ColumnName="Eve01" />
+          <ScalarProperty Name="Eve02" ColumnName="Eve02" />
+          <ScalarProperty Name="Eve03" ColumnName="Eve03" />
+          <ScalarProperty Name="Eve04" ColumnName="Eve04" />
+          <ScalarProperty Name="Eve05" ColumnName="Eve05" />
+          <ScalarProperty Name="Eve06" ColumnName="Eve06" />
+          <ScalarProperty Name="Eve07" ColumnName="Eve07" />
+          <ScalarProperty Name="Eve08" ColumnName="Eve08" />
+          <ScalarProperty Name="Eve09" ColumnName="Eve09" />
+          <ScalarProperty Name="Eve10" ColumnName="Eve10" />
+          <ScalarProperty Name="Eve11" ColumnName="Eve11" />
+          <ScalarProperty Name="Eve12" ColumnName="Eve12" />
+          <ScalarProperty Name="Eve13" ColumnName="Eve13" />
+          <ScalarProperty Name="Eve14" ColumnName="Eve14" />
+          <ScalarProperty Name="Eve15" ColumnName="Eve15" />
+          <ScalarProperty Name="Eve16" ColumnName="Eve16" />
+          <ScalarProperty Name="Eve17" ColumnName="Eve17" />
+          <ScalarProperty Name="Eve18" ColumnName="Eve18" />
+          <ScalarProperty Name="Eve19" ColumnName="Eve19" />
+          <ScalarProperty Name="Eve20" ColumnName="Eve20" />
+          <ScalarProperty Name="Eve21" ColumnName="Eve21" />
+          <ScalarProperty Name="Eve22" ColumnName="Eve22" />
+          <ScalarProperty Name="Eve23" ColumnName="Eve23" />
+          <ScalarProperty Name="Eve24" ColumnName="Eve24" />
+          <ScalarProperty Name="Eve25" ColumnName="Eve25" />
+          <ScalarProperty Name="Eve26" ColumnName="Eve26" />
+          <ScalarProperty Name="Eve27" ColumnName="Eve27" />
+          <ScalarProperty Name="Eve28" ColumnName="Eve28" />
+          <ScalarProperty Name="Eve29" ColumnName="Eve29" />
+          <ScalarProperty Name="Eve30" ColumnName="Eve30" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UpdateEventDateTimeAndStatus" FunctionName="AthleticsModel.Store.UpdateEventDateTimeAndStatus" />
+    <FunctionImportMapping FunctionImportName="CompetitionAgeGroupsAndEvents" FunctionName="AthleticsModel.Store.CompetitionAgeGroupsAndEvents">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.CompetitionAgeGroupsAndEvents_Result">
+          <ScalarProperty Name="AgeGr" ColumnName="AgeGr" />
+          <ScalarProperty Name="AgeGroupGender" ColumnName="AgeGroupGender" />
+          <ScalarProperty Name="AgeGroupAgeFrom" ColumnName="AgeGroupAgeFrom" />
+          <ScalarProperty Name="AgeGroupAgeTo" ColumnName="AgeGroupAgeTo" />
+          <ScalarProperty Name="AgeGroupName" ColumnName="AgeGroupName" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="AgeLineNo" ColumnName="AgeLineNo" />
+          <ScalarProperty Name="NoOfEvents" ColumnName="NoOfEvents" />
+          <ScalarProperty Name="Event01" ColumnName="Event01" />
+          <ScalarProperty Name="Event02" ColumnName="Event02" />
+          <ScalarProperty Name="Event03" ColumnName="Event03" />
+          <ScalarProperty Name="Event04" ColumnName="Event04" />
+          <ScalarProperty Name="Event05" ColumnName="Event05" />
+          <ScalarProperty Name="Event06" ColumnName="Event06" />
+          <ScalarProperty Name="Event07" ColumnName="Event07" />
+          <ScalarProperty Name="Event08" ColumnName="Event08" />
+          <ScalarProperty Name="Event09" ColumnName="Event09" />
+          <ScalarProperty Name="Event10" ColumnName="Event10" />
+          <ScalarProperty Name="Event11" ColumnName="Event11" />
+          <ScalarProperty Name="Event12" ColumnName="Event12" />
+          <ScalarProperty Name="Event13" ColumnName="Event13" />
+          <ScalarProperty Name="Event14" ColumnName="Event14" />
+          <ScalarProperty Name="Event15" ColumnName="Event15" />
+          <ScalarProperty Name="Event16" ColumnName="Event16" />
+          <ScalarProperty Name="Event17" ColumnName="Event17" />
+          <ScalarProperty Name="Event18" ColumnName="Event18" />
+          <ScalarProperty Name="Event19" ColumnName="Event19" />
+          <ScalarProperty Name="Event20" ColumnName="Event20" />
+          <ScalarProperty Name="Event21" ColumnName="Event21" />
+          <ScalarProperty Name="Event22" ColumnName="Event22" />
+          <ScalarProperty Name="Event23" ColumnName="Event23" />
+          <ScalarProperty Name="Event24" ColumnName="Event24" />
+          <ScalarProperty Name="Event25" ColumnName="Event25" />
+          <ScalarProperty Name="Event26" ColumnName="Event26" />
+          <ScalarProperty Name="Event27" ColumnName="Event27" />
+          <ScalarProperty Name="Event28" ColumnName="Event28" />
+          <ScalarProperty Name="Event29" ColumnName="Event29" />
+          <ScalarProperty Name="Event30" ColumnName="Event30" />
+          <ScalarProperty Name="EventLine01" ColumnName="EventLine01" />
+          <ScalarProperty Name="EventLine02" ColumnName="EventLine02" />
+          <ScalarProperty Name="EventLine03" ColumnName="EventLine03" />
+          <ScalarProperty Name="EventLine04" ColumnName="EventLine04" />
+          <ScalarProperty Name="EventLine05" ColumnName="EventLine05" />
+          <ScalarProperty Name="EventLine06" ColumnName="EventLine06" />
+          <ScalarProperty Name="EventLine07" ColumnName="EventLine07" />
+          <ScalarProperty Name="EventLine08" ColumnName="EventLine08" />
+          <ScalarProperty Name="EventLine09" ColumnName="EventLine09" />
+          <ScalarProperty Name="EventLine10" ColumnName="EventLine10" />
+          <ScalarProperty Name="EventLine11" ColumnName="EventLine11" />
+          <ScalarProperty Name="EventLine12" ColumnName="EventLine12" />
+          <ScalarProperty Name="EventLine13" ColumnName="EventLine13" />
+          <ScalarProperty Name="EventLine14" ColumnName="EventLine14" />
+          <ScalarProperty Name="EventLine15" ColumnName="EventLine15" />
+          <ScalarProperty Name="EventLine16" ColumnName="EventLine16" />
+          <ScalarProperty Name="EventLine17" ColumnName="EventLine17" />
+          <ScalarProperty Name="EventLine18" ColumnName="EventLine18" />
+          <ScalarProperty Name="EventLine19" ColumnName="EventLine19" />
+          <ScalarProperty Name="EventLine20" ColumnName="EventLine20" />
+          <ScalarProperty Name="EventLine21" ColumnName="EventLine21" />
+          <ScalarProperty Name="EventLine22" ColumnName="EventLine22" />
+          <ScalarProperty Name="EventLine23" ColumnName="EventLine23" />
+          <ScalarProperty Name="EventLine24" ColumnName="EventLine24" />
+          <ScalarProperty Name="EventLine25" ColumnName="EventLine25" />
+          <ScalarProperty Name="EventLine26" ColumnName="EventLine26" />
+          <ScalarProperty Name="EventLine27" ColumnName="EventLine27" />
+          <ScalarProperty Name="EventLine28" ColumnName="EventLine28" />
+          <ScalarProperty Name="EventLine29" ColumnName="EventLine29" />
+          <ScalarProperty Name="EventLine30" ColumnName="EventLine30" />
+          <ScalarProperty Name="DetailedEventType01" ColumnName="DetailedEventType01" />
+          <ScalarProperty Name="DetailedEventType02" ColumnName="DetailedEventType02" />
+          <ScalarProperty Name="DetailedEventType03" ColumnName="DetailedEventType03" />
+          <ScalarProperty Name="DetailedEventType04" ColumnName="DetailedEventType04" />
+          <ScalarProperty Name="DetailedEventType05" ColumnName="DetailedEventType05" />
+          <ScalarProperty Name="DetailedEventType06" ColumnName="DetailedEventType06" />
+          <ScalarProperty Name="DetailedEventType07" ColumnName="DetailedEventType07" />
+          <ScalarProperty Name="DetailedEventType08" ColumnName="DetailedEventType08" />
+          <ScalarProperty Name="DetailedEventType09" ColumnName="DetailedEventType09" />
+          <ScalarProperty Name="DetailedEventType10" ColumnName="DetailedEventType10" />
+          <ScalarProperty Name="DetailedEventType11" ColumnName="DetailedEventType11" />
+          <ScalarProperty Name="DetailedEventType12" ColumnName="DetailedEventType12" />
+          <ScalarProperty Name="DetailedEventType13" ColumnName="DetailedEventType13" />
+          <ScalarProperty Name="DetailedEventType14" ColumnName="DetailedEventType14" />
+          <ScalarProperty Name="DetailedEventType15" ColumnName="DetailedEventType15" />
+          <ScalarProperty Name="DetailedEventType16" ColumnName="DetailedEventType16" />
+          <ScalarProperty Name="DetailedEventType17" ColumnName="DetailedEventType17" />
+          <ScalarProperty Name="DetailedEventType18" ColumnName="DetailedEventType18" />
+          <ScalarProperty Name="DetailedEventType19" ColumnName="DetailedEventType19" />
+          <ScalarProperty Name="DetailedEventType20" ColumnName="DetailedEventType20" />
+          <ScalarProperty Name="DetailedEventType21" ColumnName="DetailedEventType21" />
+          <ScalarProperty Name="DetailedEventType22" ColumnName="DetailedEventType22" />
+          <ScalarProperty Name="DetailedEventType23" ColumnName="DetailedEventType23" />
+          <ScalarProperty Name="DetailedEventType24" ColumnName="DetailedEventType24" />
+          <ScalarProperty Name="DetailedEventType25" ColumnName="DetailedEventType25" />
+          <ScalarProperty Name="DetailedEventType26" ColumnName="DetailedEventType26" />
+          <ScalarProperty Name="DetailedEventType27" ColumnName="DetailedEventType27" />
+          <ScalarProperty Name="DetailedEventType28" ColumnName="DetailedEventType28" />
+          <ScalarProperty Name="DetailedEventType29" ColumnName="DetailedEventType29" />
+          <ScalarProperty Name="DetailedEventType30" ColumnName="DetailedEventType30" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EventsForAthlete" FunctionName="AthleticsModel.Store.EventsForAthlete">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.EventsForAthlete_Result">
+          <ScalarProperty Name="EventLine" ColumnName="EventLine" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+          <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="AgeFrom" ColumnName="AgeFrom" />
+          <ScalarProperty Name="AgeTo" ColumnName="AgeTo" />
+          <ScalarProperty Name="OrderInStatistics" ColumnName="OrderInStatistics" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="Grein" ColumnName="Grein" />
+          <ScalarProperty Name="AlreadyRegistered" ColumnName="AlreadyRegistered" />
+          <ScalarProperty Name="LineType" ColumnName="LineType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DeleteCompetitorInEvent" FunctionName="AthleticsModel.Store.DeleteCompetitorInEvent" />
+    <FunctionImportMapping FunctionImportName="CalculateMultiEventPointsFromResult" FunctionName="AthleticsModel.Store.CalculateMultiEventPointsFromResult" />
+    <FunctionImportMapping FunctionImportName="UpdCompetitorInEvent" FunctionName="AthleticsModel.Store.UpdCompetitorInEvent" />
+    <FunctionImportMapping FunctionImportName="ProcessMultiEventCompetitors" FunctionName="AthleticsModel.Store.ProcessMultiEventCompetitors" />
+    <FunctionImportMapping FunctionImportName="ReturnLineNumberOfMultiEvent" FunctionName="AthleticsModel.Store.ReturnLineNumberOfMultiEvent" />
+    <FunctionImportMapping FunctionImportName="ReturnYouthPoints" FunctionName="AthleticsModel.Store.ReturnYouthPoints" />
+    <FunctionImportMapping FunctionImportName="ReturnCompetitorsInEvent" FunctionName="AthleticsModel.Store.ReturnCompetitorsInEvent">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.ReturnCompetitorsInEvent_Result1">
+          <ScalarProperty Name="mot" ColumnName="mot" />
+          <ScalarProperty Name="greinarnumer" ColumnName="greinarnumer" />
+          <ScalarProperty Name="lina" ColumnName="lina" />
+          <ScalarProperty Name="rasnumer" ColumnName="rasnumer" />
+          <ScalarProperty Name="ridillnumer" ColumnName="ridillnumer" />
+          <ScalarProperty Name="stokkkastrod" ColumnName="stokkkastrod" />
+          <ScalarProperty Name="nafn" ColumnName="nafn" />
+          <ScalarProperty Name="faedingarar" ColumnName="faedingarar" />
+          <ScalarProperty Name="felag" ColumnName="felag" />
+          <ScalarProperty Name="vindur" ColumnName="vindur" />
+          <ScalarProperty Name="arangur" ColumnName="arangur" />
+          <ScalarProperty Name="rafmagnstimataka" ColumnName="rafmagnstimataka" />
+          <ScalarProperty Name="urslitarod" ColumnName="urslitarod" />
+          <ScalarProperty Name="urslitarodtexti" ColumnName="urslitarodtexti" />
+          <ScalarProperty Name="samasaetiognaestiaundan" ColumnName="samasaetiognaestiaundan" />
+          <ScalarProperty Name="nanarirod" ColumnName="nanarirod" />
+          <ScalarProperty Name="sortorder1" ColumnName="sortorder1" />
+          <ScalarProperty Name="sortorder2" ColumnName="sortorder2" />
+          <ScalarProperty Name="stig" ColumnName="stig" />
+          <ScalarProperty Name="IAAF_Stig" ColumnName="IAAF Stig" />
+          <ScalarProperty Name="tilraun1" ColumnName="tilraun1" />
+          <ScalarProperty Name="vindur1" ColumnName="vindur1" />
+          <ScalarProperty Name="merking1" ColumnName="merking1" />
+          <ScalarProperty Name="tilraun2" ColumnName="tilraun2" />
+          <ScalarProperty Name="vindur2" ColumnName="vindur2" />
+          <ScalarProperty Name="merking2" ColumnName="merking2" />
+          <ScalarProperty Name="tilraun3" ColumnName="tilraun3" />
+          <ScalarProperty Name="vindur3" ColumnName="vindur3" />
+          <ScalarProperty Name="merking3" ColumnName="merking3" />
+          <ScalarProperty Name="tilraun4" ColumnName="tilraun4" />
+          <ScalarProperty Name="vindur4" ColumnName="vindur4" />
+          <ScalarProperty Name="merking4" ColumnName="merking4" />
+          <ScalarProperty Name="tilraun5" ColumnName="tilraun5" />
+          <ScalarProperty Name="vindur5" ColumnName="vindur5" />
+          <ScalarProperty Name="merking5" ColumnName="merking5" />
+          <ScalarProperty Name="tilraun6" ColumnName="tilraun6" />
+          <ScalarProperty Name="vindur6" ColumnName="vindur6" />
+          <ScalarProperty Name="merking6" ColumnName="merking6" />
+          <ScalarProperty Name="athugasemd" ColumnName="athugasemd" />
+          <ScalarProperty Name="bestiaranguriar" ColumnName="bestiaranguriar" />
+          <ScalarProperty Name="personulegmet" ColumnName="personulegmet" />
+          <ScalarProperty Name="bestiaranguriartexti" ColumnName="bestiaranguriartexti" />
+          <ScalarProperty Name="personulegtmettexti" ColumnName="personulegtmettexti" />
+          <ScalarProperty Name="rodiundanurslitum" ColumnName="rodiundanurslitum" />
+          <ScalarProperty Name="qualification" ColumnName="qualification" />
+          <ScalarProperty Name="gestur" ColumnName="gestur" />
+          <ScalarProperty Name="Unglingastig" ColumnName="Unglingastig" />
+          <ScalarProperty Name="PerformaceRemarks" ColumnName="PerformaceRemarks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="IndexCompetitionVenue" FunctionName="AthleticsModel.Store.IndexCompetitionVenue" />
+    <FunctionImportMapping FunctionImportName="SelectFirst8ForFinal" FunctionName="AthleticsModel.Store.SelectFirst8ForFinal" />
+    <FunctionImportMapping FunctionImportName="ReadyForSelectFirst8ForFinal" FunctionName="AthleticsModel.Store.ReadyForSelectFirst8ForFinal" />
+    <FunctionImportMapping FunctionImportName="LastBibNo" FunctionName="AthleticsModel.Store.LastBibNo" />
+    <FunctionImportMapping FunctionImportName="EventInProgress" FunctionName="AthleticsModel.Store.EventInProgress">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.EventInProgress_Result">
+          <ScalarProperty Name="ResultOrder" ColumnName="ResultOrder" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="Performance" ColumnName="Performance" />
+          <ScalarProperty Name="BibNo" ColumnName="BibNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Club" ColumnName="Club" />
+          <ScalarProperty Name="YearOfBirth" ColumnName="YearOfBirth" />
+          <ScalarProperty Name="Series" ColumnName="Series" />
+          <ScalarProperty Name="JumpThrowOrder" ColumnName="JumpThrowOrder" />
+          <ScalarProperty Name="Marking1" ColumnName="Marking1" />
+          <ScalarProperty Name="NextInLine" ColumnName="NextInLine" />
+          <ScalarProperty Name="Waiting" ColumnName="Waiting" />
+          <ScalarProperty Name="StatusOfEvent" ColumnName="StatusOfEvent" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CompetitorInfo" FunctionName="AthleticsModel.Store.CompetitorInfo" />
+    <FunctionImportMapping FunctionImportName="CompetitorsRecords" FunctionName="AthleticsModel.Store.CompetitorsRecords">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.CompetitorsRecords_Result">
+          <ScalarProperty Name="LineType" ColumnName="LineType" />
+          <ScalarProperty Name="ActiveText" ColumnName="ActiveText" />
+          <ScalarProperty Name="AgeGroup" ColumnName="AgeGroup" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="OutdoorsOrIndoors" ColumnName="OutdoorsOrIndoors" />
+          <ScalarProperty Name="Results" ColumnName="Results" />
+          <ScalarProperty Name="AchievementDate" ColumnName="AchievementDate" />
+          <ScalarProperty Name="Venue" ColumnName="Venue" />
+          <ScalarProperty Name="Club" ColumnName="Club" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="WindReading" ColumnName="WindReading" />
+          <ScalarProperty Name="CompetitionName" ColumnName="CompetitionName" />
+          <ScalarProperty Name="CompetitionCode" ColumnName="CompetitionCode" />
+          <ScalarProperty Name="Placing" ColumnName="Placing" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertToLogFile" FunctionName="AthleticsModel.Store.InsertToLogFile" />
+    <FunctionImportMapping FunctionImportName="UpdateScoreboardStatus" FunctionName="AthleticsModel.Store.UpdateScoreboardStatus" />
+    <FunctionImportMapping FunctionImportName="ReturnCompetitionForScoreb" FunctionName="AthleticsModel.Store.ReturnCompetitionForScoreb" />
+    <FunctionImportMapping FunctionImportName="ScoreboardEventsUpdSelection" FunctionName="AthleticsModel.Store.ScoreboardEventsUpdSelection" />
+    <FunctionImportMapping FunctionImportName="TVEventsUpdSelection" FunctionName="AthleticsModel.Store.TVEventsUpdSelection" />
+    <FunctionImportMapping FunctionImportName="CompetitionIsFinalized" FunctionName="AthleticsModel.Store.CompetitionIsFinalized" />
+    <FunctionImportMapping FunctionImportName="SaveApplicationForAccess" FunctionName="AthleticsModel.Store.SaveApplicationForAccess" />
+    <FunctionImportMapping FunctionImportName="NoOfRegistrationsInEvetns" FunctionName="AthleticsModel.Store.NoOfRegistrationsInEvetns" />
+    <FunctionImportMapping FunctionImportName="ChangePassword" FunctionName="AthleticsModel.Store.ChangePassword" />
+    <FunctionImportMapping FunctionImportName="ModifyCompetitorsClub" FunctionName="AthleticsModel.Store.ModifyCompetitorsClub" />
+    <FunctionImportMapping FunctionImportName="PerfornancesForCompetitorFoundInYear" FunctionName="AthleticsModel.Store.PerfornancesForCompetitorFoundInYear" />
+    <FunctionImportMapping FunctionImportName="CanUserUpdateMeet" FunctionName="AthleticsModel.Store.CanUserUpdateMeet" />
+    <FunctionImportMapping FunctionImportName="CalculatePointsInEvent" FunctionName="AthleticsModel.Store.CalculatePointsInEvent" />
+    <FunctionImportMapping FunctionImportName="RegisterCompetitorFromNatReg" FunctionName="AthleticsModel.Store.RegisterCompetitorFromNatReg" />
+    <FunctionImportMapping FunctionImportName="MedalTable" FunctionName="AthleticsModel.Store.MedalTable">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.MedalTable_Result">
+          <ScalarProperty Name="ClubCode" ColumnName="ClubCode" />
+          <ScalarProperty Name="ClubName" ColumnName="ClubName" />
+          <ScalarProperty Name="NoOfGold" ColumnName="NoOfGold" />
+          <ScalarProperty Name="NoOfSilver" ColumnName="NoOfSilver" />
+          <ScalarProperty Name="NoOfBronze" ColumnName="NoOfBronze" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MedalWinnersPrClub" FunctionName="AthleticsModel.Store.MedalWinnersPrClub">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.MedalWinnersPrClub_Result">
+          <ScalarProperty Name="BibNo" ColumnName="BibNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Club" ColumnName="Club" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="EventLineNo" ColumnName="EventLineNo" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="Performance" ColumnName="Performance" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAccessLevel" FunctionName="AthleticsModel.Store.GetAccessLevel" />
+    <FunctionImportMapping FunctionImportName="InsertCompUpdAccess" FunctionName="AthleticsModel.Store.InsertCompUpdAccess" />
+    <FunctionImportMapping FunctionImportName="TopPerformanceByIAAFPoints" FunctionName="AthleticsModel.Store.TopPerformanceByIAAFPoints">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.TopPerformanceByIAAFPoints_Result">
+          <ScalarProperty Name="IAAF_Stig" ColumnName="IAAF Stig" />
+          <ScalarProperty Name="arangur" ColumnName="arangur" />
+          <ScalarProperty Name="nafn" ColumnName="nafn" />
+          <ScalarProperty Name="felag" ColumnName="felag" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UpdateTimesInTrackEvent" FunctionName="AthleticsModel.Store.UpdateTimesInTrackEvent" />
+    <FunctionImportMapping FunctionImportName="UpdateEventDateTimeEtc" FunctionName="AthleticsModel.Store.UpdateEventDateTimeEtc" />
+    <FunctionImportMapping FunctionImportName="PrepareToRegisterNewRelayTeam" FunctionName="AthleticsModel.Store.PrepareToRegisterNewRelayTeam">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.PrepareToRegisterNewRelayTeam_Result">
+          <ScalarProperty Name="NewBibNoOut" ColumnName="NewBibNoOut" />
+          <ScalarProperty Name="GenderOut" ColumnName="GenderOut" />
+          <ScalarProperty Name="TeamNameOut" ColumnName="TeamNameOut" />
+          <ScalarProperty Name="YearOfBirthOut" ColumnName="YearOfBirthOut" />
+          <ScalarProperty Name="LastLineNoInEvent" ColumnName="LastLineNoInEvent" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DeleteCompetitorInComp" FunctionName="AthleticsModel.Store.DeleteCompetitorInComp" />
+    <FunctionImportMapping FunctionImportName="CompetitorsInEvResultOrder" FunctionName="AthleticsModel.Store.CompetitorsInEvResultOrder">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.CompetitorsInEvResultOrder_Result">
+          <ScalarProperty Name="mot" ColumnName="mot" />
+          <ScalarProperty Name="greinarnumer" ColumnName="greinarnumer" />
+          <ScalarProperty Name="lina" ColumnName="lina" />
+          <ScalarProperty Name="rasnumer" ColumnName="rasnumer" />
+          <ScalarProperty Name="ridillnumer" ColumnName="ridillnumer" />
+          <ScalarProperty Name="stokkkastrod" ColumnName="stokkkastrod" />
+          <ScalarProperty Name="nafn" ColumnName="nafn" />
+          <ScalarProperty Name="faedingarar" ColumnName="faedingarar" />
+          <ScalarProperty Name="felag" ColumnName="felag" />
+          <ScalarProperty Name="vindur" ColumnName="vindur" />
+          <ScalarProperty Name="arangur" ColumnName="arangur" />
+          <ScalarProperty Name="rafmagnstimataka" ColumnName="rafmagnstimataka" />
+          <ScalarProperty Name="urslitarod" ColumnName="urslitarod" />
+          <ScalarProperty Name="urslitarodtexti" ColumnName="urslitarodtexti" />
+          <ScalarProperty Name="sortorder1" ColumnName="sortorder1" />
+          <ScalarProperty Name="sortorder2" ColumnName="sortorder2" />
+          <ScalarProperty Name="samasaetiognaestiaundan" ColumnName="samasaetiognaestiaundan" />
+          <ScalarProperty Name="nanarirod" ColumnName="nanarirod" />
+          <ScalarProperty Name="stig" ColumnName="stig" />
+          <ScalarProperty Name="IAAF_Stig" ColumnName="IAAF Stig" />
+          <ScalarProperty Name="tilraun1" ColumnName="tilraun1" />
+          <ScalarProperty Name="vindur1" ColumnName="vindur1" />
+          <ScalarProperty Name="merking1" ColumnName="merking1" />
+          <ScalarProperty Name="tilraun2" ColumnName="tilraun2" />
+          <ScalarProperty Name="vindur2" ColumnName="vindur2" />
+          <ScalarProperty Name="merking2" ColumnName="merking2" />
+          <ScalarProperty Name="tilraun3" ColumnName="tilraun3" />
+          <ScalarProperty Name="vindur3" ColumnName="vindur3" />
+          <ScalarProperty Name="merking3" ColumnName="merking3" />
+          <ScalarProperty Name="tilraun4" ColumnName="tilraun4" />
+          <ScalarProperty Name="vindur4" ColumnName="vindur4" />
+          <ScalarProperty Name="merking4" ColumnName="merking4" />
+          <ScalarProperty Name="tilraun5" ColumnName="tilraun5" />
+          <ScalarProperty Name="vindur5" ColumnName="vindur5" />
+          <ScalarProperty Name="merking5" ColumnName="merking5" />
+          <ScalarProperty Name="tilraun6" ColumnName="tilraun6" />
+          <ScalarProperty Name="vindur6" ColumnName="vindur6" />
+          <ScalarProperty Name="merking6" ColumnName="merking6" />
+          <ScalarProperty Name="athugasemd" ColumnName="athugasemd" />
+          <ScalarProperty Name="seria" ColumnName="seria" />
+          <ScalarProperty Name="bestiaranguriar" ColumnName="bestiaranguriar" />
+          <ScalarProperty Name="personulegmet" ColumnName="personulegmet" />
+          <ScalarProperty Name="bestiaranguriartexti" ColumnName="bestiaranguriartexti" />
+          <ScalarProperty Name="personulegtmettexti" ColumnName="personulegtmettexti" />
+          <ScalarProperty Name="rodiundanurslitum" ColumnName="rodiundanurslitum" />
+          <ScalarProperty Name="qualification" ColumnName="qualification" />
+          <ScalarProperty Name="gestur" ColumnName="gestur" />
+          <ScalarProperty Name="Unglingastig" ColumnName="Unglingastig" />
+          <ScalarProperty Name="thrautarstig" ColumnName="thrautarstig" />
+          <ScalarProperty Name="PerformaceRemarks" ColumnName="PerformaceRemarks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CompetitorIsAlreadyRegisteredInCompetition" FunctionName="AthleticsModel.Store.CompetitorIsAlreadyRegisteredInCompetition" />
+    <FunctionImportMapping FunctionImportName="CompetitorIsAlreadyRegisteredInEvent" FunctionName="AthleticsModel.Store.CompetitorIsAlreadyRegisteredInEvent" />
+    <FunctionImportMapping FunctionImportName="GetAvailableRelayRunners" FunctionName="AthleticsModel.Store.GetAvailableRelayRunners">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.GetAvailableRelayRunners_Result">
+          <ScalarProperty Name="rasnumer" ColumnName="rasnumer" />
+          <ScalarProperty Name="nafn" ColumnName="nafn" />
+          <ScalarProperty Name="felag" ColumnName="felag" />
+          <ScalarProperty Name="faedingarar" ColumnName="faedingarar" />
+          <ScalarProperty Name="aldurkeppanda" ColumnName="aldurkeppanda" />
+          <ScalarProperty Name="spretturnr" ColumnName="spretturnr" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetRelayTeamMembers" FunctionName="AthleticsModel.Store.GetRelayTeamMembers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.GetRelayTeamMembers_Result1">
+          <ScalarProperty Name="Lína" ColumnName="Lína" />
+          <ScalarProperty Name="Sprettur" ColumnName="Sprettur" />
+          <ScalarProperty Name="Félag" ColumnName="Félag" />
+          <ScalarProperty Name="Kyn" ColumnName="Kyn" />
+          <ScalarProperty Name="Rásnúmer_keppanda" ColumnName="Rásnúmer keppanda" />
+          <ScalarProperty Name="Keppandanúmer" ColumnName="Keppandanúmer" />
+          <ScalarProperty Name="Nafn_keppanda" ColumnName="Nafn keppanda" />
+          <ScalarProperty Name="YearOfBirth" ColumnName="YearOfBirth" />
+          <ScalarProperty Name="AgeOfComp" ColumnName="AgeOfComp" />
+          <ScalarProperty Name="NameOfTeam" ColumnName="NameOfTeam" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SetRunnersInRelay" FunctionName="AthleticsModel.Store.SetRunnersInRelay" />
+    <FunctionImportMapping FunctionImportName="DeleteCompetitionEvent" FunctionName="AthleticsModel.Store.DeleteCompetitionEvent" />
+    <FunctionImportMapping FunctionImportName="ToggleGuestForCompetitorInCompetition" FunctionName="AthleticsModel.Store.ToggleGuestForCompetitorInCompetition" />
+    <FunctionImportMapping FunctionImportName="ToggleGuestForCompetitorInEvent" FunctionName="AthleticsModel.Store.ToggleGuestForCompetitorInEvent" />
+    <FunctionImportMapping FunctionImportName="RetrieveRunnersFromPreviousRound" FunctionName="AthleticsModel.Store.RetrieveRunnersFromPreviousRound">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.RetrieveRunnersFromPreviousRound_Result1">
+          <ScalarProperty Name="EventLineNo" ColumnName="EventLineNo" />
+          <ScalarProperty Name="BibNo" ColumnName="BibNo" />
+          <ScalarProperty Name="TimeInHeat" ColumnName="TimeInHeat" />
+          <ScalarProperty Name="RunnersTime" ColumnName="RunnersTime" />
+          <ScalarProperty Name="ThousandsOfASec" ColumnName="ThousandsOfASec" />
+          <ScalarProperty Name="QualificationCode" ColumnName="QualificationCode" />
+          <ScalarProperty Name="FromHeatNo" ColumnName="FromHeatNo" />
+          <ScalarProperty Name="ErrCode" ColumnName="ErrCode" />
+          <ScalarProperty Name="ErrMsg" ColumnName="ErrMsg" />
+          <ScalarProperty Name="LineNoFromPrevRound" ColumnName="LineNoFromPrevRound" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UpdateCompInEvPbSb" FunctionName="AthleticsModel.Store.UpdateCompInEvPbSb" />
+    <FunctionImportMapping FunctionImportName="ReturnCompAgeFromAndAgeTo" FunctionName="AthleticsModel.Store.ReturnCompAgeFromAndAgeTo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.ReturnCompAgeFromAndAgeTo_Result">
+          <ScalarProperty Name="LineOrder" ColumnName="LineOrder" />
+          <ScalarProperty Name="AgeFromTo" ColumnName="AgeFromTo" />
+          <ScalarProperty Name="AgeFromText" ColumnName="AgeFromText" />
+          <ScalarProperty Name="AgeFromValue" ColumnName="AgeFromValue" />
+          <ScalarProperty Name="AgeToText" ColumnName="AgeToText" />
+          <ScalarProperty Name="AgeToValue" ColumnName="AgeToValue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CompResultsWithParameters" FunctionName="AthleticsModel.Store.CompResultsWithParameters">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AthleticsModel.CompResultsWithParameters_Result">
+          <ScalarProperty Name="LineType" ColumnName="LineType" />
+          <ScalarProperty Name="EventNo" ColumnName="EventNo" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="Wind" ColumnName="Wind" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Club" ColumnName="Club" />
+          <ScalarProperty Name="YearOfBirth" ColumnName="YearOfBirth" />
+          <ScalarProperty Name="Series" ColumnName="Series" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="NeedsWindMeter" ColumnName="NeedsWindMeter" />
+          <ScalarProperty Name="WindText" ColumnName="WindText" />
+          <ScalarProperty Name="EntryNo" ColumnName="EntryNo" />
+          <ScalarProperty Name="CompetitorCode" ColumnName="CompetitorCode" />
+          <ScalarProperty Name="Points" ColumnName="Points" />
+          <ScalarProperty Name="ResultOrder" ColumnName="ResultOrder" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetUserAccessToCompetition" FunctionName="AthleticsModel.Store.GetUserAccessToCompetition" />
+    <FunctionImportMapping FunctionImportName="ReturnUnglingastig" FunctionName="AthleticsModel.Store.ReturnUnglingastig" />
+    <FunctionImportMapping FunctionImportName="ReturnPersBestYearBestForEvent" FunctionName="AthleticsModel.Store.ReturnPersBestYearBestForEvent" />
+  </EntityContainerMapping>
+</Mapping>

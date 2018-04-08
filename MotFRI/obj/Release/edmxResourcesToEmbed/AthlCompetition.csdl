@@ -1,0 +1,1829 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AthleticsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="AthleticsEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Athl_Competition" EntityType="AthleticsModel.Athl_Competition" />
+    <EntitySet Name="Athl_CompetitionEvents" EntityType="AthleticsModel.Athl_CompetitionEvents" />
+    <EntitySet Name="Athl_CompetitorsInCompetition" EntityType="AthleticsModel.Athl_CompetitorsInCompetition" />
+    <FunctionImport Name="ReturnLastEventinCompLineNo" ReturnType="Collection(Int32)">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ReturnAgeGroupInfo2" ReturnType="Collection(AthleticsModel.ReturnAgeGroupInfo2_Result)">
+      <Parameter Name="AgeGroupCode" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Athl_EventsInCompetition" EntityType="AthleticsModel.Athl_EventsInCompetition" />
+    <EntitySet Name="Athl_Events" EntityType="AthleticsModel.Athl_Events" />
+    <EntitySet Name="Athl_Competitors" EntityType="AthleticsModel.Athl_Competitors" />
+    <EntitySet Name="Athl_CompetitorsInEvent" EntityType="AthleticsModel.Athl_CompetitorsInEvent" />
+    <FunctionImport Name="ReturnLastLineInEvent" ReturnType="Collection(Int32)">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ReturnPersonalBestAndYearBest">
+      <Parameter Name="CompetitorCode" Mode="In" Type="String" />
+      <Parameter Name="EventCode" Mode="In" Type="String" />
+      <Parameter Name="EventGroup" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ReturnPersonalBestAndYearBest1" ReturnType="Collection(AthleticsModel.ReturnPersonalBestAndYearBest1_Result)">
+      <Parameter Name="CompetitorCode" Mode="In" Type="String" />
+      <Parameter Name="EventCode" Mode="In" Type="String" />
+      <Parameter Name="EventGroup" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ReturnPersonalBestAndYearBest2" ReturnType="Collection(AthleticsModel.ReturnPersonalBestAndYearBest2_Result)">
+      <Parameter Name="CompetitorCode" Mode="In" Type="String" />
+      <Parameter Name="EventCode" Mode="In" Type="String" />
+      <Parameter Name="EventGroup" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ReturnPersBestYearBest">
+      <Parameter Name="CompetitorCode" Mode="In" Type="String" />
+      <Parameter Name="EventCode" Mode="In" Type="String" />
+      <Parameter Name="EventGroup" Mode="In" Type="String" />
+      <Parameter Name="PersonalBestOutdoors" Mode="InOut" Type="String" />
+      <Parameter Name="PersonalBestIndoors" Mode="InOut" Type="String" />
+      <Parameter Name="PersonalBestWind" Mode="InOut" Type="String" />
+      <Parameter Name="YearBestOutdoors" Mode="InOut" Type="String" />
+      <Parameter Name="YearBestIndoors" Mode="InOut" Type="String" />
+      <Parameter Name="YearBestWind" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CompetitorsInEvent">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventNumber" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateCompetitorInEventWithResults">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+      <Parameter Name="BibNo" Mode="In" Type="Int32" />
+      <Parameter Name="Timi" Mode="In" Type="Decimal" />
+      <Parameter Name="Metrar" Mode="In" Type="Decimal" />
+      <Parameter Name="Vindur" Mode="In" Type="Decimal" />
+      <Parameter Name="Arangur" Mode="In" Type="String" />
+      <Parameter Name="Tilr1" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind1" Mode="In" Type="Decimal" />
+      <Parameter Name="Tilr2" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind2" Mode="In" Type="Decimal" />
+      <Parameter Name="Tilr3" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind3" Mode="In" Type="Decimal" />
+      <Parameter Name="Tilr4" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind4" Mode="In" Type="Decimal" />
+      <Parameter Name="Tilr5" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind5" Mode="In" Type="Decimal" />
+      <Parameter Name="Tilr6" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind6" Mode="In" Type="Decimal" />
+      <Parameter Name="Seria" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateOrderByResults">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+      <Parameter Name="EventType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CompetitorsInEvent1">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventNumber" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CompetitionEvents" ReturnType="Collection(AthleticsModel.CompetitionEvents_Result)">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CompetitorsInEventWithElTimining">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventNumber" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateCompetitorInEvent">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+      <Parameter Name="BibNo" Mode="In" Type="Int32" />
+      <Parameter Name="Timi" Mode="In" Type="Decimal" />
+      <Parameter Name="Metrar" Mode="In" Type="Decimal" />
+      <Parameter Name="Vindur" Mode="In" Type="Decimal" />
+      <Parameter Name="Arangur" Mode="In" Type="String" />
+      <Parameter Name="Tilr1" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind1" Mode="In" Type="Decimal" />
+      <Parameter Name="Tilr2" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind2" Mode="In" Type="Decimal" />
+      <Parameter Name="Tilr3" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind3" Mode="In" Type="Decimal" />
+      <Parameter Name="Tilr4" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind4" Mode="In" Type="Decimal" />
+      <Parameter Name="Tilr5" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind5" Mode="In" Type="Decimal" />
+      <Parameter Name="Tilr6" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind6" Mode="In" Type="Decimal" />
+      <Parameter Name="Seria" Mode="In" Type="String" />
+      <Parameter Name="ElectricalTiming" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Athl_HeightsInHJandPV" EntityType="AthleticsModel.Athl_HeightsInHJandPV" />
+    <FunctionImport Name="UpdateHeightsInHJandPV">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+      <Parameter Name="LineNo" Mode="In" Type="Int32" />
+      <Parameter Name="BibNo" Mode="In" Type="Int32" />
+      <Parameter Name="ResultText" Mode="In" Type="String" />
+      <Parameter Name="ResultPlace" Mode="In" Type="Int32" />
+      <Parameter Name="CloserPlace" Mode="In" Type="Int32" />
+      <Parameter Name="SamePlaceAsPrev" Mode="In" Type="Int32" />
+      <Parameter Name="Height1" Mode="In" Type="String" />
+      <Parameter Name="Height2" Mode="In" Type="String" />
+      <Parameter Name="Height3" Mode="In" Type="String" />
+      <Parameter Name="Height4" Mode="In" Type="String" />
+      <Parameter Name="Height5" Mode="In" Type="String" />
+      <Parameter Name="Height6" Mode="In" Type="String" />
+      <Parameter Name="Height7" Mode="In" Type="String" />
+      <Parameter Name="Height8" Mode="In" Type="String" />
+      <Parameter Name="Height9" Mode="In" Type="String" />
+      <Parameter Name="Height10" Mode="In" Type="String" />
+      <Parameter Name="Height11" Mode="In" Type="String" />
+      <Parameter Name="Height12" Mode="In" Type="String" />
+      <Parameter Name="Height13" Mode="In" Type="String" />
+      <Parameter Name="Height14" Mode="In" Type="String" />
+      <Parameter Name="Height15" Mode="In" Type="String" />
+      <Parameter Name="Height16" Mode="In" Type="String" />
+      <Parameter Name="Height17" Mode="In" Type="String" />
+      <Parameter Name="Height18" Mode="In" Type="String" />
+      <Parameter Name="Height19" Mode="In" Type="String" />
+      <Parameter Name="Height20" Mode="In" Type="String" />
+      <Parameter Name="Height21" Mode="In" Type="String" />
+      <Parameter Name="Height22" Mode="In" Type="String" />
+      <Parameter Name="Height23" Mode="In" Type="String" />
+      <Parameter Name="Height24" Mode="In" Type="String" />
+      <Parameter Name="Height25" Mode="In" Type="String" />
+      <Parameter Name="SortOrder1" Mode="In" Type="Int32" />
+      <Parameter Name="SortOrder2" Mode="In" Type="Int32" />
+      <Parameter Name="SortOrder3" Mode="In" Type="Int32" />
+      <Parameter Name="IAAFPoints" Mode="In" Type="Int32" />
+      <Parameter Name="YouthPoints" Mode="In" Type="Int32" />
+      <Parameter Name="OpeningHeight" Mode="In" Type="String" />
+      <Parameter Name="FirstIncreaseBy" Mode="In" Type="String" />
+      <Parameter Name="FirstLimit" Mode="In" Type="String" />
+      <Parameter Name="SecondIncreaseBy" Mode="In" Type="String" />
+      <Parameter Name="SecondLimit" Mode="In" Type="String" />
+      <Parameter Name="ThirdIncreaseBy" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateWindInHeat">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+      <Parameter Name="HeatNo" Mode="In" Type="Int32" />
+      <Parameter Name="Wind" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="CompetitorsInEvent2">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventNumber" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetCompetitorsInEvent">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventNumber" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CompetitorsInEventInResultOrder">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventNumber" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetCompetitorsInEv">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventNumber" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetCompetitorsInEvent1">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventNumber" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetCompInEvent">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventNumber" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetCompetitorsInEvent2">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventNumber" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CompetitorsInEvent3" ReturnType="Collection(AthleticsModel.CompetitorsInEvent3_Result)">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventNumber" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ReturnCompetitionDates" ReturnType="Collection(AthleticsModel.ReturnCompetitionDates_Result)">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ReturnLastLineNosForHJPV">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+      <Parameter Name="LastLineNoOfCompetitorsInEvent" Mode="InOut" Type="Int32" />
+      <Parameter Name="LastLineNoOfHeights" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SeedAthletesInCompEvent" ReturnType="Collection(AthleticsModel.SeedAthletesInCompEvent_Result)">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+      <Parameter Name="SeedingType" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ReturnIAAFPoints">
+      <Parameter Name="EventCode" Mode="In" Type="String" />
+      <Parameter Name="GenderInt" Mode="In" Type="Int32" />
+      <Parameter Name="Flokkur" Mode="In" Type="String" />
+      <Parameter Name="OutdoorsIndorrs" Mode="In" Type="Int32" />
+      <Parameter Name="TimeResult" Mode="In" Type="Decimal" />
+      <Parameter Name="MetersResult" Mode="In" Type="Decimal" />
+      <Parameter Name="Points" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CheckUserIDAndPassword">
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Passw" Mode="In" Type="String" />
+      <Parameter Name="ReturnValue" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SortCompetitorsInEventByHeatAndLane">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Athl_Venues" EntityType="AthleticsModel.Athl_Venues" />
+    <FunctionImport Name="UpdateEventStatus">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+      <Parameter Name="NewStatus" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ReturnCompetitionEventDates" ReturnType="Collection(String)">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ReturnNoOfHeatsInEvent">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventNumber" Mode="In" Type="Int32" />
+      <Parameter Name="OutNoOfHeats" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SortAthletesInCompEvent">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+      <Parameter Name="SeedingType" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="LineNoOfFirstCompetitorInHeat">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventNumber" Mode="In" Type="Int32" />
+      <Parameter Name="HeatNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ReturnLineNoOfFirstCompetitorInHeat" ReturnType="Collection(Int32)">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventNumber" Mode="In" Type="Int32" />
+      <Parameter Name="HeatNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateOrderByResults1">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+      <Parameter Name="EventType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateOrderAndPointsByResults">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+      <Parameter Name="EventType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CompetitorsPrClubPrAgeGroupInCompetition" ReturnType="Collection(AthleticsModel.CompetitorsPrClubPrAgeGroupInCompetition_Result)">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="ClubOrUserName" Mode="In" Type="String" />
+      <Parameter Name="ThisIsAClub" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ClubsForUser" ReturnType="Collection(AthleticsModel.ClubsForUser_Result)">
+      <Parameter Name="UserLogin" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CompetitorsPrClubAgeGrInCompetition" ReturnType="Collection(AthleticsModel.CompetitorsPrClubAgeGrInCompetition_Result)">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="ClubOrUserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CompetitorsPrClubPrAgeGrInCompetition" ReturnType="Collection(AthleticsModel.CompetitorsPrClubPrAgeGrInCompetition_Result)">
+      <Parameter Name="CompCodeIn" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CompetitorsAndRegistrationInCompetition" ReturnType="Collection(AthleticsModel.CompetitorsAndRegistrationInCompetition_Result)">
+      <Parameter Name="CompCodeIn" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="AgeGroupsAndEvents" ReturnType="Collection(AthleticsModel.AgeGroupsAndEvents_Result)">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="WithRelayEvents" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CompetitorsAndRegistrationInCompetition2" ReturnType="Collection(AthleticsModel.CompetitorsAndRegistrationInCompetition2_Result)">
+      <Parameter Name="CompCodeIn" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateEventDateTimeAndStatus">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+      <Parameter Name="NewDate" Mode="In" Type="DateTime" />
+      <Parameter Name="NewTime" Mode="In" Type="DateTime" />
+      <Parameter Name="NewStatus" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AgeGroupsAndEvents1" ReturnType="Collection(AthleticsModel.AgeGroupsAndEvents1_Result)">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="WithRelayEvents" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CompetitionAgeGroupsAndEvents" ReturnType="Collection(AthleticsModel.CompetitionAgeGroupsAndEvents_Result)">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="WithRelayEvents" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="EventsForAthlete" ReturnType="Collection(AthleticsModel.EventsForAthlete_Result)">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="Gender" Mode="In" Type="Int32" />
+      <Parameter Name="Age" Mode="In" Type="Int32" />
+      <Parameter Name="BibNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteCompetitorInEvent">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+      <Parameter Name="BibNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CalculateMultiEventPointsFromResult">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+      <Parameter Name="LineNo" Mode="In" Type="Int32" />
+      <Parameter Name="ResultTimeOrMeters" Mode="In" Type="Decimal" />
+      <Parameter Name="MultiEventPoints" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdCompetitorInEvent">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+      <Parameter Name="BibNo" Mode="In" Type="Int32" />
+      <Parameter Name="Timi" Mode="In" Type="Decimal" />
+      <Parameter Name="Metrar" Mode="In" Type="Decimal" />
+      <Parameter Name="Vindur" Mode="In" Type="Decimal" />
+      <Parameter Name="Arangur" Mode="In" Type="String" />
+      <Parameter Name="Tilr1" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind1" Mode="In" Type="Decimal" />
+      <Parameter Name="Tilr2" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind2" Mode="In" Type="Decimal" />
+      <Parameter Name="Tilr3" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind3" Mode="In" Type="Decimal" />
+      <Parameter Name="Tilr4" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind4" Mode="In" Type="Decimal" />
+      <Parameter Name="Tilr5" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind5" Mode="In" Type="Decimal" />
+      <Parameter Name="Tilr6" Mode="In" Type="Decimal" />
+      <Parameter Name="Vind6" Mode="In" Type="Decimal" />
+      <Parameter Name="Seria" Mode="In" Type="String" />
+      <Parameter Name="ElectricalTiming" Mode="In" Type="Int32" />
+      <Parameter Name="Merk1" Mode="In" Type="Int32" />
+      <Parameter Name="Merk2" Mode="In" Type="Int32" />
+      <Parameter Name="Merk3" Mode="In" Type="Int32" />
+      <Parameter Name="Merk4" Mode="In" Type="Int32" />
+      <Parameter Name="Merk5" Mode="In" Type="Int32" />
+      <Parameter Name="Merk6" Mode="In" Type="Int32" />
+      <Parameter Name="Sortorder1" Mode="In" Type="Decimal" />
+      <Parameter Name="Sortorder2" Mode="In" Type="Decimal" />
+      <Parameter Name="NanariRod" Mode="In" Type="Int32" />
+      <Parameter Name="UrslitarodTexti" Mode="In" Type="String" />
+      <Parameter Name="SamaSaetiOgNastiAUndan" Mode="In" Type="Int32" />
+      <Parameter Name="Athugasemd" Mode="In" Type="String" />
+      <Parameter Name="HeatNo" Mode="In" Type="Int32" />
+      <Parameter Name="LaneOrOrder" Mode="In" Type="Int32" />
+      <Parameter Name="IAAFPts" Mode="In" Type="Int32" />
+      <Parameter Name="MultiEventPoints" Mode="In" Type="Int32" />
+      <Parameter Name="YouthPoints" Mode="In" Type="Int32" />
+      <Parameter Name="PerformanceRemarks" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CompetitorsInEventInResultOrder1" ReturnType="Collection(AthleticsModel.CompetitorsInEventInResultOrder1_Result)">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventNumber" Mode="In" Type="Int32" />
+      <Parameter Name="HeatNumberFilter" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ProcessMultiEventCompetitors">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ReturnLineNumberOfMultiEvent">
+      <Parameter Name="CompCode" Mode="In" Type="String" />
+      <Parameter Name="EventLineNo" Mode="In" Type="Int32" />
+      <Parameter Name="LineNoOfMultiEvent" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ReturnYouthPoints">
+      <Parameter Name="EventCode" Mode="In" Type="String" />
+      <Parameter Name="Gender" Mode="In" Type="Int32" />
+      <Parameter Name="Flokkur" Mode="In" Type="String" />
+      <Parameter Name="OutOrIndoors" Mode="In" Type="Int32" />
+      <Parameter Name="PerformanceText" Mode="In" Type="String" />
+      <Parameter Name="CompetitorsAge" Mode="In" Type="Int32" />
+      <Parameter Name="ElectricalTiming" Mode="In" Type="Int32" />
+      <Parameter Name="PointsOut" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ReturnCompetitorsInEvent" ReturnType="Collection(AthleticsModel.ReturnCompetitorsInEvent_Result1)">
+      <Parameter Name="CompetitionCode" Mode="In" Type="String" />
+      <Parameter Name="EventNumber" Mode="In" Type="Int32" />
+      <Parameter Name="HeatFilter" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Athl_Competition">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Location" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Date2" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Date3" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Organizer" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Director" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Judge" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="OutdoorsOrIndoors" Type="Int32" Nullable="false" />
+    <Property Name="CompetitonType" Type="Int32" Nullable="false" />
+    <Property Name="fjolditilstiga" Type="Int32" Nullable="false" />
+    <Property Name="stigfyrir1saeti" Type="Int32" Nullable="false" />
+    <Property Name="stigfyrir2saeti" Type="Int32" Nullable="false" />
+    <Property Name="allirfastig" Type="Byte" Nullable="false" />
+    <Property Name="tegundstigakeppni" Type="Int32" Nullable="false" />
+    <Property Name="fjoldibrauta" Type="Int32" Nullable="false" />
+    <Property Name="skraningargjaldprgrein" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="undirskriftgjaldkera" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="rafmagnstimataka" Type="Byte" Nullable="false" />
+    <Property Name="heitiiafrekaskra" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="fjoldiumferdaitaeknigreinum" Type="Int32" Nullable="false" />
+    <Property Name="staðurgreinainnanbæjarfélags" Type="Byte" Nullable="false" />
+    <Property Name="dagsetning4" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Tími" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Skráningargjld_f__boðhlaup" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="vantardagogmanud" Type="Byte" Nullable="false" />
+    <Property Name="lengdikm" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="systurhlaup1" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="systurhlaup2" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="systurhlaup3" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="hlaupmotifyrra" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="vidbotvtimatoku1" Type="Int32" Nullable="false" />
+    <Property Name="greiniafrekaskra" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="bokadiafrekaskra" Type="Byte" Nullable="false" />
+    <Property Name="vidbotvtimatoku" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="endanlegurslitskrad" Type="Byte" Nullable="false" />
+    <Property Name="raesitimi" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="synaathugasemd" Type="Byte" Nullable="false" />
+    <Property Name="oldungaflokkar" Type="Byte" Nullable="false" />
+    <Property Name="tungumal" Type="Int32" Nullable="false" />
+    <Property Name="synafelag" Type="Byte" Nullable="false" />
+    <Property Name="synaheitisveitar" Type="Byte" Nullable="false" />
+    <Property Name="taknhlaupsvidinnlestur" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ensktheitiamoti" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="heitihtmlsidu" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="aldursflokkamot" Type="Byte" Nullable="false" />
+    <Property Name="makeppauppfyrirsig" Type="Byte" Nullable="false" />
+    <Property Name="ritarablodmedislmeti" Type="Byte" Nullable="false" />
+    <Property Name="synaland" Type="Byte" Nullable="false" />
+    <Property Name="athugasemdaurslitabladi" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Reikna_unglingastig" Type="Byte" Nullable="false" />
+    <Property Name="dagssídastuppfaert" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="timisídastuppfaert" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="bodhlaupmedmismsprettum" Type="Byte" Nullable="false" />
+    <Property Name="textividgesti" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="synanettotima" Type="Byte" Nullable="false" />
+    <Property Name="greiniafrekaskraflogutimi" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="notafelagafkeppendaspjaldi" Type="Byte" Nullable="false" />
+    <Property Name="lokamotivafrekaskrar" Type="Byte" Nullable="false" />
+    <Property Name="landistadfelags" Type="Byte" Nullable="false" />
+    <Property Name="ekkibirtaiafrekaskra" Type="Byte" Nullable="false" />
+    <Property Name="slodaurslitmots" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="synamillitima1" Type="Byte" Nullable="false" />
+    <Property Name="synamillitima2" Type="Byte" Nullable="false" />
+    <Property Name="heitialista" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="keppnisvollur" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="floguhlaup" Type="Byte" Nullable="false" />
+    <Property Name="nanaritegund" Type="Int32" Nullable="false" />
+    <Property Name="hlaupaseria" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="flokkurhlaups" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="tegundmots" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="synamillitima3" Type="Byte" Nullable="false" />
+    <Property Name="teljarialltaf1" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Stofna_nýjan_v_innles_á_millit" Type="Byte" Nullable="false" />
+    <Property Name="Millitímar_teknir_eftir" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Nota_aðeins_ársbesta_við_röðun" Type="Byte" Nullable="false" />
+    <Property Name="Tímabil_ársbesta_frá_mótsdags" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="Reikna_IAAF_stig" Type="Byte" Nullable="false" />
+    <Property Name="Má_prenta_úrslit_frá_Scheduler" Type="Byte" Nullable="false" />
+    <Property Name="synamillitima4" Type="Byte" Nullable="false" />
+    <Property Name="synamillitima5" Type="Byte" Nullable="false" />
+    <Property Name="Með_rásnúmeri" Type="Byte" Nullable="false" />
+    <Property Name="Sleppa_í_afhendingu_rásnúmera" Type="Byte" Nullable="false" />
+    <Property Type="Decimal" Name="Skráningargj__yngri_en_18_ára" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="Skráningargj__f_boðhl_y_18_ára" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="CompetitorsMinimumAge" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Athl_CompetitionEvents">
+    <Key>
+      <PropertyRef Name="mot" />
+      <PropertyRef Name="lina" />
+    </Key>
+    <Property Type="Binary" Name="timestamp" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="String" Name="mot" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="lina" Nullable="false" />
+    <Property Type="String" Name="grein" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="kyn" Nullable="false" />
+    <Property Type="String" Name="flokkur" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ridill" Nullable="false" />
+    <Property Type="Int32" Name="numerridils" Nullable="false" />
+    <Property Type="DateTime" Name="dagsetning" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="timi" Nullable="false" Precision="3" />
+    <Property Type="String" Name="stadur" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="nafnakall" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="timi2ridils" Nullable="false" Precision="3" />
+    <Property Type="String" Name="heitigreinar" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ensktheitigreinar" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="tegundgreinar" Nullable="false" />
+    <Property Type="Byte" Name="rafmagnstimataka" Nullable="false" />
+    <Property Type="Byte" Name="krefstvindmaelis" Nullable="false" />
+    <Property Type="Int32" Name="nanaritegundargreining" Nullable="false" />
+    <Property Type="Byte" Name="thrautargrein" Nullable="false" />
+    <Property Type="Byte" Name="Sería_með_stigum_í_þrautargr_" Nullable="false" />
+    <Property Type="Int32" Name="fjoldiibrauta" Nullable="false" />
+    <Property Type="Int32" Name="fjoldiumferda" Nullable="false" />
+    <Property Type="Int32" Name="aldurfra" Nullable="false" />
+    <Property Type="Int32" Name="aldurtil" Nullable="false" />
+    <Property Type="Byte" Name="stigagrein" Nullable="false" />
+    <Property Type="Int32" Name="fjolditilstiga" Nullable="false" />
+    <Property Type="Int32" Name="stigfyrir1saeti" Nullable="false" />
+    <Property Type="Int32" Name="stigfyrir2saeti" Nullable="false" />
+    <Property Type="Byte" Name="handvirkstigaskraning" Nullable="false" />
+    <Property Type="Byte" Name="teljagreinistigautreikningi" Nullable="false" />
+    <Property Type="Int32" Name="Röð_kepp__sem_fær_fyrst_stig" Nullable="false" />
+    <Property Type="Decimal" Name="skraningargjald" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Byte" Name="urslitkomin" Nullable="false" />
+    <Property Type="Byte" Name="birtaiurslitum" Nullable="false" />
+    <Property Type="Int32" Name="stadakeppni" Nullable="false" />
+    <Property Type="String" Name="takngreinar" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="rodiurslitum" Nullable="false" />
+    <Property Type="Int32" Name="urridliaundankoma" Nullable="false" />
+    <Property Type="Int32" Name="hamarkfjoldikeppenda" Nullable="false" />
+    <Property Type="String" Name="sigurvegariifyrra" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="arangurifyrra" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="motsmetshafi" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="motsmet" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dagsetningmotsmets" Nullable="false" Precision="3" />
+    <Property Type="String" Name="stadurmotsmets" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="felagmotsmetshafa" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="rodiafrekaskra" Nullable="false" />
+    <Property Type="Int32" Name="rodithraut" Nullable="false" />
+    <Property Type="String" Name="motsmetshafi2" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="motsmet2" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="dagsetningmotsmets2" Nullable="false" Precision="3" />
+    <Property Type="String" Name="stadurmotsmets2" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="felagmotsmetshafa2" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="tharfadradakeppendum" Nullable="false" />
+    <Property Type="String" Name="athugasemd" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="athugasemdaritarablad" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="heitihtmlskrar" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="htmlskramyndudthann" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="htmlskramyndudkl" Nullable="false" Precision="3" />
+    <Property Type="String" Name="eventnamefisi" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Númer_hlaupagreinar_f__Lynx" Nullable="false" />
+    <Property Type="Int32" Name="tilkynnaurslit" Nullable="false" />
+    <Property Type="Int32" Name="tilkynnaverdlaunaafhendingu" Nullable="false" />
+    <Property Type="Byte" Name="ekkiprentaritarablod" Nullable="false" />
+    <Property Type="String" Name="Innlesið_heiti_greinar" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Val_fyrir_LedStudio" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Athl_CompetitorsInCompetition">
+    <Key>
+      <PropertyRef Name="mot" />
+      <PropertyRef Name="rasnumer" />
+    </Key>
+    <Property Type="Binary" Name="timestamp" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="String" Name="mot" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="rasnumer" Nullable="false" />
+    <Property Type="String" Name="keppendanumer" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="nafn" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="felag" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="felaginnansambands" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="kyn" Nullable="false" />
+    <Property Type="String" Name="kennitala" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="faedingardagur" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="faedingarar" Nullable="false" />
+    <Property Type="Int32" Name="aldurkeppanda" Nullable="false" />
+    <Property Type="Int32" Name="aldursflokkur" Nullable="false" />
+    <Property Type="String" Name="leitarnafn" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="land" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="keppnisflokkurihlaupi" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="timinumeriskur" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="String" Name="timi" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="rodimark" Nullable="false" />
+    <Property Type="Int32" Name="rodiflokki" Nullable="false" />
+    <Property Type="String" Name="heitisveitar" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="ogreittthatttokugjald" Nullable="false" />
+    <Property Type="Int32" Name="skraning" Nullable="false" />
+    <Property Type="String" Name="vegalengd" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="keppnisflokkur" Nullable="false" />
+    <Property Type="Int32" Name="skogerd" Nullable="false" />
+    <Property Type="Int32" Name="staerdtbols" Nullable="false" />
+    <Property Type="String" Name="athugasemd" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="numerflogu" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="starttimiklst" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="lokatimiklst" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="nettotimi" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="kaupaedaleigjaflogu" Nullable="false" />
+    <Property Type="String" Name="bruttotimi" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="bodhlaupssveit" Nullable="false" />
+    <Property Type="Byte" Name="fyrirlidi" Nullable="false" />
+    <Property Type="String" Name="millitimi1klst" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="millitimi1brutto" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="millitimi1netto" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="millitimi2klst" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="millitimi2brutto" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="millitimi2netto" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="byssutimihlaupara" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="millitimi3klst" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="millitimi3brutto" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="millitimi3netto" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="fradrvmargrarashopa" Nullable="false" />
+    <Property Type="String" Name="millitimi4klst" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="millitimi4brutto" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="millitimi4netto" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="millitimi5klst" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="millitimi5brutto" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="millitimi5netto" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="millitimi6klst" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="millitimi6brutto" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="millitimi6netto" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="rasnumeraskyrslu" Nullable="false" />
+    <Property Type="String" Name="wrkheimili" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wrkstadur" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="vantarbol" Nullable="false" />
+    <Property Type="Byte" Name="gestur" Nullable="false" />
+    <Property Type="DateTime" Name="skraningardags" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="skraningartimi" Nullable="false" Precision="3" />
+    <Property Type="String" Name="skradaf" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wrkemail" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="flokkurhlaups" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="StaerdBolsTexti" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="Með_medalíu" Nullable="false" />
+    <Property Type="Int32" Name="numergodgerdafelags" Nullable="false" />
+    <Property Type="String" Name="numervaraflogu" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wrkheimilifangland" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="idegauserid" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="Má_senda_e_mail" Nullable="false" />
+    <Property Type="Byte" Name="Netskráning" Nullable="false" />
+    <Property Type="String" Name="Innlesið_nafn" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Innlesið_fæðingarár" Nullable="false" />
+    <Property Type="String" Name="Innlesið_félag" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Úthlutað_rásnúmer" Nullable="false" />
+    <Property Type="DateTime" Name="Skráningardags__rásnúmers" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="Skráningartími_rásnúmers" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Skráð_í_vél" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Skipta_yfir_í_vegalengd" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wrkSimi" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wrkFarsimi" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Fyrirtæki" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="wrkÞjóðerni" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="greinnumer" Nullable="false" />
+    <Property Type="Int32" Name="rodinnangreinar" Nullable="false" />
+    <Property Name="Í_hjólastól" Type="Byte" Nullable="false" />
+    <Property Name="Announcer_Remarks" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Finish_Line_Description" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="ComplexType1">
+    <Property Type="String" Name="Tákn" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="Kyn" Nullable="false" />
+    <Property Type="Int32" Name="Aldur_frá" Nullable="false" />
+    <Property Type="Int32" Name="Aldur_Til" Nullable="false" />
+    <Property Type="String" Name="Heiti" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Þágufallsheiti" Nullable="false" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="ReturnAgeGroupInfo_Result">
+    <Property Type="String" Name="Tákn" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="Kyn" Nullable="false" />
+    <Property Type="Int32" Name="Aldur_frá" Nullable="false" />
+    <Property Type="Int32" Name="Aldur_Til" Nullable="false" />
+    <Property Type="String" Name="Heiti" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Þágufallsheiti" Nullable="false" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="ReturnAgeGroupInfo2_Result">
+    <Property Type="String" Name="Tákn" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="Kyn" Nullable="false" />
+    <Property Type="Int32" Name="Aldur_frá" Nullable="false" />
+    <Property Type="Int32" Name="Aldur_Til" Nullable="false" />
+    <Property Type="String" Name="Heiti" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Þágufallsheiti" Nullable="false" MaxLength="30" />
+  </ComplexType>
+  <EntityType Name="Athl_EventsInCompetition">
+    <Key>
+      <PropertyRef Name="mot" />
+      <PropertyRef Name="greinnumer" />
+    </Key>
+    <Property Type="Binary" Name="timestamp" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="String" Name="mot" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="greinnumer" Nullable="false" />
+    <Property Type="String" Name="grein" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="kyn" Nullable="false" />
+    <Property Type="String" Name="flokkur" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="utiinni" Nullable="false" />
+    <Property Type="String" Name="heitigreinar" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="yngstikeppandi" Nullable="false" />
+    <Property Type="Int32" Name="elstikeppandi" Nullable="false" />
+    <Property Type="String" Name="keppnisflokkur" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="rodiafrekaskra" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Int32" Name="ridilledaurslit" Nullable="false" />
+    <Property Type="DateTime" Name="dagsetninggreinar" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ensktheitigreinar" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="aldursfloldunga" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="stadur" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="timi" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="Dagsetning_og_tími" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Athl_Events">
+    <Key>
+      <PropertyRef Name="Grein" />
+      <PropertyRef Name="Kyn" />
+      <PropertyRef Name="Flokkur" />
+      <PropertyRef Name="Úti_Inni" />
+    </Key>
+    <Property Type="Binary" Name="timestamp" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="String" Name="Grein" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Kyn" Nullable="false" />
+    <Property Type="String" Name="Flokkur" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Úti_Inni" Nullable="false" />
+    <Property Type="Int32" Name="Tegund_greinar" Nullable="false" />
+    <Property Type="Int32" Name="Nánari_tegundargreining" Nullable="false" />
+    <Property Type="Int32" Name="Fjöldi_í_boðhlaupssveit" Nullable="false" />
+    <Property Type="Byte" Name="Krefst_vindmælis" Nullable="false" />
+    <Property Type="Decimal" Name="Mesti_löglegi_vindur" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="Þyngd_kastáhalds" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="Hæð_grinda" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="Viðbót_v__handtímatöku" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="Röð_í_afrekaskrá" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="String" Name="Heiti" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Leitarheiti" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Eining" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="Í_venjulegri_afrekaskrá" Nullable="false" />
+    <Property Type="String" Name="Enskt_heiti_greinar" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Enskt_einingarheiti" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Stigaútreikningur___Reitur_A" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="Stigaútreikningur___Reitur_B" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="Stigaútreikningur___Reitur_C" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Byte" Name="Tveggja_daga_þraut" Nullable="false" />
+    <Property Type="Byte" Name="Sýna_handtímatöku_sér" Nullable="false" />
+    <Property Type="String" Name="Besti_tími_hlaups" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Hámarkgildi_tæknigreinar" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Greinahópur" Nullable="false" />
+    <Property Type="String" Name="Þrautargrein_1" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Þrautargrein_2" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Þrautargrein_3" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Þrautargrein_4" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Þrautargrein_5" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Þrautargrein_6" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Þrautargrein_7" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Þrautargrein_8" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Þrautargrein_9" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Þrautargrein_10" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="Skrá_Íslandsmet" Nullable="false" />
+    <Property Type="Int32" Name="Röð_í_þraut" Nullable="false" />
+    <Property Type="Byte" Name="Sleppa_í_afrekaskrá" Nullable="false" />
+    <Property Type="Int32" Name="Aldur_frá__fyrir_2011_" Nullable="false" />
+    <Property Type="Int32" Name="Aldur_til__fyrir_2011_" Nullable="false" />
+    <Property Type="String" Name="Bókarmerki" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Greinarheiti_í_kerfi_Breiðabli" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Dagsetningartakmörkun" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Vegal__götuhlaups_í_km" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="String" Name="Aldurflokkasía_öldunga" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="Stigagrein_skv__IAAF" Nullable="false" />
+    <Property Type="Int32" Name="Lengd_hlaups_í_metrum" Nullable="false" />
+    <Property Type="Int32" Name="Teg__hlaups_v__fj__brauta" Nullable="false" />
+    <Property Type="String" Name="Ensk_skammstöfun_greinar" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Tákn_Greinar" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Mælieining" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Aldurssía" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Aldur_frá" Nullable="false" />
+    <Property Type="Int32" Name="Aldur_til" Nullable="false" />
+    <Property Type="String" Name="EventCode" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Samsettur_lykill" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Spretthlaup_á_beinni_braut" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Athl_Competitors">
+    <Key>
+      <PropertyRef Name="Númer" />
+    </Key>
+    <Property Name="timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Númer" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Kennitala" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Nafn" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="Heimili" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Staður" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fæðingarár" Type="Int32" Nullable="false" />
+    <Property Name="Félag" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Kyn" Type="Int32" Nullable="false" />
+    <Property Name="Land" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Fjölskyldunúmer" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Heimasími" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Vinnusími" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="E_Mail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Heimili_2" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Merking" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Félag_innan_sambands" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Leitarnafn" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="Fæðingardagur" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Þjóðerni" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Mynd" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Heimasíða" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Númer_flögu" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Auðkenni_Idega" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Með_Sömu_Kennitölu" Type="Byte" Nullable="false" />
+    <Property Name="Dags_síðast_uppfært" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Tími_síðast_uppfært" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Annað_nafn" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Sleppa_í_afrekaskrá" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Athl_CompetitorsInEvent">
+    <Key>
+      <PropertyRef Name="mot" />
+      <PropertyRef Name="greinarnumer" />
+      <PropertyRef Name="lina" />
+    </Key>
+    <Property Name="timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="mot" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="greinarnumer" Type="Int32" Nullable="false" />
+    <Property Name="lina" Type="Int32" Nullable="false" />
+    <Property Name="grein" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="kyn" Type="Int32" Nullable="false" />
+    <Property Name="flokkur" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ridill" Type="Int32" Nullable="false" />
+    <Property Name="numerridilsekkinotad" Type="Int32" Nullable="false" />
+    <Property Name="dagsetninggreinar" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="timigreinar" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="rasnumer" Type="Int32" Nullable="false" />
+    <Property Name="leitarnafn" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ridillnumer" Type="Int32" Nullable="false" />
+    <Property Name="stokkkastrod" Type="Int32" Nullable="false" />
+    <Property Name="nafn" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="faedingarar" Type="Int32" Nullable="false" />
+    <Property Name="felag" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="timi" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="metrar" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="vindur" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="arangur" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="rafmagnstimataka" Type="Byte" Nullable="false" />
+    <Property Name="thrautarstig" Type="Int32" Nullable="false" />
+    <Property Name="urslitarod" Type="Int32" Nullable="false" />
+    <Property Name="samasaetiognaestiaundan" Type="Byte" Nullable="false" />
+    <Property Name="nanarirod" Type="Int32" Nullable="false" />
+    <Property Name="stig" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="stadakeppni" Type="Int32" Nullable="false" />
+    <Property Name="urslitarodtexti" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="IAAF_Stig" Type="Int32" Nullable="false" />
+    <Property Name="tilraun1" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="vindur1" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="merking1" Type="Int32" Nullable="false" />
+    <Property Name="tilraun2" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="vindur2" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="merking2" Type="Int32" Nullable="false" />
+    <Property Name="tilraun3" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="vindur3" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="merking3" Type="Int32" Nullable="false" />
+    <Property Name="tilraun4" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="vindur4" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="merking4" Type="Int32" Nullable="false" />
+    <Property Name="tilraun5" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="vindur5" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="merking5" Type="Int32" Nullable="false" />
+    <Property Name="tilraun6" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="vindur6" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="merking6" Type="Int32" Nullable="false" />
+    <Property Name="seria" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="athugasemd" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="handvirkathugasemd" Type="Byte" Nullable="false" />
+    <Property Name="nullarangur" Type="Byte" Nullable="false" />
+    <Property Name="bestiaranguriar" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="personulegmet" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="bestiaranguriartexti" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="personulegtmettexti" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="rodiundanurslitum" Type="Int32" Nullable="false" />
+    <Property Name="qualification" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="gestur" Type="Byte" Nullable="false" />
+    <Property Name="handvirkthrautarstig" Type="Byte" Nullable="false" />
+    <Property Name="rasnumeraskyrslu" Type="Int32" Nullable="false" />
+    <Property Name="Unglingastig" Type="Int32" Nullable="false" />
+    <Property Name="sortorder1" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="sortorder2" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="String" Name="PerformaceRemarks" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="ReturnPersonalBestAndYearBest1_Result">
+    <Property Type="String" Name="PersonalBestOutdoors" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PersonalBestindoors" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PersonalBestWind" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="YearBestOutdoors" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="YearBestIndoors" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="YearBestWind" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="ReturnPersonalBestAndYearBest2_Result">
+    <Property Type="String" Name="PersonalBestOutdoors" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PersonalBestindoors" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PersonalBestWind" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="YearBestOutdoors" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="YearBestIndoors" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="YearBestWind" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="CompetitionEvents_Result">
+    <Property Type="String" Name="mot" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="lina" Nullable="false" />
+    <Property Type="String" Name="grein" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="kyn" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="flokkur" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="ridill" Nullable="true" MaxLength="11" />
+    <Property Type="Int32" Name="numerridils" Nullable="false" />
+    <Property Type="String" Name="dagsetning" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="timi" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="heitigreinar" Nullable="false" MaxLength="80" />
+    <Property Type="String" Name="tegundgreinar" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="rafmagnstimataka" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="krefstvindmaelis" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="nanaritegundargreining" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="thrautargrein" Nullable="false" MaxLength="2" />
+    <Property Type="Int32" Name="fjoldiibrauta" Nullable="false" />
+    <Property Type="Int32" Name="fjoldiumferda" Nullable="false" />
+    <Property Type="Int32" Name="aldurfra" Nullable="false" />
+    <Property Type="Int32" Name="aldurtil" Nullable="false" />
+    <Property Type="String" Name="stigagrein" Nullable="false" MaxLength="2" />
+    <Property Type="Int32" Name="fjolditilstiga" Nullable="false" />
+    <Property Type="Int32" Name="stigfyrir1saeti" Nullable="false" />
+    <Property Type="Int32" Name="stigfyrir2saeti" Nullable="false" />
+    <Property Type="String" Name="teljagreinistigautreikningi" Nullable="false" MaxLength="2" />
+    <Property Type="Int32" Name="Röð_kepp__sem_fær_fyrst_stig" Nullable="false" />
+    <Property Type="Decimal" Name="skraningargjald" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="String" Name="urslitkomin" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="birtaiurslitum" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="stadakeppni" Nullable="false" MaxLength="12" />
+    <Property Type="String" Name="takngreinar" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="rodiurslitum" Nullable="false" />
+    <Property Type="Int32" Name="urridliaundankoma" Nullable="false" />
+    <Property Type="Int32" Name="hamarkfjoldikeppenda" Nullable="false" />
+    <Property Type="String" Name="sigurvegariifyrra" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="arangurifyrra" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="motsmetshafi" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="motsmet" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="dagsetningmotsmets" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="stadurmotsmets" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="felagmotsmetshafa" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="rodiafrekaskra" Nullable="false" />
+    <Property Type="Int32" Name="rodithraut" Nullable="false" />
+    <Property Type="String" Name="tharfadradakeppendum" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="athugasemd" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="athugasemdaritarablad" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Númer_hlaupagreinar_f__Lynx" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="Athl_HeightsInHJandPV">
+    <Key>
+      <PropertyRef Name="Mót" />
+      <PropertyRef Name="Greinarnúmer" />
+      <PropertyRef Name="Lína" />
+    </Key>
+    <Property Name="timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Mót" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Greinarnúmer" Type="Int32" Nullable="false" />
+    <Property Name="Lína" Type="Int32" Nullable="false" />
+    <Property Name="Rásnúmer" Type="Int32" Nullable="false" />
+    <Property Name="Árangur" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Úrslitaröð" Type="Int32" Nullable="false" />
+    <Property Name="Nánari_röð" Type="Int32" Nullable="false" />
+    <Property Name="Sama_sæti_og_næsti_á_undan" Type="Byte" Nullable="false" />
+    <Property Name="C1__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C2__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C3__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C4__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C5__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C6__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C7__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C8__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C9__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C10__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C11__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C12__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C13__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C14__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C15__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C16__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C17__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C18__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C19__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C20__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C21__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C22__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C23__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C24__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="C25__hæð" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Raðsvæði_1__1000___hæð_" Type="Int32" Nullable="false" />
+    <Property Name="Raðsvæði_2__yfir_í_tilraun_" Type="Int32" Nullable="false" />
+    <Property Name="Raðsvæði_3__fjöldi_falla_" Type="Int32" Nullable="false" />
+    <Property Name="IAAF_Stig" Type="Int32" Nullable="false" />
+    <Property Name="Unglingastig" Type="Int32" Nullable="false" />
+    <Property Name="OpeningHeight" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FirstIncreaseBy" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FirstLimit" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SecondIncreaseBy" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SecondLimit" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ThirdIncreaseBy" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="ReturnCompetitorsInEvent_Result">
+    <Property Type="String" Name="mot" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="greinarnumer" Nullable="false" />
+    <Property Type="Int32" Name="lina" Nullable="false" />
+    <Property Type="Int32" Name="rasnumer" Nullable="false" />
+    <Property Type="Int32" Name="ridillnumer" Nullable="false" />
+    <Property Type="Int32" Name="stokkkastrod" Nullable="false" />
+    <Property Type="String" Name="nafn" Nullable="false" MaxLength="35" />
+    <Property Type="Int32" Name="faedingarar" Nullable="false" />
+    <Property Type="String" Name="felag" Nullable="false" MaxLength="10" />
+    <Property Type="Decimal" Name="vindur" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="String" Name="arangur" Nullable="false" MaxLength="10" />
+    <Property Type="Byte" Name="rafmagnstimataka" Nullable="false" />
+    <Property Type="Int32" Name="urslitarod" Nullable="false" />
+    <Property Type="String" Name="urslitarodtexti" Nullable="false" MaxLength="10" />
+    <Property Type="Byte" Name="samasaetiognaestiaundan" Nullable="false" />
+    <Property Type="Int32" Name="nanarirod" Nullable="false" />
+    <Property Type="Decimal" Name="sortorder1" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="sortorder2" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="stig" Nullable="true" Precision="9" Scale="3" />
+    <Property Type="Decimal" Name="IAAF_Stig" Nullable="true" Precision="9" Scale="0" />
+    <Property Type="Decimal" Name="tilraun1" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur1" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking1" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun2" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur2" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking2" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun3" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur3" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking3" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun4" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur4" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking4" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun5" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur5" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking5" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun6" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur6" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking6" Nullable="false" />
+    <Property Type="String" Name="athugasemd" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="bestiaranguriar" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="personulegmet" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="String" Name="bestiaranguriartexti" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="personulegtmettexti" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="rodiundanurslitum" Nullable="false" />
+    <Property Type="String" Name="qualification" Nullable="false" MaxLength="1" />
+    <Property Type="Byte" Name="gestur" Nullable="false" />
+    <Property Type="Decimal" Name="Unglingastig" Nullable="true" Precision="9" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="CompetitorsInEvent3_Result">
+    <Property Type="String" Name="mot" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="greinarnumer" Nullable="false" />
+    <Property Type="Int32" Name="lina" Nullable="false" />
+    <Property Type="Int32" Name="rasnumer" Nullable="false" />
+    <Property Type="Int32" Name="ridillnumer" Nullable="false" />
+    <Property Type="Int32" Name="stokkkastrod" Nullable="false" />
+    <Property Type="String" Name="nafn" Nullable="false" MaxLength="35" />
+    <Property Type="Int32" Name="faedingarar" Nullable="false" />
+    <Property Type="String" Name="felag" Nullable="false" MaxLength="10" />
+    <Property Type="Decimal" Name="vindur" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="String" Name="arangur" Nullable="false" MaxLength="10" />
+    <Property Type="Byte" Name="rafmagnstimataka" Nullable="false" />
+    <Property Type="Int32" Name="urslitarod" Nullable="false" />
+    <Property Type="String" Name="urslitarodtexti" Nullable="false" MaxLength="10" />
+    <Property Type="Decimal" Name="sortorder1" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="sortorder2" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Byte" Name="samasaetiognaestiaundan" Nullable="false" />
+    <Property Type="Int32" Name="nanarirod" Nullable="false" />
+    <Property Type="Decimal" Name="stig" Nullable="true" Precision="9" Scale="3" />
+    <Property Type="Decimal" Name="IAAF_Stig" Nullable="true" Precision="9" Scale="0" />
+    <Property Type="Decimal" Name="tilraun1" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur1" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking1" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun2" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur2" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking2" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun3" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur3" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking3" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun4" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur4" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking4" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun5" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur5" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking5" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun6" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur6" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking6" Nullable="false" />
+    <Property Type="String" Name="athugasemd" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="bestiaranguriar" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="personulegmet" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="String" Name="bestiaranguriartexti" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="personulegtmettexti" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="rodiundanurslitum" Nullable="false" />
+    <Property Type="String" Name="qualification" Nullable="false" MaxLength="1" />
+    <Property Type="Byte" Name="gestur" Nullable="false" />
+    <Property Type="Decimal" Name="Unglingastig" Nullable="true" Precision="9" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="CompetitorsInEventInResultOrder3_Result">
+    <Property Type="String" Name="mot" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="greinarnumer" Nullable="false" />
+    <Property Type="Int32" Name="lina" Nullable="false" />
+    <Property Type="Int32" Name="rasnumer" Nullable="false" />
+    <Property Type="Int32" Name="ridillnumer" Nullable="false" />
+    <Property Type="Int32" Name="stokkkastrod" Nullable="false" />
+    <Property Type="String" Name="nafn" Nullable="false" MaxLength="35" />
+    <Property Type="Int32" Name="faedingarar" Nullable="false" />
+    <Property Type="String" Name="felag" Nullable="false" MaxLength="10" />
+    <Property Type="Decimal" Name="vindur" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="String" Name="arangur" Nullable="false" MaxLength="10" />
+    <Property Type="Byte" Name="rafmagnstimataka" Nullable="false" />
+    <Property Type="Int32" Name="urslitarod" Nullable="false" />
+    <Property Type="String" Name="urslitarodtexti" Nullable="false" MaxLength="10" />
+    <Property Type="Decimal" Name="sortorder1" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="sortorder2" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Byte" Name="samasaetiognaestiaundan" Nullable="false" />
+    <Property Type="Int32" Name="nanarirod" Nullable="false" />
+    <Property Type="Decimal" Name="stig" Nullable="true" Precision="9" Scale="3" />
+    <Property Type="Decimal" Name="IAAF_Stig" Nullable="true" Precision="9" Scale="0" />
+    <Property Type="Decimal" Name="tilraun1" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur1" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking1" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun2" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur2" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking2" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun3" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur3" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking3" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun4" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur4" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking4" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun5" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur5" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking5" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun6" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur6" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking6" Nullable="false" />
+    <Property Type="String" Name="athugasemd" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="bestiaranguriar" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="personulegmet" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="String" Name="bestiaranguriartexti" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="personulegtmettexti" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="rodiundanurslitum" Nullable="false" />
+    <Property Type="String" Name="qualification" Nullable="false" MaxLength="1" />
+    <Property Type="Byte" Name="gestur" Nullable="false" />
+    <Property Type="Decimal" Name="Unglingastig" Nullable="true" Precision="9" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="CompetitorsInEventInResultOrder4_Result">
+    <Property Type="String" Name="mot" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="greinarnumer" Nullable="false" />
+    <Property Type="Int32" Name="lina" Nullable="false" />
+    <Property Type="Int32" Name="rasnumer" Nullable="false" />
+    <Property Type="Int32" Name="ridillnumer" Nullable="false" />
+    <Property Type="Int32" Name="stokkkastrod" Nullable="false" />
+    <Property Type="String" Name="nafn" Nullable="false" MaxLength="35" />
+    <Property Type="Int32" Name="faedingarar" Nullable="false" />
+    <Property Type="String" Name="felag" Nullable="false" MaxLength="10" />
+    <Property Type="Decimal" Name="vindur" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="String" Name="arangur" Nullable="false" MaxLength="10" />
+    <Property Type="Byte" Name="rafmagnstimataka" Nullable="false" />
+    <Property Type="Int32" Name="urslitarod" Nullable="false" />
+    <Property Type="String" Name="urslitarodtexti" Nullable="false" MaxLength="10" />
+    <Property Type="Decimal" Name="sortorder1" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="sortorder2" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Byte" Name="samasaetiognaestiaundan" Nullable="false" />
+    <Property Type="Int32" Name="nanarirod" Nullable="false" />
+    <Property Type="Decimal" Name="stig" Nullable="true" Precision="9" Scale="3" />
+    <Property Type="Decimal" Name="IAAF_Stig" Nullable="true" Precision="9" Scale="0" />
+    <Property Type="Decimal" Name="tilraun1" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur1" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking1" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun2" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur2" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking2" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun3" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur3" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking3" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun4" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur4" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking4" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun5" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur5" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking5" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun6" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur6" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking6" Nullable="false" />
+    <Property Type="String" Name="athugasemd" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="seria" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="bestiaranguriar" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="personulegmet" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="String" Name="bestiaranguriartexti" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="personulegtmettexti" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="rodiundanurslitum" Nullable="false" />
+    <Property Type="String" Name="qualification" Nullable="false" MaxLength="1" />
+    <Property Type="Byte" Name="gestur" Nullable="false" />
+    <Property Type="Decimal" Name="Unglingastig" Nullable="true" Precision="9" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="ReturnCompetitionDates_Result">
+    <Property Type="Int32" Name="Line" Nullable="true" />
+    <Property Type="DateTime" Name="FirstDate" Nullable="true" />
+    <Property Type="DateTime" Name="LastDate" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SeedAthletesInCompEvent_Result">
+    <Property Type="Int32" Name="OriginalLineNo" Nullable="true" />
+    <Property Type="Int32" Name="BibNo" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="HeatNo" Nullable="true" />
+    <Property Type="Int32" Name="LaneOrderNo" Nullable="true" />
+    <Property Type="Decimal" Name="YearsBest" Nullable="true" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="NewSortOrder" Nullable="true" Precision="38" Scale="20" />
+    <Property Type="Int32" Name="NoOfCompetitorsInEvent" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="Athl_Venues">
+    <Key>
+      <PropertyRef Name="Heiti" />
+    </Key>
+    <Property Name="timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Heiti" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Staður" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Úti_Inni" Type="Int32" Nullable="false" />
+    <Property Name="Hringhlaup_á_hallandi_braut" Type="Byte" Nullable="false" />
+    <Property Name="Fj__hringbrauta_spretthlaup" Type="Int32" Nullable="false" />
+    <Property Name="Fjöldi_beinna_brauta" Type="Int32" Nullable="false" />
+    <Property Name="Opnunardagsetning" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Fj__hingbrauta_millivegalengd" Type="Int32" Nullable="false" />
+    <Property Name="Fj__hringbrauta_langhlaup" Type="Int32" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="CompetitorsPrClubPrAgeGroupInCompetition_Result">
+    <Property Type="Int32" Name="LineType" Nullable="true" />
+    <Property Type="Int32" Name="LineNumber" Nullable="true" />
+    <Property Type="Int32" Name="BibNo" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Age" Nullable="true" />
+    <Property Type="String" Name="Club" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="AgeGroupName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AgeGroup" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="EventsPrAgeGroupInCompetition_Result">
+    <Property Type="String" Name="AgeGr" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="AgeGroupGender" Nullable="true" />
+    <Property Type="Int32" Name="AgeGroupAgeFrom" Nullable="true" />
+    <Property Type="Int32" Name="AgeGroupAgeTo" Nullable="true" />
+    <Property Type="String" Name="AgeGroupName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SortOrder" Nullable="true" />
+    <Property Type="Int32" Name="AgeLineNo" Nullable="true" />
+    <Property Type="String" Name="Event01" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event02" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event03" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event04" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event05" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event06" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event07" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event08" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event09" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event10" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event11" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event12" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event13" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event14" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event15" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event16" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event17" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event18" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event19" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event20" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event21" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event22" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event23" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event24" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event25" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event26" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event27" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event28" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event29" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event30" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="EventLine01" Nullable="true" />
+    <Property Type="Int32" Name="EventLine02" Nullable="true" />
+    <Property Type="Int32" Name="EventLine03" Nullable="true" />
+    <Property Type="Int32" Name="EventLine04" Nullable="true" />
+    <Property Type="Int32" Name="EventLine05" Nullable="true" />
+    <Property Type="Int32" Name="EventLine06" Nullable="true" />
+    <Property Type="Int32" Name="EventLine07" Nullable="true" />
+    <Property Type="Int32" Name="EventLine08" Nullable="true" />
+    <Property Type="Int32" Name="EventLine09" Nullable="true" />
+    <Property Type="Int32" Name="EventLine10" Nullable="true" />
+    <Property Type="Int32" Name="EventLine11" Nullable="true" />
+    <Property Type="Int32" Name="EventLine12" Nullable="true" />
+    <Property Type="Int32" Name="EventLine13" Nullable="true" />
+    <Property Type="Int32" Name="EventLine14" Nullable="true" />
+    <Property Type="Int32" Name="EventLine15" Nullable="true" />
+    <Property Type="Int32" Name="EventLine16" Nullable="true" />
+    <Property Type="Int32" Name="EventLine17" Nullable="true" />
+    <Property Type="Int32" Name="EventLine18" Nullable="true" />
+    <Property Type="Int32" Name="EventLine19" Nullable="true" />
+    <Property Type="Int32" Name="EventLine20" Nullable="true" />
+    <Property Type="Int32" Name="EventLine21" Nullable="true" />
+    <Property Type="Int32" Name="EventLine22" Nullable="true" />
+    <Property Type="Int32" Name="EventLine23" Nullable="true" />
+    <Property Type="Int32" Name="EventLine24" Nullable="true" />
+    <Property Type="Int32" Name="EventLine25" Nullable="true" />
+    <Property Type="Int32" Name="EventLine26" Nullable="true" />
+    <Property Type="Int32" Name="EventLine27" Nullable="true" />
+    <Property Type="Int32" Name="EventLine28" Nullable="true" />
+    <Property Type="Int32" Name="EventLine29" Nullable="true" />
+    <Property Type="Int32" Name="EventLine30" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ClubsForUser_Result">
+    <Property Type="String" Name="Club" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="NameOfClub" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Héraðssamband" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="CompetitorsPrClubAgeGrInCompetition_Result">
+    <Property Type="Int32" Name="LineNumber" Nullable="true" />
+    <Property Type="Int32" Name="BibNo" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Age" Nullable="true" />
+    <Property Type="String" Name="Club" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="AgeGroupName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AgeGroup" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="CompetitorsPrClubPrAgeGrInCompetition_Result">
+    <Property Type="Int32" Name="LineNumber" Nullable="true" />
+    <Property Type="Int32" Name="BibNo" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Age" Nullable="true" />
+    <Property Type="String" Name="Club" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="AgeGroupName" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="AgeGroup" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="NoOfEvents" Nullable="true" />
+    <Property Type="Int32" Name="Eve01" Nullable="true" />
+    <Property Type="Int32" Name="Eve02" Nullable="true" />
+    <Property Type="Int32" Name="Eve03" Nullable="true" />
+    <Property Type="Int32" Name="Eve04" Nullable="true" />
+    <Property Type="Int32" Name="Eve05" Nullable="true" />
+    <Property Type="Int32" Name="Eve06" Nullable="true" />
+    <Property Type="Int32" Name="Eve07" Nullable="true" />
+    <Property Type="Int32" Name="Eve08" Nullable="true" />
+    <Property Type="Int32" Name="Eve09" Nullable="true" />
+    <Property Type="Int32" Name="Eve10" Nullable="true" />
+    <Property Type="Int32" Name="Eve11" Nullable="true" />
+    <Property Type="Int32" Name="Eve12" Nullable="true" />
+    <Property Type="Int32" Name="Eve13" Nullable="true" />
+    <Property Type="Int32" Name="Eve14" Nullable="true" />
+    <Property Type="Int32" Name="Eve15" Nullable="true" />
+    <Property Type="Int32" Name="Eve16" Nullable="true" />
+    <Property Type="Int32" Name="Eve17" Nullable="true" />
+    <Property Type="Int32" Name="Eve18" Nullable="true" />
+    <Property Type="Int32" Name="Eve19" Nullable="true" />
+    <Property Type="Int32" Name="Eve20" Nullable="true" />
+    <Property Type="Int32" Name="Eve21" Nullable="true" />
+    <Property Type="Int32" Name="Eve22" Nullable="true" />
+    <Property Type="Int32" Name="Eve23" Nullable="true" />
+    <Property Type="Int32" Name="Eve24" Nullable="true" />
+    <Property Type="Int32" Name="Eve25" Nullable="true" />
+    <Property Type="Int32" Name="Eve26" Nullable="true" />
+    <Property Type="Int32" Name="Eve27" Nullable="true" />
+    <Property Type="Int32" Name="Eve28" Nullable="true" />
+    <Property Type="Int32" Name="Eve29" Nullable="true" />
+    <Property Type="Int32" Name="Eve30" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CompetitorsAndRegistrationInCompetition_Result">
+    <Property Type="Int32" Name="LineNumber" Nullable="true" />
+    <Property Type="Int32" Name="BibNo" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Age" Nullable="true" />
+    <Property Type="String" Name="Club" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="AgeGroupName" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="AgeGroup" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="NoOfEvents" Nullable="true" />
+    <Property Type="Int32" Name="Eve01" Nullable="true" />
+    <Property Type="Int32" Name="Eve02" Nullable="true" />
+    <Property Type="Int32" Name="Eve03" Nullable="true" />
+    <Property Type="Int32" Name="Eve04" Nullable="true" />
+    <Property Type="Int32" Name="Eve05" Nullable="true" />
+    <Property Type="Int32" Name="Eve06" Nullable="true" />
+    <Property Type="Int32" Name="Eve07" Nullable="true" />
+    <Property Type="Int32" Name="Eve08" Nullable="true" />
+    <Property Type="Int32" Name="Eve09" Nullable="true" />
+    <Property Type="Int32" Name="Eve10" Nullable="true" />
+    <Property Type="Int32" Name="Eve11" Nullable="true" />
+    <Property Type="Int32" Name="Eve12" Nullable="true" />
+    <Property Type="Int32" Name="Eve13" Nullable="true" />
+    <Property Type="Int32" Name="Eve14" Nullable="true" />
+    <Property Type="Int32" Name="Eve15" Nullable="true" />
+    <Property Type="Int32" Name="Eve16" Nullable="true" />
+    <Property Type="Int32" Name="Eve17" Nullable="true" />
+    <Property Type="Int32" Name="Eve18" Nullable="true" />
+    <Property Type="Int32" Name="Eve19" Nullable="true" />
+    <Property Type="Int32" Name="Eve20" Nullable="true" />
+    <Property Type="Int32" Name="Eve21" Nullable="true" />
+    <Property Type="Int32" Name="Eve22" Nullable="true" />
+    <Property Type="Int32" Name="Eve23" Nullable="true" />
+    <Property Type="Int32" Name="Eve24" Nullable="true" />
+    <Property Type="Int32" Name="Eve25" Nullable="true" />
+    <Property Type="Int32" Name="Eve26" Nullable="true" />
+    <Property Type="Int32" Name="Eve27" Nullable="true" />
+    <Property Type="Int32" Name="Eve28" Nullable="true" />
+    <Property Type="Int32" Name="Eve29" Nullable="true" />
+    <Property Type="Int32" Name="Eve30" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="AgeGroupsAndEvents_Result">
+    <Property Type="String" Name="AgeGr" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="AgeGroupGender" Nullable="true" />
+    <Property Type="Int32" Name="AgeGroupAgeFrom" Nullable="true" />
+    <Property Type="Int32" Name="AgeGroupAgeTo" Nullable="true" />
+    <Property Type="String" Name="AgeGroupName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SortOrder" Nullable="true" />
+    <Property Type="Int32" Name="AgeLineNo" Nullable="true" />
+    <Property Type="Int32" Name="NoOfEvents" Nullable="true" />
+    <Property Type="String" Name="Event01" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event02" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event03" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event04" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event05" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event06" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event07" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event08" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event09" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event10" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event11" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event12" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event13" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event14" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event15" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event16" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event17" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event18" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event19" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event20" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event21" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event22" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event23" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event24" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event25" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event26" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event27" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event28" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event29" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event30" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="EventLine01" Nullable="true" />
+    <Property Type="Int32" Name="EventLine02" Nullable="true" />
+    <Property Type="Int32" Name="EventLine03" Nullable="true" />
+    <Property Type="Int32" Name="EventLine04" Nullable="true" />
+    <Property Type="Int32" Name="EventLine05" Nullable="true" />
+    <Property Type="Int32" Name="EventLine06" Nullable="true" />
+    <Property Type="Int32" Name="EventLine07" Nullable="true" />
+    <Property Type="Int32" Name="EventLine08" Nullable="true" />
+    <Property Type="Int32" Name="EventLine09" Nullable="true" />
+    <Property Type="Int32" Name="EventLine10" Nullable="true" />
+    <Property Type="Int32" Name="EventLine11" Nullable="true" />
+    <Property Type="Int32" Name="EventLine12" Nullable="true" />
+    <Property Type="Int32" Name="EventLine13" Nullable="true" />
+    <Property Type="Int32" Name="EventLine14" Nullable="true" />
+    <Property Type="Int32" Name="EventLine15" Nullable="true" />
+    <Property Type="Int32" Name="EventLine16" Nullable="true" />
+    <Property Type="Int32" Name="EventLine17" Nullable="true" />
+    <Property Type="Int32" Name="EventLine18" Nullable="true" />
+    <Property Type="Int32" Name="EventLine19" Nullable="true" />
+    <Property Type="Int32" Name="EventLine20" Nullable="true" />
+    <Property Type="Int32" Name="EventLine21" Nullable="true" />
+    <Property Type="Int32" Name="EventLine22" Nullable="true" />
+    <Property Type="Int32" Name="EventLine23" Nullable="true" />
+    <Property Type="Int32" Name="EventLine24" Nullable="true" />
+    <Property Type="Int32" Name="EventLine25" Nullable="true" />
+    <Property Type="Int32" Name="EventLine26" Nullable="true" />
+    <Property Type="Int32" Name="EventLine27" Nullable="true" />
+    <Property Type="Int32" Name="EventLine28" Nullable="true" />
+    <Property Type="Int32" Name="EventLine29" Nullable="true" />
+    <Property Type="Int32" Name="EventLine30" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CompetitorsAndRegistrationInCompetition2_Result">
+    <Property Type="Int32" Name="LineNumber" Nullable="true" />
+    <Property Type="Int32" Name="BibNo" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="BirthYear" Nullable="true" />
+    <Property Type="String" Name="BirthDateText" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="Age" Nullable="true" />
+    <Property Type="String" Name="Club" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="AgeGroupName" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="AgeGroup" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="NoOfEvents" Nullable="true" />
+    <Property Type="Int32" Name="Eve01" Nullable="true" />
+    <Property Type="Int32" Name="Eve02" Nullable="true" />
+    <Property Type="Int32" Name="Eve03" Nullable="true" />
+    <Property Type="Int32" Name="Eve04" Nullable="true" />
+    <Property Type="Int32" Name="Eve05" Nullable="true" />
+    <Property Type="Int32" Name="Eve06" Nullable="true" />
+    <Property Type="Int32" Name="Eve07" Nullable="true" />
+    <Property Type="Int32" Name="Eve08" Nullable="true" />
+    <Property Type="Int32" Name="Eve09" Nullable="true" />
+    <Property Type="Int32" Name="Eve10" Nullable="true" />
+    <Property Type="Int32" Name="Eve11" Nullable="true" />
+    <Property Type="Int32" Name="Eve12" Nullable="true" />
+    <Property Type="Int32" Name="Eve13" Nullable="true" />
+    <Property Type="Int32" Name="Eve14" Nullable="true" />
+    <Property Type="Int32" Name="Eve15" Nullable="true" />
+    <Property Type="Int32" Name="Eve16" Nullable="true" />
+    <Property Type="Int32" Name="Eve17" Nullable="true" />
+    <Property Type="Int32" Name="Eve18" Nullable="true" />
+    <Property Type="Int32" Name="Eve19" Nullable="true" />
+    <Property Type="Int32" Name="Eve20" Nullable="true" />
+    <Property Type="Int32" Name="Eve21" Nullable="true" />
+    <Property Type="Int32" Name="Eve22" Nullable="true" />
+    <Property Type="Int32" Name="Eve23" Nullable="true" />
+    <Property Type="Int32" Name="Eve24" Nullable="true" />
+    <Property Type="Int32" Name="Eve25" Nullable="true" />
+    <Property Type="Int32" Name="Eve26" Nullable="true" />
+    <Property Type="Int32" Name="Eve27" Nullable="true" />
+    <Property Type="Int32" Name="Eve28" Nullable="true" />
+    <Property Type="Int32" Name="Eve29" Nullable="true" />
+    <Property Type="Int32" Name="Eve30" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="AgeGroupsAndEvents1_Result">
+    <Property Type="String" Name="AgeGr" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="AgeGroupGender" Nullable="true" />
+    <Property Type="Int32" Name="AgeGroupAgeFrom" Nullable="true" />
+    <Property Type="Int32" Name="AgeGroupAgeTo" Nullable="true" />
+    <Property Type="String" Name="AgeGroupName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SortOrder" Nullable="true" />
+    <Property Type="Int32" Name="AgeLineNo" Nullable="true" />
+    <Property Type="Int32" Name="NoOfEvents" Nullable="true" />
+    <Property Type="String" Name="Event01" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event02" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event03" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event04" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event05" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event06" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event07" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event08" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event09" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event10" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event11" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event12" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event13" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event14" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event15" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event16" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event17" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event18" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event19" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event20" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event21" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event22" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event23" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event24" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event25" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event26" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event27" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event28" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event29" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event30" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="EventLine01" Nullable="true" />
+    <Property Type="Int32" Name="EventLine02" Nullable="true" />
+    <Property Type="Int32" Name="EventLine03" Nullable="true" />
+    <Property Type="Int32" Name="EventLine04" Nullable="true" />
+    <Property Type="Int32" Name="EventLine05" Nullable="true" />
+    <Property Type="Int32" Name="EventLine06" Nullable="true" />
+    <Property Type="Int32" Name="EventLine07" Nullable="true" />
+    <Property Type="Int32" Name="EventLine08" Nullable="true" />
+    <Property Type="Int32" Name="EventLine09" Nullable="true" />
+    <Property Type="Int32" Name="EventLine10" Nullable="true" />
+    <Property Type="Int32" Name="EventLine11" Nullable="true" />
+    <Property Type="Int32" Name="EventLine12" Nullable="true" />
+    <Property Type="Int32" Name="EventLine13" Nullable="true" />
+    <Property Type="Int32" Name="EventLine14" Nullable="true" />
+    <Property Type="Int32" Name="EventLine15" Nullable="true" />
+    <Property Type="Int32" Name="EventLine16" Nullable="true" />
+    <Property Type="Int32" Name="EventLine17" Nullable="true" />
+    <Property Type="Int32" Name="EventLine18" Nullable="true" />
+    <Property Type="Int32" Name="EventLine19" Nullable="true" />
+    <Property Type="Int32" Name="EventLine20" Nullable="true" />
+    <Property Type="Int32" Name="EventLine21" Nullable="true" />
+    <Property Type="Int32" Name="EventLine22" Nullable="true" />
+    <Property Type="Int32" Name="EventLine23" Nullable="true" />
+    <Property Type="Int32" Name="EventLine24" Nullable="true" />
+    <Property Type="Int32" Name="EventLine25" Nullable="true" />
+    <Property Type="Int32" Name="EventLine26" Nullable="true" />
+    <Property Type="Int32" Name="EventLine27" Nullable="true" />
+    <Property Type="Int32" Name="EventLine28" Nullable="true" />
+    <Property Type="Int32" Name="EventLine29" Nullable="true" />
+    <Property Type="Int32" Name="EventLine30" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType01" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType02" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType03" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType04" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType05" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType06" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType07" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType08" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType09" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType10" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType11" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType12" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType13" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType14" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType15" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType16" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType17" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType18" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType19" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType20" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType21" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType22" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType23" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType24" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType25" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType26" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType27" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType28" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType29" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType30" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CompetitionAgeGroupsAndEvents_Result">
+    <Property Type="String" Name="AgeGr" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="AgeGroupGender" Nullable="true" />
+    <Property Type="Int32" Name="AgeGroupAgeFrom" Nullable="true" />
+    <Property Type="Int32" Name="AgeGroupAgeTo" Nullable="true" />
+    <Property Type="String" Name="AgeGroupName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SortOrder" Nullable="true" />
+    <Property Type="Int32" Name="AgeLineNo" Nullable="true" />
+    <Property Type="Int32" Name="NoOfEvents" Nullable="true" />
+    <Property Type="String" Name="Event01" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event02" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event03" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event04" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event05" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event06" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event07" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event08" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event09" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event10" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event11" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event12" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event13" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event14" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event15" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event16" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event17" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event18" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event19" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event20" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event21" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event22" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event23" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event24" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event25" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event26" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event27" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event28" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event29" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Event30" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="EventLine01" Nullable="true" />
+    <Property Type="Int32" Name="EventLine02" Nullable="true" />
+    <Property Type="Int32" Name="EventLine03" Nullable="true" />
+    <Property Type="Int32" Name="EventLine04" Nullable="true" />
+    <Property Type="Int32" Name="EventLine05" Nullable="true" />
+    <Property Type="Int32" Name="EventLine06" Nullable="true" />
+    <Property Type="Int32" Name="EventLine07" Nullable="true" />
+    <Property Type="Int32" Name="EventLine08" Nullable="true" />
+    <Property Type="Int32" Name="EventLine09" Nullable="true" />
+    <Property Type="Int32" Name="EventLine10" Nullable="true" />
+    <Property Type="Int32" Name="EventLine11" Nullable="true" />
+    <Property Type="Int32" Name="EventLine12" Nullable="true" />
+    <Property Type="Int32" Name="EventLine13" Nullable="true" />
+    <Property Type="Int32" Name="EventLine14" Nullable="true" />
+    <Property Type="Int32" Name="EventLine15" Nullable="true" />
+    <Property Type="Int32" Name="EventLine16" Nullable="true" />
+    <Property Type="Int32" Name="EventLine17" Nullable="true" />
+    <Property Type="Int32" Name="EventLine18" Nullable="true" />
+    <Property Type="Int32" Name="EventLine19" Nullable="true" />
+    <Property Type="Int32" Name="EventLine20" Nullable="true" />
+    <Property Type="Int32" Name="EventLine21" Nullable="true" />
+    <Property Type="Int32" Name="EventLine22" Nullable="true" />
+    <Property Type="Int32" Name="EventLine23" Nullable="true" />
+    <Property Type="Int32" Name="EventLine24" Nullable="true" />
+    <Property Type="Int32" Name="EventLine25" Nullable="true" />
+    <Property Type="Int32" Name="EventLine26" Nullable="true" />
+    <Property Type="Int32" Name="EventLine27" Nullable="true" />
+    <Property Type="Int32" Name="EventLine28" Nullable="true" />
+    <Property Type="Int32" Name="EventLine29" Nullable="true" />
+    <Property Type="Int32" Name="EventLine30" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType01" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType02" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType03" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType04" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType05" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType06" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType07" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType08" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType09" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType10" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType11" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType12" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType13" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType14" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType15" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType16" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType17" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType18" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType19" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType20" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType21" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType22" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType23" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType24" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType25" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType26" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType27" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType28" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType29" Nullable="true" />
+    <Property Type="Int32" Name="DetailedEventType30" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="EventsForAthlete_Result">
+    <Property Type="Int32" Name="EventLine" Nullable="true" />
+    <Property Type="String" Name="EventDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EventTime" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="EventName" Nullable="true" MaxLength="80" />
+    <Property Type="Int32" Name="AgeFrom" Nullable="true" />
+    <Property Type="Int32" Name="AgeTo" Nullable="true" />
+    <Property Type="Int32" Name="OrderInStatistics" Nullable="true" />
+    <Property Type="String" Name="EventCode" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Grein" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="AlreadyRegistered" Nullable="true" />
+    <Property Type="Int32" Name="LineType" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CompetitorsInEventInResultOrder1_Result">
+    <Property Type="String" Name="mot" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="greinarnumer" Nullable="false" />
+    <Property Type="Int32" Name="lina" Nullable="false" />
+    <Property Type="Int32" Name="rasnumer" Nullable="false" />
+    <Property Type="Int32" Name="ridillnumer" Nullable="false" />
+    <Property Type="Int32" Name="stokkkastrod" Nullable="false" />
+    <Property Type="String" Name="nafn" Nullable="false" MaxLength="35" />
+    <Property Type="Int32" Name="faedingarar" Nullable="false" />
+    <Property Type="String" Name="felag" Nullable="false" MaxLength="10" />
+    <Property Type="Decimal" Name="vindur" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="String" Name="arangur" Nullable="false" MaxLength="10" />
+    <Property Type="Byte" Name="rafmagnstimataka" Nullable="false" />
+    <Property Type="Int32" Name="urslitarod" Nullable="false" />
+    <Property Type="String" Name="urslitarodtexti" Nullable="false" MaxLength="10" />
+    <Property Type="Decimal" Name="sortorder1" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="sortorder2" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Byte" Name="samasaetiognaestiaundan" Nullable="false" />
+    <Property Type="Int32" Name="nanarirod" Nullable="false" />
+    <Property Type="Decimal" Name="stig" Nullable="true" Precision="9" Scale="3" />
+    <Property Type="Decimal" Name="IAAF_Stig" Nullable="true" Precision="9" Scale="0" />
+    <Property Type="Decimal" Name="tilraun1" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur1" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking1" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun2" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur2" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking2" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun3" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur3" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking3" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun4" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur4" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking4" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun5" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur5" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking5" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun6" Nullable="true" Precision="9" Scale="2" />
+    <Property Type="Decimal" Name="vindur6" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="Int32" Name="merking6" Nullable="false" />
+    <Property Type="String" Name="athugasemd" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="seria" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="bestiaranguriar" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="personulegmet" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="String" Name="bestiaranguriartexti" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="personulegtmettexti" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="rodiundanurslitum" Nullable="false" />
+    <Property Type="String" Name="qualification" Nullable="false" MaxLength="1" />
+    <Property Type="Byte" Name="gestur" Nullable="false" />
+    <Property Type="Decimal" Name="Unglingastig" Nullable="true" Precision="9" Scale="0" />
+    <Property Type="Int32" Name="thrautarstig" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="ReturnCompetitorsInEvent_Result1">
+    <Property Type="String" Name="mot" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="greinarnumer" Nullable="false" />
+    <Property Type="Int32" Name="lina" Nullable="false" />
+    <Property Type="Int32" Name="rasnumer" Nullable="false" />
+    <Property Type="Int32" Name="ridillnumer" Nullable="false" />
+    <Property Type="Int32" Name="stokkkastrod" Nullable="false" />
+    <Property Type="String" Name="nafn" Nullable="false" MaxLength="35" />
+    <Property Type="Int32" Name="faedingarar" Nullable="false" />
+    <Property Type="String" Name="felag" Nullable="false" MaxLength="10" />
+    <Property Type="Decimal" Name="vindur" Nullable="true" Precision="9" Scale="1" />
+    <Property Type="String" Name="arangur" Nullable="false" MaxLength="10" />
+    <Property Type="Byte" Name="rafmagnstimataka" Nullable="false" />
+    <Property Type="Int32" Name="urslitarod" Nullable="false" />
+    <Property Type="String" Name="urslitarodtexti" Nullable="false" MaxLength="10" />
+    <Property Type="Byte" Name="samasaetiognaestiaundan" Nullable="false" />
+    <Property Type="Int32" Name="nanarirod" Nullable="false" />
+    <Property Type="Decimal" Name="sortorder1" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="sortorder2" Nullable="false" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="stig" Nullable="true" Precision="9" Scale="3" />
+    <Property Type="Decimal" Name="IAAF_Stig" Nullable="true" Precision="9" Scale="0" />
+    <Property Type="Decimal" Name="tilraun1" Nullable="true" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="vindur1" Nullable="true" Precision="38" Scale="10" />
+    <Property Type="Int32" Name="merking1" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun2" Nullable="true" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="vindur2" Nullable="true" Precision="38" Scale="10" />
+    <Property Type="Int32" Name="merking2" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun3" Nullable="true" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="vindur3" Nullable="true" Precision="38" Scale="10" />
+    <Property Type="Int32" Name="merking3" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun4" Nullable="true" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="vindur4" Nullable="true" Precision="38" Scale="10" />
+    <Property Type="Int32" Name="merking4" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun5" Nullable="true" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="vindur5" Nullable="true" Precision="38" Scale="10" />
+    <Property Type="Int32" Name="merking5" Nullable="false" />
+    <Property Type="Decimal" Name="tilraun6" Nullable="true" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="vindur6" Nullable="true" Precision="38" Scale="10" />
+    <Property Type="Int32" Name="merking6" Nullable="false" />
+    <Property Type="String" Name="athugasemd" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="bestiaranguriar" Nullable="true" Precision="38" Scale="20" />
+    <Property Type="Decimal" Name="personulegmet" Nullable="true" Precision="38" Scale="20" />
+    <Property Type="String" Name="bestiaranguriartexti" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="personulegtmettexti" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="rodiundanurslitum" Nullable="false" />
+    <Property Type="String" Name="qualification" Nullable="false" MaxLength="1" />
+    <Property Type="Byte" Name="gestur" Nullable="false" />
+    <Property Type="Decimal" Name="Unglingastig" Nullable="true" Precision="9" Scale="0" />
+    <Property Type="String" Name="PerformaceRemarks" Nullable="false" MaxLength="30" />
+  </ComplexType>
+</Schema>

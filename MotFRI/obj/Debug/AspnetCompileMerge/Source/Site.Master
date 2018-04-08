@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MotFRI.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server"> 
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server"> 
+    <div class="page" style="width:1450px"> 
+        <div class="header">
+            <div class="title">
+                <h1>
+                    <asp:Image ID="ThorImg" runat="server" Height="44px" ImageUrl="~/LitiThor.jpg" Width="23px" />&nbsp;&nbsp;
+                    ÞÓR - Mótaforrit Frjálsíþróttasambands Íslands <br />
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:HyperLink ID="LoginHyperlink" runat="server" Width="550px" Text="LOGIN" Text-Align="Right" NavigateUrl="~/AthleticsLogon.aspx">LOGIN</asp:HyperLink>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Aðalsíða"/>
+                        <asp:MenuItem NavigateUrl="~/AfrekaskraFRI.aspx" Text="Afrekaskrá FRÍ"/>
+                        <asp:MenuItem NavigateUrl="~/AthleticsLogon.aspx" Text="Innskráning"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Um mótaforritið"/>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+  
+         <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+         
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

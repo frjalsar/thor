@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Frj-Web.config Connection String" description="Frj Connection String used in web.config by the application to access the database." defaultValue="Data Source=Localhost;Initial Catalog=Frj;Persist Security Info=True;User ID=a;Password=a" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Fridrik\\Documents\\Visual\ Studio\ 2012\\Projects\\MotFRI\\MotFRI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Frj']/@connectionString" />
+  </parameter>
+  <parameter name="Frj_AllowNullEntities-Web.config Connection String" description="Frj_AllowNullEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Competition.csdl|res://*/Competition.ssdl|res://*/Competition.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=localhost;initial catalog=Frj_AllowNull;persist security info=True;user id=a;password=a;multipleactiveresultsets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Fridrik\\Documents\\Visual\ Studio\ 2012\\Projects\\MotFRI\\MotFRI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Frj_AllowNullEntities']/@connectionString" />
+  </parameter>
+  <parameter name="AthleticsEntities-Web.config Connection String" description="AthleticsEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/AthlCompetition.csdl|res://*/AthlCompetition.ssdl|res://*/AthlCompetition.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=localhost;initial catalog=Athletics;persist security info=True;user id=a;password=a;multipleactiveresultsets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Fridrik\\Documents\\Visual\ Studio\ 2012\\Projects\\MotFRI\\MotFRI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AthleticsEntities']/@connectionString" />
+  </parameter>
+  <parameter name="AthleticsEntities1-Web.config Connection String" description="AthleticsEntities1 Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/AthlCompetition.csdl|res://*/AthlCompetition.ssdl|res://*/AthlCompetition.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=localhost;initial catalog=Athletics;persist security info=True;user id=a;password=a;multipleactiveresultsets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Fridrik\\Documents\\Visual\ Studio\ 2012\\Projects\\MotFRI\\MotFRI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AthleticsEntities1']/@connectionString" />
+  </parameter>
+  <parameter name="AthleticsConnectionString-Web.config Connection String" description="AthleticsConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=localhost;Initial Catalog=Athletics;Persist Security Info=True;User ID=a;Password=a" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Fridrik\\Documents\\Visual\ Studio\ 2012\\Projects\\MotFRI\\MotFRI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AthleticsConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

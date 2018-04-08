@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace MotFRI
+{
+    public partial class PointsStanding : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                Global gl = new Global();
+                CompCode.Text = gl.GetCompetitionCode();
+            }
+        }
+    }
+}
